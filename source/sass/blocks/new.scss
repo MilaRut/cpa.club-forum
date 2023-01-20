@@ -1,0 +1,73 @@
+.new {
+  margin-bottom: 22px;
+}
+
+.new__block {
+  padding: 20px;
+}
+
+.new__button-wrapper {
+  display: flex;
+  margin-bottom: 5px;
+}
+
+.new__btn {
+  @include font-settings (500, 14px, 1);
+  padding: 14px;
+  border: none;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #FFFFFF;
+  opacity: 0.5;
+  cursor: pointer;
+
+  &--themes {
+    background-color: #303542;
+    border-radius: 10px 0 0 10px;
+  }
+
+  &--comments {
+    background-color: #1A1D24;
+    border-radius: 0 10px 10px 0;
+  }
+}
+
+.new__item {
+  display: grid;
+  grid-template-columns: 587px 134px 121px;
+  column-gap: 20px;
+  padding-top: 15px;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid #606368;
+    padding-bottom: 15px;
+  }
+}
+
+.new__item a {
+  @include font-settings (600, 14px, 1);
+  width: 587px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.new__item span {
+  @include font-settings (400, 14px, 1);
+}
+
+.new__item p {
+  @include font-settings (400, 14px, 1);
+  position: relative;
+  padding-left: 25px;
+
+  &::before {
+    position: absolute;
+    content: url(../../img/svg/clock-icon.svg);
+    top: 0;
+    left: 0;
+  }
+}
+
+

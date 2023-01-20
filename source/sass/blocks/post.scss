@@ -1,0 +1,61 @@
+.post {
+  padding-top: 30px;
+}
+
+.post h2 {
+  @include font-settings (600, 18px, 1);
+  max-width: 726px;
+  margin-bottom: 10px;
+}
+
+.post__info {
+  display: flex;
+  margin-bottom: 20px;
+
+  p {
+    @include font-settings (400, 14px, 1);
+    opacity: 0.5;
+    padding-left: 25px;
+  }
+}
+
+.post__time {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: url(../../img/svg/clock-icon.svg);
+    top: 0;
+    left: 0;
+  }
+}
+
+.post__user-link {
+  text-decoration: underline;
+}
+
+.post__reply-btn {
+  @include font-settings (500, 14px, 1);
+  min-width: 190px;
+  background-color: $color-accent;
+  border: none;
+  border-radius: 10px;
+  color: $color-default-black;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding: 10px 20px;
+  cursor: pointer;
+
+  svg {
+    fill: $color-default-black;
+    margin-right: 5px;
+  }
+}
+
+.post__nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 28px;
+}

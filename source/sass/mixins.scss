@@ -1,3 +1,12 @@
+@mixin font-settings ($weight, $fs, $lh) {
+  font-family: $ff-inter;
+  font-style: normal;
+  font-weight: $weight;
+  font-size: $fs;
+  line-height: $lh;
+  color: $color-default-white;
+}
+
 @mixin retina {
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     @content;

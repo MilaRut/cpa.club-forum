@@ -1,0 +1,137 @@
+.comment {
+  width: 100%;
+  min-height: 372px;
+  display: flex;
+  background-color: #262931;
+  border: 1px solid #2D3341;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 21px;
+}
+
+.comment__user-block {
+  padding-right: 20px;
+  border-right: 1px solid #32343C;
+}
+
+.comment__user-image {
+  width: 150px;
+  height: 143px;
+  border-radius: 20px;
+  margin-bottom: 14px;
+}
+
+.comment__user-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center
+}
+
+.comment__user-name {
+  @include font-settings (400, 14px, 1);
+  margin-bottom: 5px;
+}
+
+.comment__user-status {
+  @include font-settings (400, 16px, 1);
+  color: $color-accent;
+  border: 1px solid $color-accent;
+  border-radius: 140px;
+  margin-bottom: 23px;
+  padding: 5px 15px;
+}
+
+.comment__user-stats span {
+  @include font-settings (300, 14px, 1);
+  opacity: 0.5;
+}
+
+.comment__user-stats {
+  margin-bottom: 5px;
+
+  b {
+    @include font-settings (600, 14px, 1);
+    color: $color-accent;
+  }
+
+  &--msg {
+    b {
+      background-color: #2C2C2D;
+      border-radius: 10px;
+      padding: 10px;
+    }
+  }
+}
+
+.comment__user-contacts {
+  @include font-settings (500, 14px, 1);
+  background: #1E2228;
+  border-radius: 10px;
+  color: $color-accent;
+  margin-top: 10px;
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+}
+
+.comment__user-contacts-icon {
+  margin-right: 30px;
+}
+
+.comment__text-block {
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+  padding-right: 85px;
+}
+
+.comment__post-time {
+  flex-shrink: 0;
+  margin-bottom: 42px;
+
+  p {
+    @include font-settings (500, 14px, 1.5);
+    opacity: 0.5;
+  }
+}
+
+.comment__text {
+  @include font-settings (500, 14px, 1.5);
+  flex-grow: 1;
+}
+
+.comment__btns-block {
+  min-height: 37px;
+  display: flex;
+  flex-shrink: 0;
+  background-color: #1E2228;
+  border-radius: 10px;
+  justify-self: flex-end;
+  justify-content: space-between;
+}
+
+.comment__btns-primary,
+.comment__btns-secondary {
+  display: flex;
+}
+
+.comment__btn {
+  @include font-settings (500, 14px, 1);
+  color: $color-accent;
+  border: none;
+  background-color: transparent;
+  opacity: 0.8;
+  padding: 5px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  &:not(:last-child) {
+    border-right: 1px solid #2E3136;
+  }
+}
+
+.comment__btn svg {
+  margin-right: 7px;
+}

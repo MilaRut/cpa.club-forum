@@ -1,0 +1,48 @@
+.aside__blocks-wrapper {
+  background-color: #262931;
+  border-radius: 20px;
+  padding: 18px;
+  margin-bottom: 30px;
+}
+
+.aside__block {
+  h3 {
+    @include font-settings (600, 18px, 1.56);
+    border-bottom: 1px solid #363840;
+    margin-bottom: 20px;
+    padding-bottom: 5px;
+  }
+}
+
+.aside__item {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.aside__block-image {
+  margin-right: 10px;
+}
+
+.aside__block-content {
+  h4 {
+    @include font-settings (600, 18px, 1.56);
+    text-transform: uppercase;
+  }
+}
+
+
+
+
+
+.aside-block__rating {
+  display: flex;
+}
+
+.aside-block__rating svg {
+  fill: #1A1D24;
+  margin-right: 7px;
+}
+
+.aside-block__rating>svg.active {
+  fill: #FFC600;
+}

@@ -1,0 +1,22 @@
+.user-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  width: 130px;
+}
+
+.user-menu a {
+  display: block;
+  position: relative;
+}
+
+.user-menu__alerts-icon {
+  position: absolute;
+  top: -3px;
+  left: 5px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 2px solid #1E2228;
+  background-color: #FF0000;
+}

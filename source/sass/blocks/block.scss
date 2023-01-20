@@ -1,0 +1,96 @@
+.block {
+  background-color: #262931;
+  border-radius: 20px;
+}
+
+.block__heading {
+  background-color: #1A1D24;
+  padding: 10px 12px;
+  border-radius: 20px 20px 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &--vip {
+    background-color: $color-accent;
+  }
+}
+
+.block__heading h2 {
+  @include font-settings (700, 16px, 1);
+}
+
+.block__heading--vip h2 {
+  color: $color-default-black;
+}
+
+.block__sort-btn {
+  width: 65px;
+  height: 30px;
+  background-color: #282B34;
+  border: none;
+  border-radius: 6px;
+  padding: 3px;
+
+  &.active {
+    background-color: #535761;
+  }
+}
+
+.block__item {
+  display: grid;
+  grid-template-columns: 420px 20px 138px 230px;
+  column-gap: 20px;
+  padding: 15px 20px;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid #606368;
+    padding-bottom: 15px;
+  }
+}
+
+.block__col--1 {
+  h3 {
+    @include font-settings (600, 14px, 1);
+  }
+
+  p {
+    @include font-settings (300, 14px, 1);
+  }
+}
+
+.block__col--2 {
+  .block__add-icon {
+    fill: $color-default-white;
+  }
+}
+
+.block__col--3 {
+  p {
+    @include font-settings (400, 14px, 1);
+  }
+
+  span {
+    @include font-settings (600, 14px, 1);
+  }
+}
+
+.block__col--4 {
+  a {
+    @include font-settings (400, 12px, 1.2);
+    display: block;
+    text-decoration: underline;
+
+  }
+
+  p {
+    @include font-settings (400, 12px, 1);
+    display: inline;
+  }
+
+  p.block__user {
+    a {
+      display: inline;
+    }
+  }
+}

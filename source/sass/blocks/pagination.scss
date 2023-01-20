@@ -1,0 +1,29 @@
+.pagination {
+  background-color: #1A1D24;
+  border: 1px solid #2D3341;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  padding: 8px 12px 6px;
+}
+
+.pagination__icon {
+
+  &--last,
+  &--next {
+    transform: scale(-1, 1);
+  }
+}
+
+.pagination__link {
+  @include font-settings (500, 14px, 1);
+  color: $color-accent;
+
+  &.active {
+    color: $color-default-white;
+  }
+
+  span {
+    padding: 0 5px;
+  }
+}
