@@ -1,7 +1,21 @@
-.main .container {
-  display: grid;
-  grid-template-columns: auto 295px;
-  column-gap: 20px;
-  padding-top: 25px;
-  padding-bottom: 25px;
+.index-main,
+.block-main,
+.vipblock-main {
+  .container {
+    display: grid;
+    grid-template-columns: auto 295px;
+    column-gap: 20px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+}
+
+.post-main,
+.userpage-main,
+.company-main {
+  .container {
+
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
 }

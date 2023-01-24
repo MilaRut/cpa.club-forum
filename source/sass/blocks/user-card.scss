@@ -1,0 +1,128 @@
+.user-card {
+  display: grid;
+  grid-template-columns: 275px auto;
+  margin-top: 26px;
+  background-color: #1A1D24;
+  border: 1px solid #2D3341;
+  border-radius: 10px;
+}
+
+.user-card__personal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #262931;
+  padding: 10px;
+  border-radius: 10px 0px 0px 10px;
+}
+
+.user-card__edit-btn {
+  width: 37px;
+  height: 37px;
+  margin-left: auto;
+  margin-bottom: 10px;
+  background: #FFFFFF;
+  border: 0.5px solid rgba(73, 62, 250, 0.2);
+  border-radius: 10px;
+  opacity: 0.7;
+
+  svg {
+    fill: #1E1E1E;
+    opacity: 0.7;
+  }
+}
+
+.user-card__image-wrapper {
+  position: relative;
+  margin-bottom: 22px;
+}
+
+.user-card__image {
+  width: 150px;
+  height: 143px;
+  border: 5px solid #FFFFFF;
+  border-radius: 20px;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.user-card__alert {
+  @include font-settings (700, 16px, 1);
+  position: absolute;
+  bottom: -15px;
+  left: -15px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #FF0000;
+  color: $color-default-white;
+  text-align: center;
+  padding: 6px;
+}
+
+.user-card__name p {
+  @include font-settings (700, 16px, 1);
+  margin-bottom: 14px;
+}
+
+.user-card__status p {
+  @include font-settings (400, 14px, 1);
+  color: $color-accent;
+  border: 1px solid $color-accent;
+  border-radius: 140px;
+  margin-bottom: 23px;
+  padding: 5px 15px;
+}
+
+.user-card__friends p {
+  @include font-settings (500, 14px, 1);
+  opacity: 0.5;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.user-card__friends-list {
+  width: 190px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 35px;
+}
+
+.user-card__friends-item {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 3px solid #FFFFFF;
+  overflow: hidden;
+}
+
+.user-card__friends-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.user-card__stats {
+  span {
+    @include font-settings (400, 14px, 1);
+    opacity: 0.5;
+  }
+
+  b {
+    @include font-settings (600, 14px, 1);
+    color: $color-accent;
+  }
+}
+
+.user-card__stats div {
+  width: 190px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}

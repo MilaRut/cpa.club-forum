@@ -135,3 +135,9 @@
 .comment__btn svg {
   margin-right: 7px;
 }
+
+.comment__btn--edit {
+  svg {
+    color: $color-accent;
+  }
+}
