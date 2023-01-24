@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Описание проекта">
+  <title>CPA Club Forum</title>
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="index-header header">
+      <div class="container">
+        <div class="header__logo">
+          <a href="#">
+            <img src="./img/cpa-logo.png" alt="CPA Club logo.">
+          </a>
+        </div>
+        <div class="header__search">
+          <form action="" method="get">
+            <input name="search" placeholder="Поиск по форуму" type="search">
+            <button class="header__search-btn" type="submit">
+              <svg width="20" height="20" fill="currentColor">
+                <use xlink:href="./img/sprite.svg#search-btn"></use>
+              </svg>
+            </button>
+          </form>
+        </div>
+        <div class="header__user-menu user-menu">
+          <div class="user-menu__alerts">
+            <a href="#">
+              <svg width="16" height="20" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M8.99994 1C8.99994 0.44772 8.55224 0 7.99994 0C7.44764 0 6.99994 0.44772 6.99994 1V1.75H6.44254C4.21745 1.75 2.37585 3.48001 2.23696 5.70074L2.01595 9.2342C1.93169 10.5814 1.4794 11.8797 0.708342 12.9876C0.0116615 13.9886 0.631882 15.3712 1.84281 15.5165L5.24994 15.9254V17C5.24994 18.5188 6.48114 19.75 7.99994 19.75C9.51874 19.75 10.7499 18.5188 10.7499 17V15.9254L14.157 15.5165C15.368 15.3712 15.9882 13.9886 15.2915 12.9876C14.5204 11.8797 14.0681 10.5814 13.9839 9.2342L13.7629 5.70074C13.624 3.48001 11.7824 1.75 9.55734 1.75H8.99994V1ZM6.44254 3.25C5.00952 3.25 3.82348 4.36417 3.73403 5.79438L3.51303 9.3278C3.41163 10.949 2.86738 12.5112 1.93953 13.8444C1.88918 13.9168 1.934 14.0167 2.02153 14.0272L5.75919 14.4757C7.24764 14.6543 8.75224 14.6543 10.2406 14.4757L13.9783 14.0272C14.0658 14.0167 14.1107 13.9168 14.0603 13.8444C13.1325 12.5112 12.5882 10.949 12.4868 9.3278L12.2658 5.79438C12.1763 4.36417 10.9903 3.25 9.55734 3.25H6.44254ZM7.99994 18.25C7.30954 18.25 6.74994 17.6904 6.74994 17V16.25H9.24994V17C9.24994 17.6904 8.69034 18.25 7.99994 18.25Z"
+                  fill="white" />
+              </svg>
+              <span class="user-menu__alerts-icon"></span>
+            </a>
+          </div>
+          <div class="user-menu__avatar">
+            <a href="userpage.html">
+              <img src="./img/avatar.png" alt="User avatar.">
+            </a>
+          </div>
+          <div class="user-menu__apps">
+            <svg class="user-menu__apps-icon" width="24" height="24" fill="currentColor">
+              <use xlink:href="./img/sprite.svg#apps"></use>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="index-main main">
+      <div class="container">
+        <h1 class="visually-hidden">Форум CPA.Club</h1>
+        <div class="main-content">
+          <section class="new">
+            <div class="new__block block">
+              <div class="new__button-wrapper">
+                <button class="new__btn new__btn--themes" type="button">Новые темы</button>
+                <button class="new__btn new__btn--comments" type="button">Новые комментарии</button>
+              </div>
+              <ul class="new__list list-reset">
+                <li class="new__item">
+                  <a href="#">Рекламная сеть RichAds: премиальные пуши, ин-пейдж, попсы, доменный трафик (по запросу)</a>
+                  <span class="new__answer-count">139 ответов</span>
+                  <p class="new__time"><time datetime="2023-01-30T20:47">Вчера, <span>20:47</span></time></p>
+                </li>
+                <li class="new__item">
+                  <a href="#">Рекламная сеть RichAds: премиальные пуши, ин-пейдж, попсы, доменный трафик (по запросу)</a>
+                  <span class="new__answer-count">139 ответов</span>
+                  <p class="new__time"><time datetime="2023-01-30T20:47">Вчера, <span>20:47</span></time></p>
+                </li>
+                <li class="new__item">
+                  <a href="#">Рекламная сеть RichAds: премиальные пуши, ин-пейдж, попсы, доменный трафик (по запросу)</a>
+                  <span class="new__answer-count">139 ответов</span>
+                  <p class="new__time"><time datetime="2023-01-30T20:47">Вчера, <span>20:47</span></time></p>
+                </li>
+                <li class="new__item">
+                  <a href="#">Рекламная сеть RichAds: премиальные пуши, ин-пейдж, попсы, доменный трафик (по запросу)</a>
+                  <span class="new__answer-count">139 ответов</span>
+                  <p class="new__time"><time datetime="2023-01-30T20:47">Вчера, <span>20:47</span></time></p>
+                </li>
+              </ul>
+            </div>
+          </section>
+
+          <div class="adblock adblock-925x110">
+            <iframe width="925" height="110" src="./img/banner-925x110.png" frameborder="0"></iframe>
+          </div>
+
+          <section class="forum-section">
+            <div class="forum-section__block forum-section__block--vip block">
+              <div class="block__heading block__heading--vip">
+                <a class="block__heading-link" href="vipblock.html">
+                  <h2>VIP раздел</h2>
+                </a>
+              </div>
+              <ul class="block__list list-reset">
+                <li class="block__item">
+                  <div class="block__col block__col--1">
+                    <h3>Заголовок топика</h3>
+                    <p>Поиск офферов, Black список, Обсуждение офферов и ПП</p>
+                  </div>
+                  <div class="block__col block__col--2">
+                    <a href="#" class="block__add-link">
+                      <svg class="block__add-icon" width="24" height="24" fill="currentColor">
+                        <use xlink:href="./img/sprite.svg#add"></use>
+                      </svg>
+                    </a>
+                  </div>
+                  <div class="block__col block__col--3">
+                    <p>Тем: <span class="block__topics-count">781</span></p>
+                    <p>Сообщений: <span class="block__msg-count">20,487</span></p>
+                  </div>
+                  <div class="block__col block__col--4">
+                    <a href="#" class="block__last-post">PST.net (платежный сервис + карты для оплаты FB/Adwords)</a>
+                    <p class="block__time"><time datetime="2023-01-30T20:47">Вчера, <span>20:47</span></time></p>
+                    <p class="block__user">от
+                      <a class="block__user-link" href="#">mrDumay</a>
+                    </p>
+                  </div>
+                </li>
+                <li class="block__item">
+                  <div class="block__col block__col--1">
+                    <h3>Заголовок топика</h3>
+                    <p>Поиск офферов, Black список, Обсуждение офферов и ПП</p>
+                  </div>
+                  <div class="block__col block__col--2">
+                    <a href="#" class="block__add-link">
+                      <svg class="block__add-icon" width="24" height="24" fill="currentColor">
+                        <use xlink:href="./img/sprite.svg#add"></use>
+                      </svg>
+                    </a>
+                  </div>
+                  <div class="block__col block__col--3">
+                    <p>Тем: <span class="block__topics-count">781</span></p>
+                    <p>Сообщений: <span class="block__msg-count">20,487</span></p>
+                  </div>
+                  <div class="block__col block__col--4">
+                    <a href="#" class="block__last-post">PST.net (платежный сервис + карты для оплаты FB/Adwords)</a>
+                    <p class="block__time"><time datetime="2023-01-30T20:47">Вчера, <span>20:47</span></time></p>
+                    <p class="block__user">от
+                      <a class="block__user-link" href="#">mrDumay</a>
+                    </p>
+                  </div>
+                </li>
+                <li class="block__item">
+                  <div class="block__col block__col--1">
+                    <h3>Заголовок топика</h3>
+                    <p>Поиск офферов, Black список, Обсуждение офферов и ПП</p>
+                  </div>
+                  <div class="block__col block__col--2">
+                    <a href="#" class="block__add-link">
+                      <svg class="block__add-icon" width="24" height="24" fill="currentColor">
+                        <use xlink:href="./img/sprite.svg#add"></use>
+                      </svg>
+                    </a>
+                  </div>
+                  <div class="block__col block__col--3">
+                    <p>Тем: <span class="block__topics-count">781</span></p>
+                    <p>Сообщений: <span class="block__msg-count">20,487</span></p>
+                  </div>
+                  <div class="block__col block__col--4">
+                    <a href="#" class="block__last-post">PST.net (платежный сервис + карты для оплаты FB/Adwords)</a>
+                    <p class="block__time"><time datetime="2023-01-30T20:47">Вчера, <span>20:47</span></time></p>
+                    <p class="block__user">от
+                      <a class="block__user-link" href="#">mrDumay</a>
+                    </p>
+                  </div>
+                </li>
+                <li class="block__item">
+                  <div class="block__col block__col--1">
+                    <h3>Заголовок топика</h3>
+                    <p>Поиск офферов, Black список, Обсуждение офферов и ПП</p>
+                  </div>
+                  <div class="block__col block__col--2">
+                    <a href="#" class="block__add-link">
+                      <svg class="block__add-icon" width="24" height="24" fill="currentColor">
+                        <use xlink:href="./img/sprite.svg#add"></use>
+                      </svg>
+                    </a>
+                  </div>
+                  <div class="block__col block__col--3">
+                    <p>Тем: <span class="block__topics-count">781</span></p>
+                    <p>Сообщений: <span class="block__msg-count">20,487</span></p>
+                  </div>
+                  <div class="block__col block__col--4">
+                    <a href="#" class="block__last-post">PST.net (платежный сервис + карты для оплаты FB/Adwords)</a>
+                    <p class="block__time"><time datetime="2023-01-30T20:47">Вчера, <span>20:47</span></time></p>
+                    <p class="block__user">от
+                      <a class="block__user-link" href="#">mrDumay</a>
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="forum-section__block block">
+              <div class="block__heading">
+                <a class="block__heading-link" href="block.html">
+                  <h2>Заголовок раздела</h2>
+                </a>
+              </div>
+              <ul class="block__list list-reset">
+                <li class="block__item">
+                  <div class="block__col block__col--1">
+                    <h3>Заголовок топика</h3>
+                    <p>Поиск офферов, Black список, Обсуждение офферов и ПП</p>
+                  </div>
+                  <div class="block__col block__col--2">
+                    <a href="#" class="block__add-link">
+                      <svg class="block__add-icon" width="24" height="24" fill="currentColor">
+                        <use xlink:href="./img/sprite.svg#add"></use>
+                      </svg>
+                    </a>
+                  </div>
+                  <div class="block__col block__col--3">
+                    <p>Тем: <span class="block__topics-count">781</span></p>
+                    <p>Сообщений: <span class="block__msg-count">20,487</span></p>
+                  </div>
+                  <div class="block__col block__col--4">
+                    <a href="#" class="block__last-post">PST.net (платежный сервис + карты для оплаты FB/Adwords)</a>
+                    <p class="block__time"><time datetime="2023-01-30T20:47">Вчера, <span>20:47</span></time></p>
+                    <p class="block__user">от
+                      <a class="block__user-link" href="#">mrDumay</a>
+                    </p>
+                  </div>
+                </li>
+                <li class="block__item">
+                  <div class="block__col block__col--1">
+                    <h3>Заголовок топика</h3>
+                    <p>Поиск офферов, Black список, Обсуждение офферов и ПП</p>
+                  </div>
+                  <div class="block__col block__col--2">
+                    <a href="#" class="block__add-link">
+                      <svg class="block__add-icon" width="24" height="24" fill="currentColor">
+                        <use xlink:href="./img/sprite.svg#add"></use>
+                      </svg>
+                    </a>
+                  </div>
+                  <div class="block__col block__col--3">
+                    <p>Тем: <span class="block__topics-count">781</span></p>
+                    <p>Сообщений: <span class="block__msg-count">20,487</span></p>
+                  </div>
+                  <div class="block__col block__col--4">
+                    <a href="#" class="block__last-post">PST.net (платежный сервис + карты для оплаты FB/Adwords)</a>
+                    <p class="block__time"><time datetime="2023-01-30T20:47">Вчера, <span>20:47</span></time></p>
+                    <p class="block__user">от
+                      <a class="block__user-link" href="#">mrDumay</a>
+                    </p>
+                  </div>
+                </li>
+                <li class="block__item">
+                  <div class="block__col block__col--1">
+                    <h3>Заголовок топика</h3>
+                    <p>Поиск офферов, Black список, Обсуждение офферов и ПП</p>
+                  </div>
+                  <div class="block__col block__col--2">
+                    <a href="#" class="block__add-link">
+                      <svg class="block__add-icon" width="24" height="24" fill="currentColor">
+                        <use xlink:href="./img/sprite.svg#add"></use>
+                      </svg>
+                    </a>
+                  </div>
+                  <div class="block__col block__col--3">
+                    <p>Тем: <span class="block__topics-count">781</span></p>
+                    <p>Сообщений: <span class="block__msg-count">20,487</span></p>
+                  </div>
+                  <div class="block__col block__col--4">
+                    <a href="#" class="block__last-post">PST.net (платежный сервис + карты для оплаты FB/Adwords)</a>
+                    <p class="block__time"><time datetime="2023-01-30T20:47">Вчера, <span>20:47</span></time></p>
+                    <p class="block__user">от
+                      <a class="block__user-link" href="#">mrDumay</a>
+                    </p>
+                  </div>
+                </li>
+                <li class="block__item">
+                  <div class="block__col block__col--1">
+                    <h3>Заголовок топика</h3>
+                    <p>Поиск офферов, Black список, Обсуждение офферов и ПП</p>
+                  </div>
+                  <div class="block__col block__col--2">
+                    <a href="#" class="block__add-link">
+                      <svg class="block__add-icon" width="24" height="24" fill="currentColor">
+                        <use xlink:href="./img/sprite.svg#add"></use>
+                      </svg>
+                    </a>
+                  </div>
+                  <div class="block__col block__col--3">
+                    <p>Тем: <span class="block__topics-count">781</span></p>
+                    <p>Сообщений: <span class="block__msg-count">20,487</span></p>
+                  </div>
+                  <div class="block__col block__col--4">
+                    <a href="#" class="block__last-post">PST.net (платежный сервис + карты для оплаты FB/Adwords)</a>
+                    <p class="block__time"><time datetime="2023-01-30T20:47">Вчера, <span>20:47</span></time></p>
+                    <p class="block__user">от
+                      <a class="block__user-link" href="#">mrDumay</a>
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="forum-section__block block">
+              <div class="block__heading">
+                <a class="block__heading-link" href="block.html">
+                  <h2>Заголовок раздела</h2>
+                </a>
+              </div>
+              <ul class="block__list list-reset">
+                <li class="block__item">
+                  <div class="block__col block__col--1">
+                    <h3>Заголовок топика</h3>
+                    <p>Поиск офферов, Black список, Обсуждение офферов и ПП</p>
+                  </div>
+                  <div class="block__col block__col--2">
+                    <a href="#" class="block__add-link">
+                      <svg class="block__add-icon" width="24" height="24" fill="currentColor">
+                        <use xlink:href="./img/sprite.svg#add"></use>
+                      </svg>
+                    </a>
+                  </div>
+                  <div class="block__col block__col--3">
+                    <p>Тем: <span class="block__topics-count">781</span></p>
+                    <p>Сообщений: <span class="block__msg-count">20,487</span></p>
+                  </div>
+                  <div class="block__col block__col--4">
+                    <a href="#" class="block__last-post">PST.net (платежный сервис + карты для оплаты FB/Adwords)</a>
+                    <p class="block__time"><time datetime="2023-01-30T20:47">Вчера, <span>20:47</span></time></p>
+                    <p class="block__user">от
+                      <a class="block__user-link" href="#">mrDumay</a>
+                    </p>
+                  </div>
+                </li>
+                <li class="block__item">
+                  <div class="block__col block__col--1">
+                    <h3>Заголовок топика</h3>
+                    <p>Поиск офферов, Black список, Обсуждение офферов и ПП</p>
+                  </div>
+                  <div class="block__col block__col--2">
+                    <a href="#" class="block__add-link">
+                      <svg class="block__add-icon" width="24" height="24" fill="currentColor">
+                        <use xlink:href="./img/sprite.svg#add"></use>
+                      </svg>
+                    </a>
+                  </div>
+                  <div class="block__col block__col--3">
+                    <p>Тем: <span class="block__topics-count">781</span></p>
+                    <p>Сообщений: <span class="block__msg-count">20,487</span></p>
+                  </div>
+                  <div class="block__col block__col--4">
+                    <a href="#" class="block__last-post">PST.net (платежный сервис + карты для оплаты FB/Adwords)</a>
+                    <p class="block__time"><time datetime="2023-01-30T20:47">Вчера, <span>20:47</span></time></p>
+                    <p class="block__user">от
+                      <a class="block__user-link" href="#">mrDumay</a>
+                    </p>
+                  </div>
+                </li>
+                <li class="block__item">
+                  <div class="block__col block__col--1">
+                    <h3>Заголовок топика</h3>
+                    <p>Поиск офферов, Black список, Обсуждение офферов и ПП</p>
+                  </div>
+                  <div class="block__col block__col--2">
+                    <a href="#" class="block__add-link">
+                      <svg class="block__add-icon" width="24" height="24" fill="currentColor">
+                        <use xlink:href="./img/sprite.svg#add"></use>
+                      </svg>
+                    </a>
+                  </div>
+                  <div class="block__col block__col--3">
+                    <p>Тем: <span class="block__topics-count">781</span></p>
+                    <p>Сообщений: <span class="block__msg-count">20,487</span></p>
+                  </div>
+                  <div class="block__col block__col--4">
+                    <a href="#" class="block__last-post">PST.net (платежный сервис + карты для оплаты FB/Adwords)</a>
+                    <p class="block__time"><time datetime="2023-01-30T20:47">Вчера, <span>20:47</span></time></p>
+                    <p class="block__user">от
+                      <a class="block__user-link" href="#">mrDumay</a>
+                    </p>
+                  </div>
+                </li>
+                <li class="block__item">
+                  <div class="block__col block__col--1">
+                    <h3>Заголовок топика</h3>
+                    <p>Поиск офферов, Black список, Обсуждение офферов и ПП</p>
+                  </div>
+                  <div class="block__col block__col--2">
+                    <a href="#" class="block__add-link">
+                      <svg class="block__add-icon" width="24" height="24" fill="currentColor">
+                        <use xlink:href="./img/sprite.svg#add"></use>
+                      </svg>
+                    </a>
+                  </div>
+                  <div class="block__col block__col--3">
+                    <p>Тем: <span class="block__topics-count">781</span></p>
+                    <p>Сообщений: <span class="block__msg-count">20,487</span></p>
+                  </div>
+                  <div class="block__col block__col--4">
+                    <a href="#" class="block__last-post">PST.net (платежный сервис + карты для оплаты FB/Adwords)</a>
+                    <p class="block__time"><time datetime="2023-01-30T20:47">Вчера, <span>20:47</span></time></p>
+                    <p class="block__user">от
+                      <a class="block__user-link" href="#">mrDumay</a>
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </div>
+
+        <aside class="aside">
+          <div class="aside__blocks-wrapper">
+            <div class="aside__block">
+              <h3>Топ рекламодателей</h3>
+              <ul class="aside__list list-reset">
+                <li class="aside__item">
+                  <div class="aside__block-image">
+                    <img src="./img/top-logo.png" alt="Company logo.">
+                  </div>
+                  <div class="aside__block-content">
+                    <h4>PIN-UP PARTNERS</h4>
+                    <div class="aside-block__rating">
+                      <svg class="active" width="14" height="15" fill="currentColor">
+                        <use xlink:href="./img/sprite.svg#raiting-star"></use>
+                      </svg>
+                      <svg class="active" width="14" height="15" fill="currentColor">
+                        <use xlink:href="./img/sprite.svg#raiting-star"></use>
+                      </svg>
+                      <svg class="active" width="14" height="15" fill="currentColor">
+                        <use xlink:href="./img/sprite.svg#raiting-star"></use>
+                      </svg>
+                      <svg class="active" width="14" height="15" fill="currentColor">
+                        <use xlink:href="./img/sprite.svg#raiting-star"></use>
+                      </svg>
+                      <svg class="active" width="14" height="15" fill="currentColor">
+                        <use xlink:href="./img/sprite.svg#raiting-star"></use>
+                      </svg>
+                      <p><span class="rating-count">12</span> оценок</p>
+                    </div>
+                  </div>
+                </li>
+                <li class="aside__item">
+                  <div class="aside__block-image">
+                    <img src="./img/top-logo.png" alt="Company logo.">
+                  </div>
+                  <div class="aside__block-content">
+                    <h4>PIN-UP PARTNERS</h4>
+                    <div class="aside-block__rating">
+                      <svg class="active" width="14" height="15" fill="currentColor">
+                        <use xlink:href="./img/sprite.svg#raiting-star"></use>
+                      </svg>
+                      <svg class="active" width="14" height="15" fill="currentColor">
+                        <use xlink:href="./img/sprite.svg#raiting-star"></use>
+                      </svg>
+                      <svg class="active" width="14" height="15" fill="currentColor">
+                        <use xlink:href="./img/sprite.svg#raiting-star"></use>
+                      </svg>
+                      <svg class="active" width="14" height="15" fill="currentColor">
+                        <use xlink:href="./img/sprite.svg#raiting-star"></use>
+                      </svg>
+                      <svg class="active" width="14" height="15" fill="currentColor">
+                        <use xlink:href="./img/sprite.svg#raiting-star"></use>
+                      </svg>
+                      <p><span class="rating-count">1266</span> оценок</p>
+                    </div>
+                  </div>
+                </li>
+                <li class="aside__item">
+                  <div class="aside__block-image">
+                    <img src="./img/top-logo.png" alt="Company logo.">
+                  </div>
+                  <div class="aside__block-content">
+                    <h4>PIN-UP PARTNERS</h4>
+                    <div class="aside-block__rating">
+                      <svg class="active" width="14" height="15" fill="currentColor">
+                        <use xlink:href="./img/sprite.svg#raiting-star"></use>
+                      </svg>
+                      <svg width="14" height="15" fill="currentColor">
+                        <use xlink:href="./img/sprite.svg#raiting-star"></use>
+                      </svg>
+                      <svg width="14" height="15" fill="currentColor">
+                        <use xlink:href="./img/sprite.svg#raiting-star"></use>
+                      </svg>
+                      <svg width="14" height="15" fill="currentColor">
+                        <use xlink:href="./img/sprite.svg#raiting-star"></use>
+                      </svg>
+                      <svg width="14" height="15" fill="currentColor">
+                        <use xlink:href="./img/sprite.svg#raiting-star"></use>
+                      </svg>
+                      <p><span class="rating-count">1266</span> оценок</p>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="aside__block">
+              <h3>Топ ПП</h3>
+              <ul class="aside__list list-reset">
+                <li class="aside__item">
+                  <div class="aside__block-image">
+                    <img src="./img/top-logo.png" alt="Company logo.">
+                  </div>
+                  <div class="aside__block-content">
+                    <h4>PIN-UP PARTNERS</h4>
+                    <div class="aside-block__rating">
+                      <svg class="active" width="14" height="15" fill="currentColor">
+                        <use xlink:href="./img/sprite.svg#raiting-star"></use>
+                      </svg>
+                      <svg class="active" width="14" height="15" fill="currentColor">
+                        <use xlink:href="./img/sprite.svg#raiting-star"></use>
+                      </svg>
+                      <svg class="active" width="14" height="15" fill="currentColor">
+                        <use xlink:href="./img/sprite.svg#raiting-star"></use>
+                      </svg>
+                      <svg class="active" width="14" height="15" fill="currentColor">
+                        <use xlink:href="./img/sprite.svg#raiting-star"></use>
+                      </svg>
+                      <svg class="active" width="14" height="15" fill="currentColor">
+                        <use xlink:href="./img/sprite.svg#raiting-star"></use>
+                      </svg>
+                      <p><span class="rating-count">12</span> оценок</p>
+                    </div>
+                  </div>
+                </li>
+                <li class="aside__item">
+                  <div class="aside__block-image">
+                    <img src="./img/top-logo.png" alt="Company logo.">
+                  </div>
+                  <div class="aside__block-content">
+                    <h4>PIN-UP PARTNERS</h4>
+                    <div class="aside-block__rating">
+                      <svg class="active" width="14" height="15" fill="currentColor">
+                        <use xlink:href="./img/sprite.svg#raiting-star"></use>
+                      </svg>
+                      <svg class="active" width="14" height="15" fill="currentColor">
+                        <use xlink:href="./img/sprite.svg#raiting-star"></use>
+                      </svg>
+                      <svg class="active" width="14" height="15" fill="currentColor">
+                        <use xlink:href="./img/sprite.svg#raiting-star"></use>
+                      </svg>
+                      <svg class="active" width="14" height="15" fill="currentColor">
+                        <use xlink:href="./img/sprite.svg#raiting-star"></use>
+                      </svg>
+                      <svg class="active" width="14" height="15" fill="currentColor">
+                        <use xlink:href="./img/sprite.svg#raiting-star"></use>
+                      </svg>
+                      <p><span class="rating-count">1266</span> оценок</p>
+                    </div>
+                  </div>
+                </li>
+                <li class="aside__item">
+                  <div class="aside__block-image">
+                    <img src="./img/top-logo.png" alt="Company logo.">
+                  </div>
+                  <div class="aside__block-content">
+                    <h4>PIN-UP PARTNERS</h4>
+                    <div class="aside-block__rating">
+                      <svg class="active" width="14" height="15" fill="currentColor">
+                        <use xlink:href="./img/sprite.svg#raiting-star"></use>
+                      </svg>
+                      <svg width="14" height="15" fill="currentColor">
+                        <use xlink:href="./img/sprite.svg#raiting-star"></use>
+                      </svg>
+                      <svg width="14" height="15" fill="currentColor">
+                        <use xlink:href="./img/sprite.svg#raiting-star"></use>
+                      </svg>
+                      <svg width="14" height="15" fill="currentColor">
+                        <use xlink:href="./img/sprite.svg#raiting-star"></use>
+                      </svg>
+                      <svg width="14" height="15" fill="currentColor">
+                        <use xlink:href="./img/sprite.svg#raiting-star"></use>
+                      </svg>
+                      <p><span class="rating-count">1266</span> оценок</p>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="aside__block">
+              <h3>Топ рекламных сетей</h3>
+              <ul class="aside__list list-reset">
+                <li class="aside__item">
+                  <div class="aside__block-image">
+                    <img src="./img/top-logo.png" alt="Company logo.">
+                  </div>
+                  <div class="aside__block-content">
+                    <h4>PIN-UP PARTNERS</h4>
+                    <div class="aside-block__rating">
+                      <svg class="active" width="14" height="15" fill="currentColor">
+                        <use xlink:href="./img/sprite.svg#raiting-star"></use>
+                      </svg>
+                      <svg class="active" width="14" height="15" fill="currentColor">
+                        <use xlink:href="./img/sprite.svg#raiting-star"></use>
+                      </svg>
+                      <svg class="active" width="14" height="15" fill="currentColor">
+                        <use xlink:href="./img/sprite.svg#raiting-star"></use>
+                      </svg>
+                      <svg class="active" width="14" height="15" fill="currentColor">
+                        <use xlink:href="./img/sprite.svg#raiting-star"></use>
+                      </svg>
+                      <svg class="active" width="14" height="15" fill="currentColor">
+                        <use xlink:href="./img/sprite.svg#raiting-star"></use>
+                      </svg>
+                      <p><span class="rating-count">12</span> оценок</p>
+                    </div>
+                  </div>
+                </li>
+                <li class="aside__item">
+                  <div class="aside__block-image">
+                    <img src="./img/top-logo.png" alt="Company logo.">
+                  </div>
+                  <div class="aside__block-content">
+                    <h4>PIN-UP PARTNERS</h4>
+                    <div class="aside-block__rating">
+                      <svg class="active" width="14" height="15" fill="currentColor">
+                        <use xlink:href="./img/sprite.svg#raiting-star"></use>
+                      </svg>
+                      <svg class="active" width="14" height="15" fill="currentColor">
+                        <use xlink:href="./img/sprite.svg#raiting-star"></use>
+                      </svg>
+                      <svg class="active" width="14" height="15" fill="currentColor">
+                        <use xlink:href="./img/sprite.svg#raiting-star"></use>
+                      </svg>
+                      <svg class="active" width="14" height="15" fill="currentColor">
+                        <use xlink:href="./img/sprite.svg#raiting-star"></use>
+                      </svg>
+                      <svg class="active" width="14" height="15" fill="currentColor">
+                        <use xlink:href="./img/sprite.svg#raiting-star"></use>
+                      </svg>
+                      <p><span class="rating-count">1266</span> оценок</p>
+                    </div>
+                  </div>
+                </li>
+                <li class="aside__item">
+                  <div class="aside__block-image">
+                    <img src="./img/top-logo.png" alt="Company logo.">
+                  </div>
+                  <div class="aside__block-content">
+                    <h4>PIN-UP PARTNERS</h4>
+                    <div class="aside-block__rating">
+                      <svg class="active" width="14" height="15" fill="currentColor">
+                        <use xlink:href="./img/sprite.svg#raiting-star"></use>
+                      </svg>
+                      <svg width="14" height="15" fill="currentColor">
+                        <use xlink:href="./img/sprite.svg#raiting-star"></use>
+                      </svg>
+                      <svg width="14" height="15" fill="currentColor">
+                        <use xlink:href="./img/sprite.svg#raiting-star"></use>
+                      </svg>
+                      <svg width="14" height="15" fill="currentColor">
+                        <use xlink:href="./img/sprite.svg#raiting-star"></use>
+                      </svg>
+                      <svg width="14" height="15" fill="currentColor">
+                        <use xlink:href="./img/sprite.svg#raiting-star"></use>
+                      </svg>
+                      <p><span class="rating-count">1266</span> оценок</p>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="aside__block">
+              <h3>Топ сервисов</h3>
+              <ul class="aside__list list-reset">
+                <li class="aside__item">
+                  <div class="aside__block-image">
+                    <img src="./img/top-logo.png" alt="Company logo.">
+                  </div>
+                  <div class="aside__block-content">
+                    <h4>PIN-UP PARTNERS</h4>
+                    <div class="aside-block__rating">
+                      <svg class="active" width="14" height="15" fill="currentColor">
+                        <use xlink:href="./img/sprite.svg#raiting-star"></use>
+                      </svg>
+                      <svg class="active" width="14" height="15" fill="currentColor">
+                        <use xlink:href="./img/sprite.svg#raiting-star"></use>
+                      </svg>
+                      <svg class="active" width="14" height="15" fill="currentColor">
+                        <use xlink:href="./img/sprite.svg#raiting-star"></use>
+                      </svg>
+                      <svg class="active" width="14" height="15" fill="currentColor">
+                        <use xlink:href="./img/sprite.svg#raiting-star"></use>
+                      </svg>
+                      <svg class="active" width="14" height="15" fill="currentColor">
+                        <use xlink:href="./img/sprite.svg#raiting-star"></use>
+                      </svg>
+                      <p><span class="rating-count">12</span> оценок</p>
+                    </div>
+                  </div>
+                </li>
+                <li class="aside__item">
+                  <div class="aside__block-image">
+                    <img src="./img/top-logo.png" alt="Company logo.">
+                  </div>
+                  <div class="aside__block-content">
+                    <h4>PIN-UP PARTNERS</h4>
+                    <div class="aside-block__rating">
+                      <svg class="active" width="14" height="15" fill="currentColor">
+                        <use xlink:href="./img/sprite.svg#raiting-star"></use>
+                      </svg>
+                      <svg class="active" width="14" height="15" fill="currentColor">
+                        <use xlink:href="./img/sprite.svg#raiting-star"></use>
+                      </svg>
+                      <svg class="active" width="14" height="15" fill="currentColor">
+                        <use xlink:href="./img/sprite.svg#raiting-star"></use>
+                      </svg>
+                      <svg class="active" width="14" height="15" fill="currentColor">
+                        <use xlink:href="./img/sprite.svg#raiting-star"></use>
+                      </svg>
+                      <svg class="active" width="14" height="15" fill="currentColor">
+                        <use xlink:href="./img/sprite.svg#raiting-star"></use>
+                      </svg>
+                      <p><span class="rating-count">1266</span> оценок</p>
+                    </div>
+                  </div>
+                </li>
+                <li class="aside__item">
+                  <div class="aside__block-image">
+                    <img src="./img/top-logo.png" alt="Company logo.">
+                  </div>
+                  <div class="aside__block-content">
+                    <h4>PIN-UP PARTNERS</h4>
+                    <div class="aside-block__rating">
+                      <svg class="active" width="14" height="15" fill="currentColor">
+                        <use xlink:href="./img/sprite.svg#raiting-star"></use>
+                      </svg>
+                      <svg width="14" height="15" fill="currentColor">
+                        <use xlink:href="./img/sprite.svg#raiting-star"></use>
+                      </svg>
+                      <svg width="14" height="15" fill="currentColor">
+                        <use xlink:href="./img/sprite.svg#raiting-star"></use>
+                      </svg>
+                      <svg width="14" height="15" fill="currentColor">
+                        <use xlink:href="./img/sprite.svg#raiting-star"></use>
+                      </svg>
+                      <svg width="14" height="15" fill="currentColor">
+                        <use xlink:href="./img/sprite.svg#raiting-star"></use>
+                      </svg>
+                      <p><span class="rating-count">1266</span> оценок</p>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="adblock adblock-295x430">
+            <iframe width="295" height="430" src="./img/banner-295x430.png" frameborder="0"></iframe>
+          </div>
+        </aside>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <nav class="footer__nav">
+          <ul class="footer__list list-reset">
+            <li class="footer__item footer__item--heading">
+              <h3>Форум</h3>
+            </li>
+            <li class="footer__item">
+              <a href="#">Главная</a>
+            </li>
+            <li class="footer__item">
+              <a href="#">VIP Раздел</a>
+            </li>
+            <li class="footer__item">
+              <a href="#">Раздел 1</a>
+            </li>
+            <li class="footer__item">
+              <a href="#">Раздел 2</a>
+            </li>
+          </ul>
+          <ul class="footer__list list-reset">
+            <li class="footer__item footer__item--heading">
+              <h3>Блог</h3>
+            </li>
+            <li class="footer__item">
+              <a href="#">Обзоры</a>
+            </li>
+            <li class="footer__item">
+              <a href="#">Кейсы</a>
+            </li>
+            <li class="footer__item">
+              <a href="#">Новости</a>
+            </li>
+            <li class="footer__item">
+              <a href="#">Тенденции</a>
+            </li>
+          </ul>
+          <ul class="footer__list list-reset">
+            <li class="footer__item footer__item--heading">
+              <h3>Компании</h3>
+            </li>
+            <li class="footer__item">
+              <a href="#">Дейтинг</a>
+            </li>
+            <li class="footer__item">
+              <a href="#">Адалт</a>
+            </li>
+            <li class="footer__item">
+              <a href="#">Нутра</a>
+            </li>
+            <li class="footer__item">
+              <a href="#">Гемблинг</a>
+            </li>
+          </ul>
+          <ul class="footer__list list-reset">
+            <li class="footer__item footer__item--heading">
+              <h3>Курсы</h3>
+            </li>
+            <li class="footer__item">
+              <a href="#">Программирование</a>
+            </li>
+            <li class="footer__item">
+              <a href="#">Аффилейт</a>
+            </li>
+            <li class="footer__item">
+              <a href="#">Дизайн</a>
+            </li>
+            <li class="footer__item">
+              <a href="#">Маркетинг</a>
+            </li>
+          </ul>
+          <ul class="footer__list list-reset">
+            <li class="footer__item footer__item--heading">
+              <h3>Мероприятия</h3>
+            </li>
+            <li class="footer__item">
+              <a href="#">Конференции</a>
+            </li>
+            <li class="footer__item">
+              <a href="#">Митапы</a>
+            </li>
+            <li class="footer__item">
+              <a href="#">Афтерпати</a>
+            </li>
+          </ul>
+          <ul class="footer__list list-reset">
+            <li class="footer__item footer__item--heading">
+              <h3>Соцсети</h3>
+            </li>
+            <li class="footer__item">
+              <ul class="footer__socials-list list-reset">
+                <li class="footer__socials-item">
+                  <a href="#">
+                    <svg class="footer__socials-icon" width="15" height="15" fill="currentColor">
+                      <use xlink:href="./img/sprite.svg#telegram"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="footer__socials-item">
+                  <a href="#">
+                    <svg class="footer__socials-icon" width="16" height="16" fill="currentColor">
+                      <use xlink:href="./img/sprite.svg#instagram"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="footer__socials-item">
+                  <a href="#">
+                    <svg class="footer__socials-icon" width="15" height="20" fill="currentColor">
+                      <use xlink:href="./img/sprite.svg#facebook"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="footer__socials-item">
+                  <a href="#">
+                    <svg class="footer__socials-icon" width="13" height="13" fill="currentColor">
+                      <use xlink:href="./img/sprite.svg#linkedin"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="footer__socials-item">
+                  <a href="#">
+                    <svg class="footer__socials-icon" width="13" height="13" fill="currentColor">
+                      <use xlink:href="./img/sprite.svg#youtube"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <nav class="footer__nav-bottom">
+          <div class="footer__copyright">
+            <span>© CPA.CLUB 2013-2023</span>
+          </div>
+          <div class="footer__menu">
+            <a href="#">Контакты администрации</a>
+            <a href="#">Архив</a>
+            <a href="#">Конфиденциальность</a>
+            <a class="footer__up-btn" href="#">
+              <svg class="footer__up-btn-icon" width="10" height="10" fill="currentColor">
+                <use xlink:href="./img/sprite.svg#up-btn"></use>
+              </svg>
+            </a>
+          </div>
+        </nav>
+      </div>
+    </footer>
+  </div>
+
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>
