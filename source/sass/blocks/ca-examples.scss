@@ -1,0 +1,79 @@
+.ca-examples__headings {
+  h1 {
+    @include font-settings (700, 24px, 1.25);
+    margin: 20px 0;
+  }
+
+  h2 {
+    @include font-settings (700, 18px, 1.25);
+    margin: 16px 0;
+  }
+
+  h3 {
+    @include font-settings (700, 16px, 1.25);
+    margin: 14px 0;
+  }
+}
+
+.ca-examples__paragraphs {
+  p {
+    @include font-settings (400, 14px, 1.5);
+    margin: 12px 0;
+  }
+}
+
+.ca-examples__image {
+  width: 683px;
+  height: 495px;
+  margin-bottom: 12px;
+
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+}
+
+.ca-examples__link {
+  a {
+    @include font-settings (400, 14px, 1.5);
+    color: $color-accent;
+    text-decoration: underline;
+  }
+}
+
+.ca-examples__unordered-list,
+.ca-examples__ordered-list {
+  li {
+    @include font-settings (400, 14px, 1.5);
+  }
+}
+
+.ca-examples__code {
+  code {
+    @include font-settings (400, 14px, 1.5);
+    color: $color-default-black;
+    background-color: #F8F9FA;
+    border-radius: 4px;
+    padding: 2px 8px;
+  }
+}
+
+.ca-examples__blockquote {
+  position: relative;
+
+  p {
+    @include font-settings (400, 14px, 1.5);
+    padding-left: 16px;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background-color: #DEE2E6;
+  }
+}

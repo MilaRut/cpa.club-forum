@@ -1,22 +1,86 @@
 .user-menu {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: baseline;
   width: 130px;
 }
 
-.user-menu a {
-  display: block;
+.user-menu__btn {
+  width: 41px;
+  height: 42px;
   position: relative;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  &.active {
+    background-color: #3E4046;
+    border-radius: 6px;
+
+    span {
+      border: 2px solid #3E4046;
+    }
+  }
+}
+
+.user-menu__btn-icon {
+  pointer-events: none;
 }
 
 .user-menu__alerts-icon {
   position: absolute;
-  top: -3px;
-  left: 5px;
+  top: 4px;
+  left: 18px;
   width: 15px;
   height: 15px;
   border-radius: 50%;
   border: 2px solid #1E2228;
   background-color: #FF0000;
+  pointer-events: none;
+}
+
+.user-menu__alerts-list {
+  display: none;
+}
+
+.user-menu__alerts-list.active {
+  display: block;
+  position: absolute;
+  top: 34px;
+  left: -136px;
+  background-color: #3E4046;
+  border-radius: 6px 0px 6px 6px;
+  padding: 10px 0;
+
+  h3 {
+    @include font-settings (700, 14px, 1);
+  }
+
+  a {
+    @include font-settings (600, 14px, 1);
+      padding: 10px 0;
+  }
+}
+
+.user-menu__alerts-item {
+  padding: 6px 40px 6px 30px;
+  &.active {
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: 18px;
+      left: 10px;
+      width: 10px;
+      height: 10px;
+      background-color: #FF0000;
+      border-radius: 50%;
+    }
+  }
+
+  &:not(:first-child):hover {
+    background-color: #2F3239;
+  }
 }

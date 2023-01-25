@@ -1,0 +1,119 @@
+.company-admin {
+  padding-top: 20px;
+}
+
+.company-admin__name {
+  input {
+    @include font-settings (400, 14px, 1.43);
+    width: 100%;
+    background-color: #262931;
+    border: 1px solid #454954;
+    border-radius: 6px;
+    padding: 10px 12px;
+    margin-bottom: 44px;
+  }
+}
+
+.company-admin h3 {
+  @include font-settings (400, 14px, 1.5);
+  margin-bottom: 13px;
+}
+
+.company-admin__file-dwnld {
+  display: flex;
+
+  p {
+    @include font-settings (400, 14px, 1.5);
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  label {
+    @include font-settings (500, 16px, 1.4);
+    color: $color-default-black;
+    display: block;
+    width: 150px;
+    height: 50px;
+    text-align: center;
+    background-color: $color-accent;
+    border-radius: 5px;
+    margin: 0 auto;
+    padding: 10px;
+  }
+}
+
+.company-admin__logo-dwnld {
+  margin-right: 50px;
+}
+
+.company-admin__drop-zone {
+  border: 1px dashed #454954;
+  border-radius: 5px;
+  width: 325px;
+  height: 179px;
+  padding: 36px 68px;
+}
+
+.company-admin__edit-section {
+  display: flex;
+  margin-top: 35px;
+}
+
+.company-admin__text {
+  min-width: 715px;
+  // height: 1453px;
+  background-color: #262931;
+  border: 1px solid #454954;
+  border-radius: 6px;
+  margin-right: 20px;
+  padding: 12px 14px;
+}
+
+.company-admin__links {
+  display: flex;
+  flex-direction: column;
+
+  input {
+    @include font-settings (400, 14px, 1.43);
+    width: 400px;
+    height: 40px;
+    background-color: #262931;
+    border: 1px solid #454954;
+    border-radius: 6px;
+    padding: 10px 12px;
+    margin-bottom: 14px;
+  }
+}
+
+.company-admin__links-first-block {
+  margin-bottom: 35px;
+}
+
+.ca-wysiwig {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.ca-wysiwig__btn {
+  height: 28px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: $color-default-white;
+  padding: 0;
+
+  span {
+    @include font-settings (400, 14px, 1.4);
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 10px;
+  }
+
+  .ca-wysiwig__color {
+    width: 20px;
+    height: 20px;
+    background-color: $color-default-white;
+    border-radius: 4px;
+  }
+}
