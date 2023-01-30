@@ -61,11 +61,11 @@
 
 .company-admin__text {
   min-width: 715px;
-  // height: 1453px;
   background-color: #262931;
   border: 1px solid #454954;
   border-radius: 6px;
   margin-right: 20px;
+  margin-bottom: 16px;
   padding: 12px 14px;
 }
 
@@ -116,4 +116,16 @@
     background-color: $color-default-white;
     border-radius: 4px;
   }
+}
+
+.company-admin__submit-btn {
+  @include font-settings (500, 14px, 1);
+  width: 202px;
+  height: 47px;
+  background-color: $color-accent;
+  border: none;
+  border-radius: 10px;
+  color: #14161B;
+  margin-bottom: 3px;
+  cursor: pointer;
 }

@@ -1,5 +1,7 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {openAlerts, closeAlerts} from './modules/alerts';
+import {initRangeSlider} from './modules/range-slider';
+import {toggleCatalogView} from './modules/catalog-toggle';
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -17,6 +19,8 @@ window.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('load', () => {
     openAlerts();
     closeAlerts();
+    initRangeSlider();
+    toggleCatalogView();
   });
 });
 

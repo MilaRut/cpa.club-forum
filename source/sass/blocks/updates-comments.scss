@@ -1,0 +1,147 @@
+.updates-comments__list {
+  display: flex;
+  flex-direction: column;
+}
+
+.updates-comments__item {
+  max-width: 730px;
+  background-color: #262931;
+  border-radius: 8px;
+  padding: 24px;
+  display: flex;
+  margin-bottom: 20px;
+
+  &--secondary {
+    max-width: 642px;
+    margin-left: 90px;
+  }
+}
+
+.updates-comments__likes {
+  min-width: 40px;
+  max-height: 100px;
+  margin-right: 24px;
+  background-color: #1D2028;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.updates__btn {
+  @include font-settings (500, 20px, 1);
+  background-color: transparent;
+  border: none;
+  color: $color-default-white;
+  cursor: pointer;
+
+  span {
+    @include font-settings (500, 16px, 1);
+  }
+}
+
+.updates-comments__heading {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.updates-comments__author {
+  display: flex;
+  align-items: center;
+}
+
+.updates-comments__author-img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 10px;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.updates-comments__author-link {
+  @include font-settings (500, 16px, 1);
+  margin-right: 18px;
+}
+
+.updates-comments__time {
+  @include font-settings (400, 16px, 1.5);
+}
+
+.updates-comments__reply-btn {
+  @include font-settings (500, 16px, 1.5);
+  background-color: transparent;
+  border: none;
+  margin-left: auto;
+  color: $color-default-white;
+  cursor: pointer;
+
+  svg {
+    fill: $color-default-white;
+    margin-right: 5px;
+  }
+
+  &.active {
+    color: $color-accent;
+  }
+}
+
+.updates-comments__reply-block {
+  display: flex;
+  max-width: 730px;
+  background-color: #262931;
+  border-radius: 8px;
+  padding: 24px;
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.updates-comments__reply-author-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 10px;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.updates-comments__reply-block {
+  form {
+    display: flex;
+  }
+
+  textarea {
+    @include font-settings (400, 16px, 1.5);
+    min-width: 506px;
+    min-height: 96px;
+    color: $color-default-white;
+    background-color: #262931;
+    border: 1px solid #FFC600;
+    border-radius: 8px;
+    margin-right: 16px;
+    caret-color: #FFC600;
+  }
+}
+
+.updates-comments__submit-btn {
+  @include font-settings (500, 14px, 1.71);
+  min-width: 104px;
+  max-height: 48px;
+  background: #FFFFFF;
+  color: #262931;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}

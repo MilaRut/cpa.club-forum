@@ -1,0 +1,122 @@
+.events {
+  margin-top: 22px;
+  background: #1A1D24;
+  border: 1px solid #2D3341;
+  border-radius: 10px;
+  padding: 60px 40px 40px;
+}
+
+.events__headings {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 82px;
+
+  h2 {
+    @include font-settings (700, 35px, 1);
+    letter-spacing: 0.9px;
+    text-transform: uppercase;
+  }
+}
+
+.events__add-btn {
+  @include font-settings (500, 14px, 1);
+  min-width: 190px;
+  background-color: $color-accent;
+  border: none;
+  border-radius: 10px;
+  color: $color-default-black;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-right: 5px;
+
+  svg {
+    fill: $color-default-black;
+    margin-right: 5px;
+  }
+}
+
+.events__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 60px 40px;
+}
+
+.events__item {
+  position: relative;
+  background-color: #262931;
+  border-radius: 0px 0px 20px 20px;
+}
+
+.events__date {
+  position: absolute;
+  width: 82px;
+  height: 82px;
+  background-color: #FFC600;
+  border-radius: 10px;
+  top: -40px;
+  left: 29px;
+  padding: 16px 10px 14px;
+
+  p {
+    @include font-settings (600, 31px, 1);
+    text-align: center;
+    letter-spacing: 0.96px;
+    color: #14161B;
+    margin-bottom: 4px;
+  }
+
+  span {
+    @include font-settings (600, 15px, 1);
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.96px;
+    color: #14161B;
+  }
+}
+
+.events__image {
+  width: 360px;
+  height: 206px;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.events__text {
+  padding: 25px 20px;
+
+  h4 {
+    @include font-settings (400, 14px, 1);
+    display: inline-block;
+    letter-spacing: 0.96px;
+    text-transform: uppercase;
+    color: #14161B;
+    background-color: $color-accent;
+    border-radius: 29px;
+    padding: 5px 17px;
+    margin-bottom: 15px;
+  }
+
+  h3 {
+    @include font-settings (600, 17px, 1.56);
+    letter-spacing: 0.28px;
+    text-transform: uppercase;
+    margin-bottom: 9px;
+  }
+
+  a {
+    @include font-settings (600, 13px, 1);
+    letter-spacing: 0.96px;
+    text-transform: uppercase;
+    color: $color-accent;
+  }
+}

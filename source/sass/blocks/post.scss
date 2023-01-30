@@ -15,22 +15,34 @@
   p {
     @include font-settings (400, 14px, 1);
     opacity: 0.5;
-    padding-left: 25px;
   }
 }
 
 .post__time {
   position: relative;
+  padding-left: 25px;
 
   &::before {
     position: absolute;
-    content: url(../../img/svg/clock-icon.svg);
-    top: 0;
+    content: url("../img/svg/clock-icon.svg");
+    top: -2px;
     left: 0;
   }
 }
 
-.post__user-link {
+.post__author {
+  position: relative;
+  padding-left: 40px;
+
+  &::before {
+    position: absolute;
+    content: url("../img/svg/user-icon.svg");
+    top: 0;
+    left: 20px;
+  }
+}
+
+.post__author-link {
   text-decoration: underline;
 }
 

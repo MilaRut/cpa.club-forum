@@ -1,0 +1,12 @@
+.rating {
+  display: flex;
+}
+
+.rating svg {
+  fill: #1A1D24;
+  margin-right: 7px;
+}
+
+.rating > svg.active {
+  fill: #FFC600;
+}

@@ -1,22 +1,18 @@
-.index-main,
-.block-main,
-.vipblock-main {
-  .container {
-    display: grid;
-    grid-template-columns: auto 295px;
-    column-gap: 20px;
-    padding-top: 25px;
-    padding-bottom: 25px;
+.main {
+  &.main-grid {
+    .container {
+      display: grid;
+      grid-template-columns: auto 295px;
+      column-gap: 20px;
+      padding-top: 25px;
+      padding-bottom: 25px;
+    }
   }
-}
 
-.post-main,
-.userpage-main,
-.company-main,
-.company-admin-main,
-.blog-main {
-  .container {
-    padding-top: 25px;
-    padding-bottom: 25px;
+  &.main-block {
+    .container {
+      padding-top: 25px;
+      padding-bottom: 25px;
+    }
   }
 }
