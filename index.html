@@ -12,7 +12,7 @@
 
 <body>
   <div class="wrapper">
-    <header class="index-header header">
+    <header class="header">
       <div class="container">
         <div class="header__logo">
           <a href="#">
@@ -30,30 +30,90 @@
           </form>
         </div>
         <div class="header__user-menu user-menu">
-          <div class="user-menu__alerts">
-            <a href="#">
-              <svg width="16" height="20" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd"
-                  d="M8.99994 1C8.99994 0.44772 8.55224 0 7.99994 0C7.44764 0 6.99994 0.44772 6.99994 1V1.75H6.44254C4.21745 1.75 2.37585 3.48001 2.23696 5.70074L2.01595 9.2342C1.93169 10.5814 1.4794 11.8797 0.708342 12.9876C0.0116615 13.9886 0.631882 15.3712 1.84281 15.5165L5.24994 15.9254V17C5.24994 18.5188 6.48114 19.75 7.99994 19.75C9.51874 19.75 10.7499 18.5188 10.7499 17V15.9254L14.157 15.5165C15.368 15.3712 15.9882 13.9886 15.2915 12.9876C14.5204 11.8797 14.0681 10.5814 13.9839 9.2342L13.7629 5.70074C13.624 3.48001 11.7824 1.75 9.55734 1.75H8.99994V1ZM6.44254 3.25C5.00952 3.25 3.82348 4.36417 3.73403 5.79438L3.51303 9.3278C3.41163 10.949 2.86738 12.5112 1.93953 13.8444C1.88918 13.9168 1.934 14.0167 2.02153 14.0272L5.75919 14.4757C7.24764 14.6543 8.75224 14.6543 10.2406 14.4757L13.9783 14.0272C14.0658 14.0167 14.1107 13.9168 14.0603 13.8444C13.1325 12.5112 12.5882 10.949 12.4868 9.3278L12.2658 5.79438C12.1763 4.36417 10.9903 3.25 9.55734 3.25H6.44254ZM7.99994 18.25C7.30954 18.25 6.74994 17.6904 6.74994 17V16.25H9.24994V17C9.24994 17.6904 8.69034 18.25 7.99994 18.25Z"
-                  fill="white" />
+          <div class="user-menu__unlogged">
+            <button class="user-menu__login-btn open-popup login-btn">Вход</button>
+            <button class="user-menu__signup-btn open-popup signup-btn">Регистрация</button>
+          </div>
+          <div class="user-menu__logged active">
+            <div class="user-menu__alerts">
+              <button class="user-menu__alerts-btn" type="button">
+                <svg class="user-menu__alerts-btn-icon" width="16" height="20" fill="currentColor">
+                  <use xlink:href="./img/sprite.svg#bell"></use>
+                </svg>
+                <span class="user-menu__alerts-icon"></span>
+              </button>
+              <ul class="user-menu__alerts-list list-reset">
+                <li class="user-menu__alerts-item">
+                  <h3>Уведомления</h3>
+                </li>
+                <li class="user-menu__alerts-item active">
+                  <a class="user-menu__alerts-link" href="#">Уведомление 1</a>
+                </li>
+                <li class="user-menu__alerts-item active">
+                  <a class="user-menu__alerts-link" href="#">Уведомление 2</a>
+                </li>
+                <li class="user-menu__alerts-item">
+                  <a class="user-menu__alerts-link" href="#">Уведомление 3</a>
+                </li>
+                <li class="user-menu__alerts-item">
+                  <a class="user-menu__alerts-link" href="#">Уведомление 4</a>
+                </li>
+              </ul>
+            </div>
+            <div class="user-menu__avatar">
+              <a href="user-profile.html">
+                <img src="./img/avatar.png" alt="User avatar.">
+              </a>
+            </div>
+            <button class="user-menu__nav-btn">
+              <svg class="user-menu__nav-icon" width="24" height="24" fill="currentColor">
+                <use xlink:href="./img/sprite.svg#apps"></use>
               </svg>
-              <span class="user-menu__alerts-icon"></span>
-            </a>
-          </div>
-          <div class="user-menu__avatar">
-            <a href="userpage.html">
-              <img src="./img/avatar.png" alt="User avatar.">
-            </a>
-          </div>
-          <div class="user-menu__apps">
-            <svg class="user-menu__apps-icon" width="24" height="24" fill="currentColor">
-              <use xlink:href="./img/sprite.svg#apps"></use>
-            </svg>
+            </button>
+            <nav class="header__nav header-nav">
+              <div class="header-nav__content">
+                <ul class="header-nav__list list-reset">
+                  <li class="header-nav__item header-nav__item--forum">
+                    <a class="header-nav__link" href="index.html">
+                      <h3>Форум</h3>
+                      <p>Классический форум для общения топов рынка</p>
+                    </a>
+                  </li>
+                  <li class="header-nav__item header-nav__item--courses">
+                    <a class="header-nav__link" href="courses.html">
+                      <h3>Курсы</h3>
+                      <p>Обучающие материалы для будущих профессионалов IT</p>
+                    </a>
+                  </li>
+                  <li class="header-nav__item header-nav__item--blog">
+                    <a class="header-nav__link" href="blog.html">
+                      <h3>Блог</h3>
+                      <p>Последние новости, кейсы и тенденции</p>
+                    </a>
+                  </li>
+                  <li class="header-nav__item header-nav__item--catalog">
+                    <a class="header-nav__link" href="catalog.html">
+                      <h3>Компании</h3>
+                      <p>Рейтинг компаний в отрасли</p>
+                    </a>
+                  </li>
+                  <li class="header-nav__item header-nav__item--events">
+                    <a class="header-nav__link" href="events.html">
+                      <h3>Мероприятия</h3>
+                      <p>Информация о формате, программе, спикерах, шоу</p>
+                    </a>
+                  </li>
+                </ul>
+                <div class="adblock adblock-220x320">
+                  <iframe width="220" height="320" frameborder="0"></iframe>
+                </div>
+              </div>
+            </nav>
           </div>
         </div>
       </div>
     </header>
-    <main class="index-main main">
+    <main class="main main-grid">
       <div class="container">
         <h1 class="visually-hidden">Форум CPA.Club</h1>
         <div class="main-content">
@@ -65,22 +125,26 @@
               </div>
               <ul class="new__list list-reset">
                 <li class="new__item">
-                  <a href="#">Рекламная сеть RichAds: премиальные пуши, ин-пейдж, попсы, доменный трафик (по запросу)</a>
+                  <a href="post.html">Рекламная сеть RichAds: премиальные пуши, ин-пейдж, попсы, доменный трафик (по
+                    запросу)</a>
                   <span class="new__answer-count">139 ответов</span>
                   <p class="new__time"><time datetime="2023-01-30T20:47">Вчера, <span>20:47</span></time></p>
                 </li>
                 <li class="new__item">
-                  <a href="#">Рекламная сеть RichAds: премиальные пуши, ин-пейдж, попсы, доменный трафик (по запросу)</a>
+                  <a href="post.html">Рекламная сеть RichAds: премиальные пуши, ин-пейдж, попсы, доменный трафик (по
+                    запросу)</a>
                   <span class="new__answer-count">139 ответов</span>
                   <p class="new__time"><time datetime="2023-01-30T20:47">Вчера, <span>20:47</span></time></p>
                 </li>
                 <li class="new__item">
-                  <a href="#">Рекламная сеть RichAds: премиальные пуши, ин-пейдж, попсы, доменный трафик (по запросу)</a>
+                  <a href="post.html">Рекламная сеть RichAds: премиальные пуши, ин-пейдж, попсы, доменный трафик (по
+                    запросу)</a>
                   <span class="new__answer-count">139 ответов</span>
                   <p class="new__time"><time datetime="2023-01-30T20:47">Вчера, <span>20:47</span></time></p>
                 </li>
                 <li class="new__item">
-                  <a href="#">Рекламная сеть RichAds: премиальные пуши, ин-пейдж, попсы, доменный трафик (по запросу)</a>
+                  <a href="post.html">Рекламная сеть RichAds: премиальные пуши, ин-пейдж, попсы, доменный трафик (по
+                    запросу)</a>
                   <span class="new__answer-count">139 ответов</span>
                   <p class="new__time"><time datetime="2023-01-30T20:47">Вчера, <span>20:47</span></time></p>
                 </li>
@@ -118,10 +182,12 @@
                   </div>
                   <div class="block__col block__col--4">
                     <a href="#" class="block__last-post">PST.net (платежный сервис + карты для оплаты FB/Adwords)</a>
-                    <p class="block__time"><time datetime="2023-01-30T20:47">Вчера, <span>20:47</span></time></p>
-                    <p class="block__user">от
-                      <a class="block__user-link" href="#">mrDumay</a>
-                    </p>
+                    <div class="block__logs">
+                      <p class="block__time"><time datetime="2023-01-30T20:47">Вчера, <span>20:47</span></time></p>
+                      <p class="block__author">от
+                        <a class="block__author-link" href="#">mrDumay</a>
+                      </p>
+                    </div>
                   </div>
                 </li>
                 <li class="block__item">
@@ -142,10 +208,12 @@
                   </div>
                   <div class="block__col block__col--4">
                     <a href="#" class="block__last-post">PST.net (платежный сервис + карты для оплаты FB/Adwords)</a>
-                    <p class="block__time"><time datetime="2023-01-30T20:47">Вчера, <span>20:47</span></time></p>
-                    <p class="block__user">от
-                      <a class="block__user-link" href="#">mrDumay</a>
-                    </p>
+                    <div class="block__logs">
+                      <p class="block__time"><time datetime="2023-01-30T20:47">Вчера, <span>20:47</span></time></p>
+                      <p class="block__author">от
+                        <a class="block__author-link" href="#">mrDumay</a>
+                      </p>
+                    </div>
                   </div>
                 </li>
                 <li class="block__item">
@@ -166,10 +234,12 @@
                   </div>
                   <div class="block__col block__col--4">
                     <a href="#" class="block__last-post">PST.net (платежный сервис + карты для оплаты FB/Adwords)</a>
-                    <p class="block__time"><time datetime="2023-01-30T20:47">Вчера, <span>20:47</span></time></p>
-                    <p class="block__user">от
-                      <a class="block__user-link" href="#">mrDumay</a>
-                    </p>
+                    <div class="block__logs">
+                      <p class="block__time"><time datetime="2023-01-30T20:47">Вчера, <span>20:47</span></time></p>
+                      <p class="block__author">от
+                        <a class="block__author-link" href="#">mrDumay</a>
+                      </p>
+                    </div>
                   </div>
                 </li>
                 <li class="block__item">
@@ -190,115 +260,12 @@
                   </div>
                   <div class="block__col block__col--4">
                     <a href="#" class="block__last-post">PST.net (платежный сервис + карты для оплаты FB/Adwords)</a>
-                    <p class="block__time"><time datetime="2023-01-30T20:47">Вчера, <span>20:47</span></time></p>
-                    <p class="block__user">от
-                      <a class="block__user-link" href="#">mrDumay</a>
-                    </p>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="forum-section__block block">
-              <div class="block__heading">
-                <a class="block__heading-link" href="block.html">
-                  <h2>Заголовок раздела</h2>
-                </a>
-              </div>
-              <ul class="block__list list-reset">
-                <li class="block__item">
-                  <div class="block__col block__col--1">
-                    <h3>Заголовок топика</h3>
-                    <p>Поиск офферов, Black список, Обсуждение офферов и ПП</p>
-                  </div>
-                  <div class="block__col block__col--2">
-                    <a href="#" class="block__add-link">
-                      <svg class="block__add-icon" width="24" height="24" fill="currentColor">
-                        <use xlink:href="./img/sprite.svg#add"></use>
-                      </svg>
-                    </a>
-                  </div>
-                  <div class="block__col block__col--3">
-                    <p>Тем: <span class="block__topics-count">781</span></p>
-                    <p>Сообщений: <span class="block__msg-count">20,487</span></p>
-                  </div>
-                  <div class="block__col block__col--4">
-                    <a href="#" class="block__last-post">PST.net (платежный сервис + карты для оплаты FB/Adwords)</a>
-                    <p class="block__time"><time datetime="2023-01-30T20:47">Вчера, <span>20:47</span></time></p>
-                    <p class="block__user">от
-                      <a class="block__user-link" href="#">mrDumay</a>
-                    </p>
-                  </div>
-                </li>
-                <li class="block__item">
-                  <div class="block__col block__col--1">
-                    <h3>Заголовок топика</h3>
-                    <p>Поиск офферов, Black список, Обсуждение офферов и ПП</p>
-                  </div>
-                  <div class="block__col block__col--2">
-                    <a href="#" class="block__add-link">
-                      <svg class="block__add-icon" width="24" height="24" fill="currentColor">
-                        <use xlink:href="./img/sprite.svg#add"></use>
-                      </svg>
-                    </a>
-                  </div>
-                  <div class="block__col block__col--3">
-                    <p>Тем: <span class="block__topics-count">781</span></p>
-                    <p>Сообщений: <span class="block__msg-count">20,487</span></p>
-                  </div>
-                  <div class="block__col block__col--4">
-                    <a href="#" class="block__last-post">PST.net (платежный сервис + карты для оплаты FB/Adwords)</a>
-                    <p class="block__time"><time datetime="2023-01-30T20:47">Вчера, <span>20:47</span></time></p>
-                    <p class="block__user">от
-                      <a class="block__user-link" href="#">mrDumay</a>
-                    </p>
-                  </div>
-                </li>
-                <li class="block__item">
-                  <div class="block__col block__col--1">
-                    <h3>Заголовок топика</h3>
-                    <p>Поиск офферов, Black список, Обсуждение офферов и ПП</p>
-                  </div>
-                  <div class="block__col block__col--2">
-                    <a href="#" class="block__add-link">
-                      <svg class="block__add-icon" width="24" height="24" fill="currentColor">
-                        <use xlink:href="./img/sprite.svg#add"></use>
-                      </svg>
-                    </a>
-                  </div>
-                  <div class="block__col block__col--3">
-                    <p>Тем: <span class="block__topics-count">781</span></p>
-                    <p>Сообщений: <span class="block__msg-count">20,487</span></p>
-                  </div>
-                  <div class="block__col block__col--4">
-                    <a href="#" class="block__last-post">PST.net (платежный сервис + карты для оплаты FB/Adwords)</a>
-                    <p class="block__time"><time datetime="2023-01-30T20:47">Вчера, <span>20:47</span></time></p>
-                    <p class="block__user">от
-                      <a class="block__user-link" href="#">mrDumay</a>
-                    </p>
-                  </div>
-                </li>
-                <li class="block__item">
-                  <div class="block__col block__col--1">
-                    <h3>Заголовок топика</h3>
-                    <p>Поиск офферов, Black список, Обсуждение офферов и ПП</p>
-                  </div>
-                  <div class="block__col block__col--2">
-                    <a href="#" class="block__add-link">
-                      <svg class="block__add-icon" width="24" height="24" fill="currentColor">
-                        <use xlink:href="./img/sprite.svg#add"></use>
-                      </svg>
-                    </a>
-                  </div>
-                  <div class="block__col block__col--3">
-                    <p>Тем: <span class="block__topics-count">781</span></p>
-                    <p>Сообщений: <span class="block__msg-count">20,487</span></p>
-                  </div>
-                  <div class="block__col block__col--4">
-                    <a href="#" class="block__last-post">PST.net (платежный сервис + карты для оплаты FB/Adwords)</a>
-                    <p class="block__time"><time datetime="2023-01-30T20:47">Вчера, <span>20:47</span></time></p>
-                    <p class="block__user">от
-                      <a class="block__user-link" href="#">mrDumay</a>
-                    </p>
+                    <div class="block__logs">
+                      <p class="block__time"><time datetime="2023-01-30T20:47">Вчера, <span>20:47</span></time></p>
+                      <p class="block__author">от
+                        <a class="block__author-link" href="#">mrDumay</a>
+                      </p>
+                    </div>
                   </div>
                 </li>
               </ul>
@@ -328,10 +295,12 @@
                   </div>
                   <div class="block__col block__col--4">
                     <a href="#" class="block__last-post">PST.net (платежный сервис + карты для оплаты FB/Adwords)</a>
-                    <p class="block__time"><time datetime="2023-01-30T20:47">Вчера, <span>20:47</span></time></p>
-                    <p class="block__user">от
-                      <a class="block__user-link" href="#">mrDumay</a>
-                    </p>
+                    <div class="block__logs">
+                      <p class="block__time"><time datetime="2023-01-30T20:47">Вчера, <span>20:47</span></time></p>
+                      <p class="block__author">от
+                        <a class="block__author-link" href="#">mrDumay</a>
+                      </p>
+                    </div>
                   </div>
                 </li>
                 <li class="block__item">
@@ -352,10 +321,12 @@
                   </div>
                   <div class="block__col block__col--4">
                     <a href="#" class="block__last-post">PST.net (платежный сервис + карты для оплаты FB/Adwords)</a>
-                    <p class="block__time"><time datetime="2023-01-30T20:47">Вчера, <span>20:47</span></time></p>
-                    <p class="block__user">от
-                      <a class="block__user-link" href="#">mrDumay</a>
-                    </p>
+                    <div class="block__logs">
+                      <p class="block__time"><time datetime="2023-01-30T20:47">Вчера, <span>20:47</span></time></p>
+                      <p class="block__author">от
+                        <a class="block__author-link" href="#">mrDumay</a>
+                      </p>
+                    </div>
                   </div>
                 </li>
                 <li class="block__item">
@@ -376,10 +347,12 @@
                   </div>
                   <div class="block__col block__col--4">
                     <a href="#" class="block__last-post">PST.net (платежный сервис + карты для оплаты FB/Adwords)</a>
-                    <p class="block__time"><time datetime="2023-01-30T20:47">Вчера, <span>20:47</span></time></p>
-                    <p class="block__user">от
-                      <a class="block__user-link" href="#">mrDumay</a>
-                    </p>
+                    <div class="block__logs">
+                      <p class="block__time"><time datetime="2023-01-30T20:47">Вчера, <span>20:47</span></time></p>
+                      <p class="block__author">от
+                        <a class="block__author-link" href="#">mrDumay</a>
+                      </p>
+                    </div>
                   </div>
                 </li>
                 <li class="block__item">
@@ -400,10 +373,125 @@
                   </div>
                   <div class="block__col block__col--4">
                     <a href="#" class="block__last-post">PST.net (платежный сервис + карты для оплаты FB/Adwords)</a>
-                    <p class="block__time"><time datetime="2023-01-30T20:47">Вчера, <span>20:47</span></time></p>
-                    <p class="block__user">от
-                      <a class="block__user-link" href="#">mrDumay</a>
-                    </p>
+                    <div class="block__logs">
+                      <p class="block__time"><time datetime="2023-01-30T20:47">Вчера, <span>20:47</span></time></p>
+                      <p class="block__author">от
+                        <a class="block__author-link" href="#">mrDumay</a>
+                      </p>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="forum-section__block block">
+              <div class="block__heading">
+                <a class="block__heading-link" href="block.html">
+                  <h2>Заголовок раздела</h2>
+                </a>
+              </div>
+              <ul class="block__list list-reset">
+                <li class="block__item">
+                  <div class="block__col block__col--1">
+                    <h3>Заголовок топика</h3>
+                    <p>Поиск офферов, Black список, Обсуждение офферов и ПП</p>
+                  </div>
+                  <div class="block__col block__col--2">
+                    <a href="#" class="block__add-link">
+                      <svg class="block__add-icon" width="24" height="24" fill="currentColor">
+                        <use xlink:href="./img/sprite.svg#add"></use>
+                      </svg>
+                    </a>
+                  </div>
+                  <div class="block__col block__col--3">
+                    <p>Тем: <span class="block__topics-count">781</span></p>
+                    <p>Сообщений: <span class="block__msg-count">20,487</span></p>
+                  </div>
+                  <div class="block__col block__col--4">
+                    <a href="#" class="block__last-post">PST.net (платежный сервис + карты для оплаты FB/Adwords)</a>
+                    <div class="block__logs">
+                      <p class="block__time"><time datetime="2023-01-30T20:47">Вчера, <span>20:47</span></time></p>
+                      <p class="block__author">от
+                        <a class="block__author-link" href="#">mrDumay</a>
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <li class="block__item">
+                  <div class="block__col block__col--1">
+                    <h3>Заголовок топика</h3>
+                    <p>Поиск офферов, Black список, Обсуждение офферов и ПП</p>
+                  </div>
+                  <div class="block__col block__col--2">
+                    <a href="#" class="block__add-link">
+                      <svg class="block__add-icon" width="24" height="24" fill="currentColor">
+                        <use xlink:href="./img/sprite.svg#add"></use>
+                      </svg>
+                    </a>
+                  </div>
+                  <div class="block__col block__col--3">
+                    <p>Тем: <span class="block__topics-count">781</span></p>
+                    <p>Сообщений: <span class="block__msg-count">20,487</span></p>
+                  </div>
+                  <div class="block__col block__col--4">
+                    <a href="#" class="block__last-post">PST.net (платежный сервис + карты для оплаты FB/Adwords)</a>
+                    <div class="block__logs">
+                      <p class="block__time"><time datetime="2023-01-30T20:47">Вчера, <span>20:47</span></time></p>
+                      <p class="block__author">от
+                        <a class="block__author-link" href="#">mrDumay</a>
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <li class="block__item">
+                  <div class="block__col block__col--1">
+                    <h3>Заголовок топика</h3>
+                    <p>Поиск офферов, Black список, Обсуждение офферов и ПП</p>
+                  </div>
+                  <div class="block__col block__col--2">
+                    <a href="#" class="block__add-link">
+                      <svg class="block__add-icon" width="24" height="24" fill="currentColor">
+                        <use xlink:href="./img/sprite.svg#add"></use>
+                      </svg>
+                    </a>
+                  </div>
+                  <div class="block__col block__col--3">
+                    <p>Тем: <span class="block__topics-count">781</span></p>
+                    <p>Сообщений: <span class="block__msg-count">20,487</span></p>
+                  </div>
+                  <div class="block__col block__col--4">
+                    <a href="#" class="block__last-post">PST.net (платежный сервис + карты для оплаты FB/Adwords)</a>
+                    <div class="block__logs">
+                      <p class="block__time"><time datetime="2023-01-30T20:47">Вчера, <span>20:47</span></time></p>
+                      <p class="block__author">от
+                        <a class="block__author-link" href="#">mrDumay</a>
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <li class="block__item">
+                  <div class="block__col block__col--1">
+                    <h3>Заголовок топика</h3>
+                    <p>Поиск офферов, Black список, Обсуждение офферов и ПП</p>
+                  </div>
+                  <div class="block__col block__col--2">
+                    <a href="#" class="block__add-link">
+                      <svg class="block__add-icon" width="24" height="24" fill="currentColor">
+                        <use xlink:href="./img/sprite.svg#add"></use>
+                      </svg>
+                    </a>
+                  </div>
+                  <div class="block__col block__col--3">
+                    <p>Тем: <span class="block__topics-count">781</span></p>
+                    <p>Сообщений: <span class="block__msg-count">20,487</span></p>
+                  </div>
+                  <div class="block__col block__col--4">
+                    <a href="#" class="block__last-post">PST.net (платежный сервис + карты для оплаты FB/Adwords)</a>
+                    <div class="block__logs">
+                      <p class="block__time"><time datetime="2023-01-30T20:47">Вчера, <span>20:47</span></time></p>
+                      <p class="block__author">от
+                        <a class="block__author-link" href="#">mrDumay</a>
+                      </p>
+                    </div>
                   </div>
                 </li>
               </ul>
@@ -422,7 +510,7 @@
                   </div>
                   <div class="aside__block-content">
                     <h4>PIN-UP PARTNERS</h4>
-                    <div class="aside-block__rating">
+                    <div class="aside-block__rating rating">
                       <svg class="active" width="14" height="15" fill="currentColor">
                         <use xlink:href="./img/sprite.svg#raiting-star"></use>
                       </svg>
@@ -448,7 +536,7 @@
                   </div>
                   <div class="aside__block-content">
                     <h4>PIN-UP PARTNERS</h4>
-                    <div class="aside-block__rating">
+                    <div class="aside-block__rating rating">
                       <svg class="active" width="14" height="15" fill="currentColor">
                         <use xlink:href="./img/sprite.svg#raiting-star"></use>
                       </svg>
@@ -474,7 +562,7 @@
                   </div>
                   <div class="aside__block-content">
                     <h4>PIN-UP PARTNERS</h4>
-                    <div class="aside-block__rating">
+                    <div class="aside-block__rating rating">
                       <svg class="active" width="14" height="15" fill="currentColor">
                         <use xlink:href="./img/sprite.svg#raiting-star"></use>
                       </svg>
@@ -506,7 +594,7 @@
                   </div>
                   <div class="aside__block-content">
                     <h4>PIN-UP PARTNERS</h4>
-                    <div class="aside-block__rating">
+                    <div class="aside-block__rating rating">
                       <svg class="active" width="14" height="15" fill="currentColor">
                         <use xlink:href="./img/sprite.svg#raiting-star"></use>
                       </svg>
@@ -532,7 +620,7 @@
                   </div>
                   <div class="aside__block-content">
                     <h4>PIN-UP PARTNERS</h4>
-                    <div class="aside-block__rating">
+                    <div class="aside-block__rating rating">
                       <svg class="active" width="14" height="15" fill="currentColor">
                         <use xlink:href="./img/sprite.svg#raiting-star"></use>
                       </svg>
@@ -558,7 +646,7 @@
                   </div>
                   <div class="aside__block-content">
                     <h4>PIN-UP PARTNERS</h4>
-                    <div class="aside-block__rating">
+                    <div class="aside-block__rating rating">
                       <svg class="active" width="14" height="15" fill="currentColor">
                         <use xlink:href="./img/sprite.svg#raiting-star"></use>
                       </svg>
@@ -590,7 +678,7 @@
                   </div>
                   <div class="aside__block-content">
                     <h4>PIN-UP PARTNERS</h4>
-                    <div class="aside-block__rating">
+                    <div class="aside-block__rating rating">
                       <svg class="active" width="14" height="15" fill="currentColor">
                         <use xlink:href="./img/sprite.svg#raiting-star"></use>
                       </svg>
@@ -616,7 +704,7 @@
                   </div>
                   <div class="aside__block-content">
                     <h4>PIN-UP PARTNERS</h4>
-                    <div class="aside-block__rating">
+                    <div class="aside-block__rating rating">
                       <svg class="active" width="14" height="15" fill="currentColor">
                         <use xlink:href="./img/sprite.svg#raiting-star"></use>
                       </svg>
@@ -642,7 +730,7 @@
                   </div>
                   <div class="aside__block-content">
                     <h4>PIN-UP PARTNERS</h4>
-                    <div class="aside-block__rating">
+                    <div class="aside-block__rating rating">
                       <svg class="active" width="14" height="15" fill="currentColor">
                         <use xlink:href="./img/sprite.svg#raiting-star"></use>
                       </svg>
@@ -674,7 +762,7 @@
                   </div>
                   <div class="aside__block-content">
                     <h4>PIN-UP PARTNERS</h4>
-                    <div class="aside-block__rating">
+                    <div class="aside-block__rating rating">
                       <svg class="active" width="14" height="15" fill="currentColor">
                         <use xlink:href="./img/sprite.svg#raiting-star"></use>
                       </svg>
@@ -700,7 +788,7 @@
                   </div>
                   <div class="aside__block-content">
                     <h4>PIN-UP PARTNERS</h4>
-                    <div class="aside-block__rating">
+                    <div class="aside-block__rating rating">
                       <svg class="active" width="14" height="15" fill="currentColor">
                         <use xlink:href="./img/sprite.svg#raiting-star"></use>
                       </svg>
@@ -726,7 +814,7 @@
                   </div>
                   <div class="aside__block-content">
                     <h4>PIN-UP PARTNERS</h4>
-                    <div class="aside-block__rating">
+                    <div class="aside-block__rating rating">
                       <svg class="active" width="14" height="15" fill="currentColor">
                         <use xlink:href="./img/sprite.svg#raiting-star"></use>
                       </svg>
@@ -759,151 +847,251 @@
 
     <footer class="footer">
       <div class="container">
-        <nav class="footer__nav">
-          <ul class="footer__list list-reset">
-            <li class="footer__item footer__item--heading">
-              <h3>Форум</h3>
-            </li>
-            <li class="footer__item">
-              <a href="#">Главная</a>
-            </li>
-            <li class="footer__item">
-              <a href="#">VIP Раздел</a>
-            </li>
-            <li class="footer__item">
-              <a href="#">Раздел 1</a>
-            </li>
-            <li class="footer__item">
-              <a href="#">Раздел 2</a>
-            </li>
-          </ul>
-          <ul class="footer__list list-reset">
-            <li class="footer__item footer__item--heading">
-              <h3>Блог</h3>
-            </li>
-            <li class="footer__item">
-              <a href="#">Обзоры</a>
-            </li>
-            <li class="footer__item">
-              <a href="#">Кейсы</a>
-            </li>
-            <li class="footer__item">
-              <a href="#">Новости</a>
-            </li>
-            <li class="footer__item">
-              <a href="#">Тенденции</a>
-            </li>
-          </ul>
-          <ul class="footer__list list-reset">
-            <li class="footer__item footer__item--heading">
-              <h3>Компании</h3>
-            </li>
-            <li class="footer__item">
-              <a href="#">Дейтинг</a>
-            </li>
-            <li class="footer__item">
-              <a href="#">Адалт</a>
-            </li>
-            <li class="footer__item">
-              <a href="#">Нутра</a>
-            </li>
-            <li class="footer__item">
-              <a href="#">Гемблинг</a>
-            </li>
-          </ul>
-          <ul class="footer__list list-reset">
-            <li class="footer__item footer__item--heading">
-              <h3>Курсы</h3>
-            </li>
-            <li class="footer__item">
-              <a href="#">Программирование</a>
-            </li>
-            <li class="footer__item">
-              <a href="#">Аффилейт</a>
-            </li>
-            <li class="footer__item">
-              <a href="#">Дизайн</a>
-            </li>
-            <li class="footer__item">
-              <a href="#">Маркетинг</a>
-            </li>
-          </ul>
-          <ul class="footer__list list-reset">
-            <li class="footer__item footer__item--heading">
-              <h3>Мероприятия</h3>
-            </li>
-            <li class="footer__item">
-              <a href="#">Конференции</a>
-            </li>
-            <li class="footer__item">
-              <a href="#">Митапы</a>
-            </li>
-            <li class="footer__item">
-              <a href="#">Афтерпати</a>
-            </li>
-          </ul>
-          <ul class="footer__list list-reset">
-            <li class="footer__item footer__item--heading">
-              <h3>Соцсети</h3>
-            </li>
-            <li class="footer__item">
-              <ul class="footer__socials-list list-reset">
-                <li class="footer__socials-item">
-                  <a href="#">
-                    <svg class="footer__socials-icon" width="15" height="15" fill="currentColor">
-                      <use xlink:href="./img/sprite.svg#telegram"></use>
-                    </svg>
-                  </a>
-                </li>
-                <li class="footer__socials-item">
-                  <a href="#">
-                    <svg class="footer__socials-icon" width="16" height="16" fill="currentColor">
-                      <use xlink:href="./img/sprite.svg#instagram"></use>
-                    </svg>
-                  </a>
-                </li>
-                <li class="footer__socials-item">
-                  <a href="#">
-                    <svg class="footer__socials-icon" width="15" height="20" fill="currentColor">
-                      <use xlink:href="./img/sprite.svg#facebook"></use>
-                    </svg>
-                  </a>
-                </li>
-                <li class="footer__socials-item">
-                  <a href="#">
-                    <svg class="footer__socials-icon" width="13" height="13" fill="currentColor">
-                      <use xlink:href="./img/sprite.svg#linkedin"></use>
-                    </svg>
-                  </a>
-                </li>
-                <li class="footer__socials-item">
-                  <a href="#">
-                    <svg class="footer__socials-icon" width="13" height="13" fill="currentColor">
-                      <use xlink:href="./img/sprite.svg#youtube"></use>
-                    </svg>
-                  </a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </nav>
-        <nav class="footer__nav-bottom">
-          <div class="footer__copyright">
-            <span>© CPA.CLUB 2013-2023</span>
-          </div>
-          <div class="footer__menu">
-            <a href="#">Контакты администрации</a>
-            <a href="#">Архив</a>
-            <a href="#">Конфиденциальность</a>
-            <a class="footer__up-btn" href="#">
-              <svg class="footer__up-btn-icon" width="10" height="10" fill="currentColor">
-                <use xlink:href="./img/sprite.svg#up-btn"></use>
-              </svg>
-            </a>
-          </div>
-        </nav>
+        <div class="footer__content">
+          <nav class="footer__nav">
+            <ul class="footer__list list-reset">
+              <li class="footer__item footer__item--heading">
+                <h3>Форум</h3>
+              </li>
+              <li class="footer__item">
+                <a href="index.html">Главная</a>
+              </li>
+              <li class="footer__item">
+                <a href="vipblock.html">VIP Раздел</a>
+              </li>
+              <li class="footer__item">
+                <a href="block.html">Раздел 1</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Раздел 2</a>
+              </li>
+            </ul>
+            <ul class="footer__list list-reset">
+              <li class="footer__item footer__item--heading">
+                <h3>Блог</h3>
+              </li>
+              <li class="footer__item">
+                <a href="#">Обзоры</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Кейсы</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Новости</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Тенденции</a>
+              </li>
+            </ul>
+            <ul class="footer__list list-reset">
+              <li class="footer__item footer__item--heading">
+                <h3>Компании</h3>
+              </li>
+              <li class="footer__item">
+                <a href="#">Дейтинг</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Адалт</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Нутра</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Гемблинг</a>
+              </li>
+            </ul>
+            <ul class="footer__list list-reset">
+              <li class="footer__item footer__item--heading">
+                <h3>Курсы</h3>
+              </li>
+              <li class="footer__item">
+                <a href="#">Программирование</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Аффилейт</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Дизайн</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Маркетинг</a>
+              </li>
+            </ul>
+            <ul class="footer__list list-reset">
+              <li class="footer__item footer__item--heading">
+                <h3>Мероприятия</h3>
+              </li>
+              <li class="footer__item">
+                <a href="#">Конференции</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Митапы</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Афтерпати</a>
+              </li>
+            </ul>
+            <ul class="footer__list list-reset">
+              <li class="footer__item footer__item--heading">
+                <h3>Соцсети</h3>
+              </li>
+              <li class="footer__item">
+                <ul class="footer__socials-list list-reset">
+                  <li class="footer__socials-item">
+                    <a href="https://t.me/cpaclubmain" target="_blank">
+                      <svg class="footer__socials-icon" width="15" height="15" fill="currentColor">
+                        <use xlink:href="./img/sprite.svg#telegram"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="footer__socials-item">
+                    <a href="https://www.instagram.com/cpa_club/" target="_blank">
+                      <svg class="footer__socials-icon" width="16" height="16" fill="currentColor">
+                        <use xlink:href="./img/sprite.svg#instagram"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="footer__socials-item">
+                    <a href="https://facebook.com/cpaclub1" target="_blank">
+                      <svg class="footer__socials-icon" width="15" height="20" fill="currentColor">
+                        <use xlink:href="./img/sprite.svg#facebook"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="footer__socials-item">
+                    <a href="https://linkedin.com/company/cpa-club" target="_blank">
+                      <svg class="footer__socials-icon" width="13" height="13" fill="currentColor">
+                        <use xlink:href="./img/sprite.svg#linkedin"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="footer__socials-item">
+                    <a href="https://www.youtube.com/channel/UCJlWqpH8laA0LPdUWpe8gMw" target="_blank">
+                      <svg class="footer__socials-icon" width="13" height="13" fill="currentColor">
+                        <use xlink:href="./img/sprite.svg#youtube"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+          <nav class="footer__nav-bottom">
+            <div class="footer__copyright">
+              <span>© CPA.CLUB 2013-2023</span>
+            </div>
+            <div class="footer__menu">
+              <a href="#">Контакты администрации</a>
+              <a href="#">Архив</a>
+              <a href="#">Конфиденциальность</a>
+              <a class="footer__up-btn" href="#">
+                <svg class="footer__up-btn-icon" width="10" height="10" fill="currentColor">
+                  <use xlink:href="./img/sprite.svg#up-btn"></use>
+                </svg>
+              </a>
+            </div>
+          </nav>
+        </div>
       </div>
     </footer>
+  </div>
+
+  <!-- Modals -->
+
+  <div class="popup-overlay">
+    <div class="popup">
+      <div class="popup__content">
+        <button type="button" class="popup__close-btn" aria-label="Закрыть окно."></button>
+        <ul class="popup__content-list list-reset">
+          <li class="popup__content-item popup__content-item--signup" id="signup">
+            <h2>Регистрация</h2>
+            <p>Добро пожаловать! Введите данные для регистрации</p>
+            <ul class="popup__reg-btn-list list-reset">
+              <li class="popup__reg-btn-item">
+                <a href="#" class="popup__reg-btn-link popup__reg-btn-link--google">
+                  <svg class="popup__reg-btn-icon" width="18" height="18" fill="currentColor">
+                    <use xlink:href="./img/sprite.svg#reg-google"></use>
+                  </svg>
+                  <span>Регистрация с Google</span>
+                </a>
+              </li>
+              <li class="popup__reg-btn-item">
+                <a href="#" class="popup__reg-btn-link popup__reg-btn-link--apple">
+                  <svg class="popup__reg-btn-icon" width="15" height="18" fill="currentColor">
+                    <use xlink:href="./img/sprite.svg#reg-apple"></use>
+                  </svg>
+                  <span>Регистрация с Apple</span>
+                </a>
+              </li>
+            </ul>
+            <div class="popup__divider">
+              <p>или</p>
+            </div>
+            <form action="" method="post" id="login-form">
+              <label for="login-userlogin">
+                <input type="text" name="login-userlogin" id="login-userlogin" placeholder="Логин" required>
+              </label>
+              <label for="login-email">
+                <input type="email" name="login-email" id="login-email" placeholder="Email" required>
+              </label>
+              <label for="login-password">
+                <input type="password" name="login-password" id="login-password" placeholder="Пароль" required>
+              </label>
+              <button type="submit" class="popup__submit-btn">Вход</button>
+            </form>
+          </li>
+
+          <li class="popup__content-item popup__content-item--login" id="login">
+            <h2>Вход</h2>
+            <p>Добро пожаловать! Введите данные для входа</p>
+            <ul class="popup__reg-btn-list list-reset">
+              <li class="popup__reg-btn-item">
+                <a href="#" class="popup__reg-btn-link popup__reg-btn-link--google">
+                  <svg class="popup__reg-btn-icon" width="18" height="18" fill="currentColor">
+                    <use xlink:href="./img/sprite.svg#reg-google"></use>
+                  </svg>
+                  <span>Вход с Google</span>
+                </a>
+              </li>
+              <li class="popup__reg-btn-item">
+                <a href="#" class="popup__reg-btn-link popup__reg-btn-link--apple">
+                  <svg class="popup__reg-btn-icon" width="15" height="18" fill="currentColor">
+                    <use xlink:href="./img/sprite.svg#reg-apple"></use>
+                  </svg>
+                  <span>Вход с Apple</span>
+                </a>
+              </li>
+            </ul>
+            <div class="popup__divider">
+              <p>или</p>
+            </div>
+            <form action="" method="post" id="signup-form">
+              <label for="signup-userlogin">
+                <input type="text" name="signup-userlogin" id="signup-userlogin" placeholder="Логин" required>
+              </label>
+              <label for="signup-password">
+                <input type="password" name="signup-password" id="signup-password" placeholder="Пароль" required>
+              </label>
+              <div class="popup__checkbox-wrapper">
+                <label>Запомнить меня
+                  <input class="visually-hidden" type="checkbox" name="remember" id="remember" checked>
+                  <span class="popup__checkbox-mark"></span>
+                </label>
+                <a href="#" id="forgot-password-link" class="popup__forgot-password-link">Забыли пароль?</a>
+              </div>
+              <button type="submit" class="popup__submit-btn">Вход</button>
+              <div class="popup__signup-wrapper">
+                <span>Нет аккаунта?</span>
+                <button type="button" class="popup__signup-btn open-popup signup-btn">Регистрация</button>
+              </div>
+            </form>
+          </li>
+        </ul>
+        <div class="popup__image">
+          <img src="./img/popup-bg.png" width="455" height="635" alt="">
+        </div>
+      </div>
+    </div>
   </div>
 
   <script src="js/main.min.js"></script>
