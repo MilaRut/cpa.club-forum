@@ -1,0 +1,89 @@
+.header-nav {
+  display: none;
+}
+
+.header-nav.active {
+  display: block;
+  position: absolute;
+  min-width: 1258px;
+  top: 37px;
+  right: 0;
+  background-color: #3E4046;
+  border-radius: 6px 0px 6px 6px;
+  z-index: 10;
+}
+
+.header-nav__content {
+  display: grid;
+  grid-template-columns: auto 220px;
+  column-gap: 40px;
+  padding: 27px 59px 19px 44px;
+}
+
+.header-nav__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 106px;
+  padding-top: 33px;
+}
+
+.header-nav__item {
+  position: relative;
+  border-radius: 10px;
+  width: 261px;
+  margin: 0 15px 12px;
+  padding: 15px 5px 10px 62px;
+
+  &:hover {
+    background-color: #37393F;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 33px;
+    height: 33px;
+    top: 15px;
+    left: 11px;
+    border: 0.5px solid #E6E6E7;
+    border-radius: 11px;
+  }
+
+  &--forum::before {
+    background: url("../img/svg/nav-forum.svg") center no-repeat;
+  }
+
+  &--courses::before {
+    background: url("../img/svg/nav-courses.svg") center no-repeat;
+  }
+
+  &--blog::before {
+    background: url("../img/svg/nav-blog.svg") center no-repeat;
+  }
+
+  &--catalog::before {
+    background: url("../img/svg/nav-catalog.svg") center no-repeat;
+  }
+
+  &--events::before {
+    background: url("../img/svg/nav-events.svg") center no-repeat;
+  }
+}
+
+.header-nav__link {
+  display: block;
+
+  h3 {
+    @include font-settings (600, 14px, 1);
+    text-transform: uppercase;
+  }
+
+  p {
+    @include font-settings (400, 13px, 1);
+    padding: 10px 0;
+  }
+}
+
+.adblock-220x320 {
+  background-color: #2c2e32;
+}
