@@ -17,11 +17,13 @@
 // ---------------------------------
 
 @import "blocks/header";
+@import "blocks/search";
 @import "blocks/user-menu";
 @import "blocks/header-nav";
 @import "blocks/main";
 @import "blocks/new";
 @import "blocks/block";
+@import "blocks/sort";
 @import "blocks/adblock";
 @import "blocks/forum-section";
 @import "blocks/aside-block";
@@ -52,4 +54,5 @@
 @import "blocks/events";
 @import "blocks/footer";
 @import "blocks/popup";
+@import "blocks/set-rating";
 

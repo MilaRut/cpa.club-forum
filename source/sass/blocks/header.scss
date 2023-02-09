@@ -11,31 +11,8 @@
 
 .header__logo {
   padding-top: 5px;
-}
 
-.header__search {
-  position: relative;
-}
-
-.header__search input {
-  @include font-settings (500, 14px, 1);
-  border: 1px solid #2D3341;
-  border-radius: 10px;
-  background-color: transparent;
-  width: 456px;
-  height: 40px;
-  padding-left: 34px;
-  color: $color-default-white;
-}
-
-input::placeholder {
-  color: #474C53;
-}
-
-.header__search-btn {
-  position: absolute;
-  background-color: transparent;
-  border: none;
-  top: 9px;
-  left: 4px;
+  img:hover {
+    opacity: 0.6;
+  }
 }

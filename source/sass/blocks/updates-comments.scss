@@ -31,10 +31,25 @@
 
 .updates__btn {
   @include font-settings (500, 20px, 1);
+  width: 40px;
+  height: 34px;
   background-color: transparent;
   border: none;
   color: $color-default-white;
   cursor: pointer;
+
+  &--like {
+    border-radius: 10px 10px 0px 0px;
+  }
+
+  &--dislike {
+    border-radius: 0px 0px 10px 10px;
+  }
+
+  &:hover,
+  &:active {
+    background-color: #14161B;
+  }
 
   span {
     @include font-settings (500, 16px, 1);
@@ -131,7 +146,12 @@
     border: 1px solid #FFC600;
     border-radius: 8px;
     margin-right: 16px;
+    padding: 10px 20px;
     caret-color: #FFC600;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
   }
 }
 
@@ -144,4 +164,12 @@
   border: none;
   border-radius: 8px;
   cursor: pointer;
+
+  &:hover {
+    background-color: #D1D2D3;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }

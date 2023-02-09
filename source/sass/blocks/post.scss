@@ -59,6 +59,10 @@
   padding: 10px 20px;
   cursor: pointer;
 
+  &:hover {
+    background-color: $color-accent-hover;
+  }
+
   svg {
     fill: $color-default-black;
     margin-right: 5px;

@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Описание проекта">
+  <meta name="description" content="CPA Club Forum">
   <title>CPA Club Forum</title>
   <link rel="stylesheet" href="css/style.min.css">
 </head>
@@ -16,25 +16,46 @@
       <div class="container">
         <div class="header__logo">
           <a href="index.html">
-            <img src="./img/cpa-logo.png" alt="CPA Club logo.">
+            <img src="./img/cpa-logo.png" srcset="./img/cpa-logo@2x.png 2x" loading="lazy" width="190" height="29"
+              alt="CPA Club logo.">
           </a>
         </div>
-        <div class="header__search">
-          <form action="" method="get">
+
+        <div class="header__search search">
+          <form action="" method="get" id="header-search-form">
             <input name="search" placeholder="Поиск по форуму" type="search">
-            <button class="header__search-btn" type="submit">
+            <button class="search__btn" type="submit">
               <svg width="20" height="20" fill="currentColor">
                 <use xlink:href="./img/sprite.svg#search-btn"></use>
               </svg>
             </button>
           </form>
+
+          <!-- add class 'active' to show the list below -->
+          <div class="search__results">
+            <ul class="search__results-list list-reset">
+              <li class="search__results-item">
+                <h3>Результаты поиска • <span class="search__results-count">3</span></h3>
+              </li>
+              <li class="search__results-item">
+                <a href="" class="search__results-link">Single line item</a>
+              </li>
+              <li class="search__results-item">
+                <a href="" class="search__results-link">Single line item</a>
+              </li>
+              <li class="search__results-item">
+                <a href="" class="search__results-link">Single line item</a>
+              </li>
+            </ul>
+          </div>
+
         </div>
         <div class="header__user-menu user-menu">
-          <div class="user-menu__unlogged active">
+          <div class="user-menu__unlogged">
             <button class="user-menu__login-btn open-popup login-btn">Вход</button>
             <button class="user-menu__signup-btn open-popup signup-btn">Регистрация</button>
           </div>
-          <div class="user-menu__logged">
+          <div class="user-menu__logged active">
             <div class="user-menu__alerts">
               <button class="user-menu__alerts-btn" type="button">
                 <svg class="user-menu__alerts-btn-icon" width="16" height="20" fill="currentColor">
@@ -62,7 +83,7 @@
             </div>
             <div class="user-menu__avatar">
               <a href="user-profile.html">
-                <img src="./img/avatar.png" alt="User avatar.">
+                <img src="./img/avatar.png" loading="lazy" width="30" height="30" alt="User avatar.">
               </a>
             </div>
             <button class="user-menu__nav-btn">
@@ -124,9 +145,10 @@
             <h2>Направления</h2>
             <ul class="courses__list list-reset">
               <li class="courses__item">
-                <a href="#" class="courses__card">
+                <a href="courses-cards.html" class="courses__card">
                   <div class="courses__cover">
-                    <img src="./img/courses-1.png" alt="">
+                    <img src="./img/courses-1.png" srcset="./img/courses-1@2x.png 2x" width="269" height="250" loading="lazy"
+                    alt="">
                   </div>
                   <h3>Программирование</h3>
                   <p>10 курсов</p>
@@ -135,7 +157,8 @@
               <li class="courses__item">
                 <a href="#" class="courses__card">
                   <div class="courses__cover">
-                    <img src="./img/courses-2.png" alt="">
+                    <img src="./img/courses-2.png" srcset="./img/courses-2@2x.png 2x" width="269" height="250" loading="lazy"
+                    alt="">
                   </div>
                   <h3>Аффилейт</h3>
                   <p>10 курсов</p>
@@ -144,7 +167,8 @@
               <li class="courses__item">
                 <a href="#" class="courses__card">
                   <div class="courses__cover">
-                    <img src="./img/courses-3.png" alt="">
+                    <img src="./img/courses-3.png" srcset="./img/courses-3@2x.png 2x" width="269" height="250" loading="lazy"
+                    alt="">
                   </div>
                   <h3>Дизайн</h3>
                   <p>10 курсов</p>
@@ -153,16 +177,18 @@
               <li class="courses__item">
                 <a href="#" class="courses__card">
                   <div class="courses__cover">
-                    <img src="./img/courses-4.png" alt="">
+                    <img src="./img/courses-4.png" srcset="./img/courses-4@2x.png 2x" width="269" height="250" loading="lazy"
+                    alt="">
                   </div>
                   <h3>Управление</h3>
                   <p>10 курсов</p>
                 </a>
               </li>
               <li class="courses__item">
-                <a href="#" class="courses__card">
+                <a href="courses-cards.html" class="courses__card">
                   <div class="courses__cover">
-                    <img src="./img/courses-1.png" alt="">
+                    <img src="./img/courses-1.png" srcset="./img/courses-1@2x.png 2x" width="269" height="250" loading="lazy"
+                    alt="">
                   </div>
                   <h3>Программирование</h3>
                   <p>10 курсов</p>
@@ -171,7 +197,8 @@
               <li class="courses__item">
                 <a href="#" class="courses__card">
                   <div class="courses__cover">
-                    <img src="./img/courses-2.png" alt="">
+                    <img src="./img/courses-2.png" srcset="./img/courses-2@2x.png 2x" width="269" height="250" loading="lazy"
+                    alt="">
                   </div>
                   <h3>Аффилейт</h3>
                   <p>10 курсов</p>
@@ -180,7 +207,8 @@
               <li class="courses__item">
                 <a href="#" class="courses__card">
                   <div class="courses__cover">
-                    <img src="./img/courses-3.png" alt="">
+                    <img src="./img/courses-3.png" srcset="./img/courses-3@2x.png 2x" width="269" height="250" loading="lazy"
+                    alt="">
                   </div>
                   <h3>Дизайн</h3>
                   <p>10 курсов</p>
@@ -189,7 +217,8 @@
               <li class="courses__item">
                 <a href="#" class="courses__card">
                   <div class="courses__cover">
-                    <img src="./img/courses-4.png" alt="">
+                    <img src="./img/courses-4.png" srcset="./img/courses-4@2x.png 2x" width="269" height="250" loading="lazy"
+                    alt="">
                   </div>
                   <h3>Управление</h3>
                   <p>10 курсов</p>
@@ -444,7 +473,8 @@
           </li>
         </ul>
         <div class="popup__image">
-          <img src="./img/popup-bg.png" width="455" height="635" alt="">
+          <img src="./img/popup-bg.png" srcset="./img/popup-bg@2x.png 2x" width="455" height="635" loading="lazy"
+            alt="">
         </div>
       </div>
     </div>

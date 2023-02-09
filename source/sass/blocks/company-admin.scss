@@ -37,8 +37,9 @@
     text-align: center;
     background-color: $color-accent;
     border-radius: 5px;
-    margin: 0 auto;
+    margin: 0 auto 12px;
     padding: 10px;
+    cursor: pointer;
   }
 }
 
@@ -51,7 +52,23 @@
   border-radius: 5px;
   width: 325px;
   height: 179px;
-  padding: 36px 68px;
+  padding: 20px 10px;
+
+  p {
+    padding: 0 68px;
+  }
+
+  span {
+    @include font-settings (400, 13px, 1.69);
+    opacity: 0.5;
+    font-style: italic;
+    display: block;
+    text-align: center;
+  }
+
+  &:hover {
+    background-color: #262832;
+  }
 }
 
 .company-admin__edit-section {
@@ -87,6 +104,14 @@
 
 .company-admin__links-first-block {
   margin-bottom: 35px;
+}
+
+.company-admin {
+  input {
+    &:hover {
+      border: 1px solid #FCCD03;
+    }
+  }
 }
 
 .ca-wysiwig {
@@ -128,4 +153,12 @@
   color: #14161B;
   margin-bottom: 3px;
   cursor: pointer;
+
+  &:hover {
+    background-color: $color-accent-hover;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }

@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Описание проекта">
+  <meta name="description" content="CPA Club Forum">
   <title>CPA Club Forum</title>
   <link rel="stylesheet" href="css/style.min.css">
 </head>
@@ -16,25 +16,46 @@
       <div class="container">
         <div class="header__logo">
           <a href="index.html">
-            <img src="./img/cpa-logo.png" alt="CPA Club logo.">
+            <img src="./img/cpa-logo.png" srcset="./img/cpa-logo@2x.png 2x" loading="lazy" width="190" height="29"
+              alt="CPA Club logo.">
           </a>
         </div>
-        <div class="header__search">
-          <form action="" method="get">
+
+        <div class="header__search search">
+          <form action="" method="get" id="header-search-form">
             <input name="search" placeholder="Поиск по форуму" type="search">
-            <button class="header__search-btn" type="submit">
+            <button class="search__btn" type="submit">
               <svg width="20" height="20" fill="currentColor">
                 <use xlink:href="./img/sprite.svg#search-btn"></use>
               </svg>
             </button>
           </form>
+
+          <!-- add class 'active' to show the list below -->
+          <div class="search__results">
+            <ul class="search__results-list list-reset">
+              <li class="search__results-item">
+                <h3>Результаты поиска • <span class="search__results-count">3</span></h3>
+              </li>
+              <li class="search__results-item">
+                <a href="" class="search__results-link">Single line item</a>
+              </li>
+              <li class="search__results-item">
+                <a href="" class="search__results-link">Single line item</a>
+              </li>
+              <li class="search__results-item">
+                <a href="" class="search__results-link">Single line item</a>
+              </li>
+            </ul>
+          </div>
+
         </div>
         <div class="header__user-menu user-menu">
-          <div class="user-menu__unlogged active">
+          <div class="user-menu__unlogged">
             <button class="user-menu__login-btn open-popup login-btn">Вход</button>
             <button class="user-menu__signup-btn open-popup signup-btn">Регистрация</button>
           </div>
-          <div class="user-menu__logged">
+          <div class="user-menu__logged active">
             <div class="user-menu__alerts">
               <button class="user-menu__alerts-btn" type="button">
                 <svg class="user-menu__alerts-btn-icon" width="16" height="20" fill="currentColor">
@@ -62,7 +83,7 @@
             </div>
             <div class="user-menu__avatar">
               <a href="user-profile.html">
-                <img src="./img/avatar.png" alt="User avatar.">
+                <img src="./img/avatar.png" loading="lazy" width="30" height="30" alt="User avatar.">
               </a>
             </div>
             <button class="user-menu__nav-btn">
@@ -128,7 +149,8 @@
             </button>
             <div class="user-card__image-wrapper">
               <div class="user-card__image">
-                <img src="./img/comment-user-photo-1.png" width="150" height="143" alt="User photo.">
+                <img src="./img/comment-user-photo-1.png" srcset="./img/comment-user-photo-1@2x.png 2x"
+                width="150" height="150" loading="lazy" alt="User photo.">
               </div>
               <span class="user-card__alert">1</span>
             </div>
@@ -181,121 +203,136 @@
 
           <div class="user-card__info tabs">
             <div class="tabs__buttons">
-              <button class="tabs__btn"><span>Моя активность</span></button>
-              <button class="tabs__btn"><span>Публичные сообщения</span></button>
-              <button class="tabs__btn active"><span>Обо мне</span></button>
-              <button class="tabs__btn"><span>Репутация</span></button>
+              <button class="tabs__btn" data-tab="#tab_1"><span>Моя активность</span></button>
+              <button class="tabs__btn" data-tab="#tab_2"><span>Публичные сообщения</span></button>
+              <button class="tabs__btn active" data-tab="#tab_3"><span>Обо мне</span></button>
+              <button class="tabs__btn" data-tab="#tab_4"><span>Репутация</span></button>
             </div>
-            <div class="tabs__content">
-              <div class="tabs__content-block tabs__content-block--basic">
-                <div class="tabs__heading">
-                  <h3>Базовая информация</h3>
-                  <button class="tabs__edit-btn">
-                    <svg width="20" height="20" fill="currentColor">
-                      <use xlink:href="./img/sprite.svg#edit"></use>
-                    </svg>
-                  </button>
-                </div>
-                <dl class="tabs__user-info">
-                  <dt>Имя</dt>
-                  <dd>Мария</dd>
-                  <dt>Город</dt>
-                  <dd>Москва</dd>
-                  <dt>Статус</dt>
-                  <dd>Недоступно</dd>
-                  <dt>Род деятельности</dt>
-                  <dd>Команда клуба</dd>
-                </dl>
-              </div>
 
-              <div class="tabs__content-block tabs__content-block--contacts">
-                <div class="tabs__heading">
-                  <h3>Контакты</h3>
-                  <button class="tabs__edit-btn">
-                    <svg width="20" height="20" fill="#ffffff">
-                      <use xlink:href="./img/sprite.svg#edit"></use>
-                    </svg>
-                  </button>
-                </div>
-                <ul class="tabs__contacts-list list-reset">
-                  <li class="tabs__contacts-item">
-                    <a href="#" class="tabs__contacts-link">
-                      <svg class="tabs__contacts-icon" width="20" height="18" fill="currentColor">
-                        <use xlink:href="./img/sprite.svg#tg-icon"></use>
-                      </svg>
-                      <span>@username</span>
-                    </a>
-                  </li>
-                  <li class="tabs__contacts-item">
-                    <a href="#" class="tabs__contacts-link">
-                      <svg class="tabs__contacts-icon" width="18" height="18" fill="currentColor">
-                        <use xlink:href="./img/sprite.svg#skype-icon"></use>
-                      </svg>
-                      <span>@username</span>
-                    </a>
-                  </li>
-                  <li class="tabs__contacts-item">
-                    <a href="#" class="tabs__contacts-link">
-                      <svg class="tabs__contacts-icon" width="24" height="24" fill="currentColor">
-                        <use xlink:href="./img/sprite.svg#lnkdn-icon"></use>
-                      </svg>
-                      <span>@username</span>
-                    </a>
-                  </li>
-                </ul>
+            <div class="tabs__content" id="tab_1">
+              <div class="tabs__content-item tabs__content-item--activity">
+                Моя активность
               </div>
-
-              <div class="tabs__content-block tabs__content-block--signature">
-                <div class="tabs__heading">
-                  <h3>Подпись</h3>
-                  <button class="tabs__edit-btn">
-                    <svg width="20" height="20" fill="currentColor">
-                      <use xlink:href="./img/sprite.svg#edit"></use>
-                    </svg>
-                  </button>
-                </div>
-                <p>Все вопросы / пожелания / предложения по развитию CPA.CLUB - ко мне.</p>
+            </div>
+            <div class="tabs__content" id="tab_2">
+              <div class="tabs__content-item tabs__content-item--messages">
+                Публичные сообщения
               </div>
-
-              <div class="tabs__content-block tabs__content-block--stats">
-                <div class="tabs__heading">
-                  <h3>Статистика</h3>
+            </div>
+            <div class="tabs__content active" id="tab_3">
+              <div class="tabs__content-item tabs__content-item--about-me">
+                <div class="tabs__content-block tabs__content-block--basic">
+                  <div class="tabs__heading">
+                    <h3>Базовая информация</h3>
+                    <button class="tabs__edit-btn">
+                      <svg width="20" height="20" fill="currentColor">
+                        <use xlink:href="./img/sprite.svg#edit"></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <dl class="tabs__user-info">
+                    <dt>Имя</dt>
+                    <dd>Мария</dd>
+                    <dt>Город</dt>
+                    <dd>Москва</dd>
+                    <dt>Статус</dt>
+                    <dd>Недоступно</dd>
+                    <dt>Род деятельности</dt>
+                    <dd>Команда клуба</dd>
+                  </dl>
                 </div>
-                <ul class="tabs__stats-list list-reset">
-                  <li class="tabs__stats-item">
-                    <dl class="tabs__stats tabs__stats--msgs">
-                      <dt>Всего сообщений</dt>
-                      <dd>526</dd>
-                      <dt>Последнее сообщение</dt>
-                      <dd>
-                        <a class="tabs__stats-last-msg" href="#">Накрутка Reels <time
-                            datetime="2022-11-20T16:23">20.11.2022 16:23</time></a>
-                      </dd>
-                    </dl>
-                  </li>
-                  <li class="tabs__stats-item">
-                    <dl class="tabs__stats tabs__stats--remark">
-                      <dt>Замечания</dt>
-                      <dd>Оставить замечание пользователю</dd>
-                    </dl>
-                  </li>
-                  <li class="tabs__stats-item">
-                    <dl class="tabs__stats tabs__stats--thanks">
-                      <dt>Благодарности</dt>
-                      <dd>Благодарностей: <span>218</span> (сообщений: <span>76</span>)
-                      </dd>
-                    </dl>
-                  </li>
-                  <li class="tabs__stats-item">
-                    <dl class="tabs__stats tabs__stats--additional">
-                      <dt>Дополнительная информация</dt>
-                      <dd>
-                        <p>Последняя активность <time datetime="2022-11-20T16:23">20.11.2022 16:23</time></p>
-                        <p>Регистрация <time datetime="2013-11-07">07.11.2013</time></p>
-                      </dd>
-                    </dl>
-                  </li>
-                </ul>
+                <div class="tabs__content-block tabs__content-block--contacts">
+                  <div class="tabs__heading">
+                    <h3>Контакты</h3>
+                    <button class="tabs__edit-btn">
+                      <svg width="20" height="20" fill="#ffffff">
+                        <use xlink:href="./img/sprite.svg#edit"></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <ul class="tabs__contacts-list list-reset">
+                    <li class="tabs__contacts-item">
+                      <a href="#" class="tabs__contacts-link">
+                        <svg class="tabs__contacts-icon" width="20" height="18" fill="currentColor">
+                          <use xlink:href="./img/sprite.svg#tg-icon"></use>
+                        </svg>
+                        <span>@username</span>
+                      </a>
+                    </li>
+                    <li class="tabs__contacts-item">
+                      <a href="#" class="tabs__contacts-link">
+                        <svg class="tabs__contacts-icon" width="18" height="18" fill="currentColor">
+                          <use xlink:href="./img/sprite.svg#skype-icon"></use>
+                        </svg>
+                        <span>@username</span>
+                      </a>
+                    </li>
+                    <li class="tabs__contacts-item">
+                      <a href="#" class="tabs__contacts-link">
+                        <svg class="tabs__contacts-icon" width="24" height="24" fill="currentColor">
+                          <use xlink:href="./img/sprite.svg#lnkdn-icon"></use>
+                        </svg>
+                        <span>@username</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="tabs__content-block tabs__content-block--signature">
+                  <div class="tabs__heading">
+                    <h3>Подпись</h3>
+                    <button class="tabs__edit-btn">
+                      <svg width="20" height="20" fill="currentColor">
+                        <use xlink:href="./img/sprite.svg#edit"></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <p>Все вопросы / пожелания / предложения по развитию CPA.CLUB - ко мне.</p>
+                </div>
+                <div class="tabs__content-block tabs__content-block--stats">
+                  <div class="tabs__heading">
+                    <h3>Статистика</h3>
+                  </div>
+                  <ul class="tabs__stats-list list-reset">
+                    <li class="tabs__stats-item">
+                      <dl class="tabs__stats tabs__stats--msgs">
+                        <dt>Всего сообщений</dt>
+                        <dd>526</dd>
+                        <dt>Последнее сообщение</dt>
+                        <dd>
+                          <a class="tabs__stats-last-msg" href="#">Накрутка Reels <time
+                              datetime="2022-11-20T16:23">20.11.2022 16:23</time></a>
+                        </dd>
+                      </dl>
+                    </li>
+                    <li class="tabs__stats-item">
+                      <dl class="tabs__stats tabs__stats--remark">
+                        <dt>Замечания</dt>
+                        <dd>Оставить замечание пользователю</dd>
+                      </dl>
+                    </li>
+                    <li class="tabs__stats-item">
+                      <dl class="tabs__stats tabs__stats--thanks">
+                        <dt>Благодарности</dt>
+                        <dd>Благодарностей: <span>218</span> (сообщений: <span>76</span>)
+                        </dd>
+                      </dl>
+                    </li>
+                    <li class="tabs__stats-item">
+                      <dl class="tabs__stats tabs__stats--additional">
+                        <dt>Дополнительная информация</dt>
+                        <dd>
+                          <p>Последняя активность <time datetime="2022-11-20T16:23">20.11.2022 16:23</time></p>
+                          <p>Регистрация <time datetime="2013-11-07">07.11.2013</time></p>
+                        </dd>
+                      </dl>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="tabs__content" id="tab_4">
+              <div class="tabs__content-item tabs__content-item--reputation">
+                Репутация
               </div>
             </div>
           </div>
@@ -454,7 +491,7 @@
     </footer>
   </div>
 
-    <!-- Modals -->
+  <!-- Modals -->
 
   <div class="popup-overlay">
     <div class="popup">
@@ -546,7 +583,8 @@
           </li>
         </ul>
         <div class="popup__image">
-          <img src="./img/popup-bg.png" width="455" height="635" alt="">
+                <img src="./img/popup-bg.png" srcset="./img/popup-bg@2x.png 2x" width="455" height="635" loading="lazy"
+            alt="">
         </div>
       </div>
     </div>

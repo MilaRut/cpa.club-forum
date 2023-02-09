@@ -37,6 +37,14 @@
     fill: $color-default-black;
     margin-right: 5px;
   }
+
+  &:hover {
+    background-color: $color-accent-hover;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
 
 .events__list {
@@ -49,6 +57,15 @@
   position: relative;
   background-color: #262931;
   border-radius: 0px 0px 20px 20px;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: 0px 0px 20px rgba(10, 57, 184, 0.25);
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
 
 .events__date {
@@ -80,7 +97,7 @@
 }
 
 .events__image {
-  width: 360px;
+  width: 100%;
   height: 206px;
   overflow: hidden;
 
@@ -113,7 +130,7 @@
     margin-bottom: 9px;
   }
 
-  a {
+  p {
     @include font-settings (600, 13px, 1);
     letter-spacing: 0.96px;
     text-transform: uppercase;

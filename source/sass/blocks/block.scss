@@ -24,19 +24,6 @@
   color: $color-default-black;
 }
 
-.block__sort-btn {
-  width: 65px;
-  height: 30px;
-  background-color: #282B34;
-  border: none;
-  border-radius: 6px;
-  padding: 3px;
-
-  &.active {
-    background-color: #535761;
-  }
-}
-
 .block__item {
   display: grid;
   grid-template-columns: 420px 20px 138px auto;
@@ -60,6 +47,13 @@
 }
 
 .block__col--2 {
+
+  .block__add-link {
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+
   .block__add-icon {
     fill: $color-default-white;
   }
@@ -82,6 +76,10 @@
     text-decoration: underline;
     max-width: 208px;
     margin-bottom: 8px;
+
+    &:hover {
+      opacity: 0.6;
+    }
   }
 
   p {

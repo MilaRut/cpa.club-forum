@@ -1,3 +1,7 @@
+import {FocusLock} from '../utils/focus-lock';
+
+const focusLock = new FocusLock();
+
 const openBtns = document.querySelectorAll('.open-popup');
 const closeBtn = document.querySelector('.popup__close-btn');
 const popupOverlay = document.querySelector('.popup-overlay');
@@ -8,11 +12,13 @@ const signup = document.getElementById('signup');
 function openPopup() {
   popupOverlay.classList.add('active');
   popup.classList.add('active');
+  focusLock.lock('.popup-overlay');
 }
 
 function closePopup() {
   popupOverlay.classList.remove('active');
   popup.classList.remove('active');
+  focusLock.unlock();
 }
 
 function initPopup() {

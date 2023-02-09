@@ -1,5 +1,5 @@
 .blog {
-  padding: 31px 40px 44px;
+  padding: 31px 20px 44px;
   background-color: #1A1D24;
   border: 1px solid #2D3341;
   border-radius: 10px;
@@ -36,12 +36,21 @@
     fill: $color-default-black;
     margin-right: 5px;
   }
+
+  &:hover {
+    background-color: $color-accent-hover;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
 
 .blog__content {
   display: grid;
   grid-template-columns: auto 360px;
   column-gap: 40px;
+  padding: 0 20px;
 }
 
 .blog__list {
@@ -57,7 +66,7 @@
 
 .blog__item {
   background-color: #262931;
-  border-radius: 0px 0px 20px 20px;
+  border-radius: 20px;
 
   &.pinned {
     position: relative;
@@ -73,6 +82,14 @@
       border-radius: 10px;
       z-index: 10;
     }
+  }
+
+  &:hover {
+    box-shadow: 0px 0px 20px rgba(10, 57, 184, 0.25);
+  }
+
+  &:active {
+    opacity: 0.6;
   }
 }
 
@@ -178,10 +195,18 @@
 }
 
 .blog__cases-item {
-  max-width: 269px;
+  max-width: 300px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  border-radius: 20px;
+  padding: 15px 16px;
+
+  &:hover,
+  &:active {
+    background-color: #262832;
+    border-radius: 20px;
+  }
 }
 
 .blog__cases-image {
@@ -245,5 +270,14 @@
 
   svg {
     margin-right: 14px;
+  }
+  
+  &:hover {
+    background-color: #76777C;
+    color: $color-default-white;
+  }
+
+  &:active {
+    opacity: 0.5;
   }
 }

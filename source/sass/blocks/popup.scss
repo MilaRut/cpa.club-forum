@@ -124,11 +124,27 @@
     background-color: #FFFFFF;
     box-shadow: 0px 0px 2.30909px rgba(0, 0, 0, 0.084), 0px 1.53939px 2.30909px rgba(0, 0, 0, 0.168);
     color: rgba(0, 0, 0, 0.54);
+
+    &:hover {
+      background-color: #CCD5E4;
+    }
+
+    &:active {
+      background-color: #D1D2D3;
+    }
   }
 
   &--apple {
     background-color: #000000;
     box-shadow: 0px 0px 2.30909px rgba(0, 0, 0, 0.084), 0px 1.53939px 2.30909px rgba(0, 0, 0, 0.168);
+
+    &:hover {
+      background-color: #0A0C0F;
+    }
+
+    &:active {
+      background-color: #15171E;
+    }
   }
 }
 
@@ -190,6 +206,14 @@
   border-radius: 10px;
   margin-top: 21px;
   cursor: pointer;
+
+  &:hover {
+    background-color: #76777C;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
 }
 
 .popup__image {
@@ -237,6 +261,14 @@
     cursor: pointer;
   }
 
+  input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1px;
+    height: 1px;
+  }
+
   span {
     position: absolute;
     top: -1px;
@@ -247,6 +279,18 @@
     border: 1px solid #FFFFFF;
     border-radius: 5px;
   }
+}
+
+.popup__checkbox-wrapper input:focus-within+label,
+.popup__checkbox-wrapper label:focus-within {
+  box-shadow: 0 0 0 1px $color-default-white;
+  border-radius: 3px;
+}
+
+.popup__checkbox-wrapper input:hover+label,
+.popup__checkbox-wrapper label:hover {
+  opacity: 0.6;
+  box-shadow: none;
 }
 
 .popup__checkbox-wrapper input:checked+span {
@@ -261,6 +305,14 @@
 
 .popup__forgot-password-link {
   text-decoration: underline;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.4;
+  }
 }
 
 .popup__signup-wrapper {
@@ -278,5 +330,13 @@
     border: none;
     text-decoration: underline;
     cursor: pointer;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.4;
+    }
   }
 }

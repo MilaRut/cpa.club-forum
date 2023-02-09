@@ -12,6 +12,7 @@
   &--last,
   &--next {
     transform: scale(-1, 1);
+    fill: $color-accent;
   }
 }
 
@@ -19,8 +20,11 @@
   @include font-settings (500, 14px, 1);
   color: $color-accent;
 
+  &:hover,
+  &:hover svg,
   &.active {
     color: $color-default-white;
+    fill: $color-default-white;
   }
 
   span {

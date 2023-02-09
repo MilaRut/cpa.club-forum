@@ -40,6 +40,14 @@
     width: 14px;
     height: 14px;
   }
+
+  &:hover {
+    background: #14161B;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
 
 .profile__rating {
@@ -142,6 +150,14 @@
   svg {
     fill: $color-default-white;
     margin-right: 7px;
+  }
+  
+  &:hover {
+    background: #14161B;
+  }
+
+  &:active {
+    opacity: 0.6;
   }
 }
 

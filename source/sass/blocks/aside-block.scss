@@ -20,7 +20,17 @@
 }
 
 .aside__block-image {
+  width: 45px;
+  height: 45px;
   margin-right: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain
+  }
 }
 
 .aside__block-content {

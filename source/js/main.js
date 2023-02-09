@@ -1,9 +1,11 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {openAlerts, closeAlerts} from './modules/alerts';
+import {openSorting, closeSorting} from './modules/sort';
 import {openHeaderNav, closeHeaderNav} from './modules/header-nav';
 import {initRangeSlider} from './modules/range-slider';
 import {toggleCatalogView} from './modules/catalog-toggle';
 import {initPopup} from './modules/popup';
+import {initTabs} from './modules/tabs';
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -22,11 +24,14 @@ window.addEventListener('DOMContentLoaded', () => {
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
     openAlerts();
+    closeAlerts();
+    openSorting();
+    closeSorting();
     openHeaderNav();
     closeHeaderNav();
-    closeAlerts();
     initRangeSlider();
     toggleCatalogView();
+    initTabs();
   });
 });
 
