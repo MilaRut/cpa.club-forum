@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Описание проекта">
+  <meta name="description" content="CPA Club Forum">
   <title>CPA Club Forum</title>
   <link rel="stylesheet" href="css/style.min.css">
 </head>
@@ -16,18 +16,39 @@
       <div class="container">
         <div class="header__logo">
           <a href="#">
-            <img src="./img/cpa-logo.png" alt="CPA Club logo.">
+            <img src="./img/cpa-logo.png" srcset="./img/cpa-logo@2x.png 2x" loading="lazy" width="190" height="29"
+              alt="CPA Club logo.">
           </a>
         </div>
-        <div class="header__search">
-          <form action="" method="get">
+
+        <div class="header__search search">
+          <form action="" method="get" id="header-search-form">
             <input name="search" placeholder="Поиск по форуму" type="search">
-            <button class="header__search-btn" type="submit">
+            <button class="search__btn" type="submit">
               <svg width="20" height="20" fill="currentColor">
                 <use xlink:href="./img/sprite.svg#search-btn"></use>
               </svg>
             </button>
           </form>
+
+          <!-- add class 'active' to show the list below -->
+          <div class="search__results">
+            <ul class="search__results-list list-reset">
+              <li class="search__results-item">
+                <h3>Результаты поиска • <span class="search__results-count">3</span></h3>
+              </li>
+              <li class="search__results-item">
+                <a href="" class="search__results-link">Single line item</a>
+              </li>
+              <li class="search__results-item">
+                <a href="" class="search__results-link">Single line item</a>
+              </li>
+              <li class="search__results-item">
+                <a href="" class="search__results-link">Single line item</a>
+              </li>
+            </ul>
+          </div>
+
         </div>
         <div class="header__user-menu user-menu">
           <div class="user-menu__unlogged">
@@ -62,7 +83,7 @@
             </div>
             <div class="user-menu__avatar">
               <a href="user-profile.html">
-                <img src="./img/avatar.png" alt="User avatar.">
+                <img src="./img/avatar.png" loading="lazy" width="30" height="30" alt="User avatar.">
               </a>
             </div>
             <button class="user-menu__nav-btn">
@@ -113,17 +134,46 @@
         </div>
       </div>
     </header>
+
     <main class="main main-grid">
       <div class="container">
         <h1 class="visually-hidden">Форум CPA.Club</h1>
         <div class="main-content">
           <section class="new">
-            <div class="new__block block">
+            <div class="new__block tabs block">
               <div class="new__button-wrapper">
-                <button class="new__btn new__btn--themes" type="button">Новые темы</button>
-                <button class="new__btn new__btn--comments" type="button">Новые комментарии</button>
+                <button class="new__btn new__btn--themes tabs__btn active" data-tab="#new-tab_1" type="button">Новые
+                  темы</button>
+                <button class="new__btn new__btn--comments tabs__btn" data-tab="#new-tab_2" type="button">Новые
+                  комментарии</button>
               </div>
-              <ul class="new__list list-reset">
+              <ul class="new__list new__list--themes list-reset tabs__content active" id="new-tab_1">
+                <li class="new__item">
+                  <a href="post.html">Рекламная сеть RichAds: премиальные пуши, ин-пейдж, попсы, доменный трафик (по
+                    запросу)</a>
+                  <span class="new__answer-count">139 ответов</span>
+                  <p class="new__time"><time datetime="2023-01-30T20:47">Вчера, <span>20:47</span></time></p>
+                </li>
+                <li class="new__item">
+                  <a href="post.html">Рекламная сеть RichAds: премиальные пуши, ин-пейдж, попсы, доменный трафик (по
+                    запросу)</a>
+                  <span class="new__answer-count">139 ответов</span>
+                  <p class="new__time"><time datetime="2023-01-30T20:47">Вчера, <span>20:47</span></time></p>
+                </li>
+                <li class="new__item">
+                  <a href="post.html">Рекламная сеть RichAds: премиальные пуши, ин-пейдж, попсы, доменный трафик (по
+                    запросу)</a>
+                  <span class="new__answer-count">139 ответов</span>
+                  <p class="new__time"><time datetime="2023-01-30T20:47">Вчера, <span>20:47</span></time></p>
+                </li>
+                <li class="new__item">
+                  <a href="post.html">Рекламная сеть RichAds: премиальные пуши, ин-пейдж, попсы, доменный трафик (по
+                    запросу)</a>
+                  <span class="new__answer-count">139 ответов</span>
+                  <p class="new__time"><time datetime="2023-01-30T20:47">Вчера, <span>20:47</span></time></p>
+                </li>
+              </ul>
+              <ul class="new__list new__list--comments list-reset tabs__content" id="new-tab_2">
                 <li class="new__item">
                   <a href="post.html">Рекламная сеть RichAds: премиальные пуши, ин-пейдж, попсы, доменный трафик (по
                     запросу)</a>
@@ -506,7 +556,8 @@
               <ul class="aside__list list-reset">
                 <li class="aside__item">
                   <div class="aside__block-image">
-                    <img src="./img/top-logo.png" alt="Company logo.">
+                    <img src="./img/top-logo.png" srcset="./img/top-logo@2x.png 2x" loading="lazy" width="45"
+                      height="45" alt="Company logo.">
                   </div>
                   <div class="aside__block-content">
                     <h4>PIN-UP PARTNERS</h4>
@@ -532,7 +583,8 @@
                 </li>
                 <li class="aside__item">
                   <div class="aside__block-image">
-                    <img src="./img/top-logo.png" alt="Company logo.">
+                    <img src="./img/top-logo.png" srcset="./img/top-logo@2x.png 2x" loading="lazy" width="45"
+                      height="45" alt="Company logo.">
                   </div>
                   <div class="aside__block-content">
                     <h4>PIN-UP PARTNERS</h4>
@@ -558,7 +610,8 @@
                 </li>
                 <li class="aside__item">
                   <div class="aside__block-image">
-                    <img src="./img/top-logo.png" alt="Company logo.">
+                    <img src="./img/top-logo.png" srcset="./img/top-logo@2x.png 2x" loading="lazy" width="45"
+                      height="45" alt="Company logo.">
                   </div>
                   <div class="aside__block-content">
                     <h4>PIN-UP PARTNERS</h4>
@@ -590,7 +643,8 @@
               <ul class="aside__list list-reset">
                 <li class="aside__item">
                   <div class="aside__block-image">
-                    <img src="./img/top-logo.png" alt="Company logo.">
+                    <img src="./img/top-logo.png" srcset="./img/top-logo@2x.png 2x" loading="lazy" width="45"
+                      height="45" alt="Company logo.">
                   </div>
                   <div class="aside__block-content">
                     <h4>PIN-UP PARTNERS</h4>
@@ -616,7 +670,8 @@
                 </li>
                 <li class="aside__item">
                   <div class="aside__block-image">
-                    <img src="./img/top-logo.png" alt="Company logo.">
+                    <img src="./img/top-logo.png" srcset="./img/top-logo@2x.png 2x" loading="lazy" width="45"
+                      height="45" alt="Company logo.">
                   </div>
                   <div class="aside__block-content">
                     <h4>PIN-UP PARTNERS</h4>
@@ -642,7 +697,8 @@
                 </li>
                 <li class="aside__item">
                   <div class="aside__block-image">
-                    <img src="./img/top-logo.png" alt="Company logo.">
+                    <img src="./img/top-logo.png" srcset="./img/top-logo@2x.png 2x" loading="lazy" width="45"
+                      height="45" alt="Company logo.">
                   </div>
                   <div class="aside__block-content">
                     <h4>PIN-UP PARTNERS</h4>
@@ -674,7 +730,8 @@
               <ul class="aside__list list-reset">
                 <li class="aside__item">
                   <div class="aside__block-image">
-                    <img src="./img/top-logo.png" alt="Company logo.">
+                    <img src="./img/top-logo.png" srcset="./img/top-logo@2x.png 2x" loading="lazy" width="45"
+                      height="45" alt="Company logo.">
                   </div>
                   <div class="aside__block-content">
                     <h4>PIN-UP PARTNERS</h4>
@@ -700,7 +757,8 @@
                 </li>
                 <li class="aside__item">
                   <div class="aside__block-image">
-                    <img src="./img/top-logo.png" alt="Company logo.">
+                    <img src="./img/top-logo.png" srcset="./img/top-logo@2x.png 2x" loading="lazy" width="45"
+                      height="45" alt="Company logo.">
                   </div>
                   <div class="aside__block-content">
                     <h4>PIN-UP PARTNERS</h4>
@@ -726,7 +784,8 @@
                 </li>
                 <li class="aside__item">
                   <div class="aside__block-image">
-                    <img src="./img/top-logo.png" alt="Company logo.">
+                    <img src="./img/top-logo.png" srcset="./img/top-logo@2x.png 2x" loading="lazy" width="45"
+                      height="45" alt="Company logo.">
                   </div>
                   <div class="aside__block-content">
                     <h4>PIN-UP PARTNERS</h4>
@@ -758,7 +817,8 @@
               <ul class="aside__list list-reset">
                 <li class="aside__item">
                   <div class="aside__block-image">
-                    <img src="./img/top-logo.png" alt="Company logo.">
+                    <img src="./img/top-logo.png" srcset="./img/top-logo@2x.png 2x" loading="lazy" width="45"
+                      height="45" alt="Company logo.">
                   </div>
                   <div class="aside__block-content">
                     <h4>PIN-UP PARTNERS</h4>
@@ -784,7 +844,8 @@
                 </li>
                 <li class="aside__item">
                   <div class="aside__block-image">
-                    <img src="./img/top-logo.png" alt="Company logo.">
+                    <img src="./img/top-logo.png" srcset="./img/top-logo@2x.png 2x" loading="lazy" width="45"
+                      height="45" alt="Company logo.">
                   </div>
                   <div class="aside__block-content">
                     <h4>PIN-UP PARTNERS</h4>
@@ -810,7 +871,8 @@
                 </li>
                 <li class="aside__item">
                   <div class="aside__block-image">
-                    <img src="./img/top-logo.png" alt="Company logo.">
+                    <img src="./img/top-logo.png" srcset="./img/top-logo@2x.png 2x" loading="lazy" width="45"
+                      height="45" alt="Company logo.">
                   </div>
                   <div class="aside__block-content">
                     <h4>PIN-UP PARTNERS</h4>
@@ -1088,7 +1150,8 @@
           </li>
         </ul>
         <div class="popup__image">
-          <img src="./img/popup-bg.png" width="455" height="635" alt="">
+          <img src="./img/popup-bg.png" srcset="./img/popup-bg@2x.png 2x" width="455" height="635" loading="lazy"
+            alt="">
         </div>
       </div>
     </div>
