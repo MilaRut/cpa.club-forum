@@ -2,10 +2,10 @@
   background-color: #1A1D24;
   border: 1px solid #2D3341;
   border-radius: 10px;
-  padding: 38px 40px 30px;
+  padding: 37px 38px 30px;
 
   h2 {
-    @include font-settings (500, 30px, 1.16);
+    @include font-settings ($ff-inter, 500, 30px, 1.16);
     letter-spacing: 0.96px;
     margin-bottom: 25px;
   }
@@ -15,7 +15,7 @@
   background-color: #12151B;
   border: 1px solid #2D3341;
   border-radius: 10px;
-  padding: 56px 38px 40px 32px;
+  padding: 56px 38px 20px 32px;
 }
 
 .updates__cover {
@@ -40,8 +40,8 @@
     object-fit: cover;
   }
 
-  h2 {
-    @include font-settings (700, 35px, 0.99);
+  h3 {
+    @include font-settings ($ff-inter, 700, 35px, 0.99);
     letter-spacing: 0.97px;
     text-transform: uppercase;
     position: absolute;
@@ -50,23 +50,23 @@
   }
 
   p {
-    @include font-settings (500, 14x, 1);
+    @include font-settings ($ff-inter, 500, 14px, 1);
     letter-spacing: 0.3px;
     text-transform: uppercase;
     position: absolute;
-    bottom: 28px;
-    right: 21px;
+    bottom: 29px;
+    right: 37px;
   }
 }
 
 .updates__author {
   display: flex;
   align-items: center;
-  margin-bottom: 25px;
+  margin-bottom: 24px;
 
   p,
   a {
-    @include font-settings (400, 14px, 1.1);
+    @include font-settings ($ff-inter, 400, 14px, 1.1);
     color: #AAAAAA;
     letter-spacing: 0.96px;
     text-transform: uppercase;
@@ -88,16 +88,20 @@
 }
 
 .updates__text {
-  margin-bottom: 25px;
   padding-left: 6px;
+  margin-bottom: 5px;
 
   p {
-    @include font-settings (400, 14px, 1.5);
+    @include font-settings ($ff-inter, 400, 14px, 1.5);
+    padding-bottom: 25px;
   }
 
   h3 {
-    @include font-settings (400, 24px, 1.5);
-    margin-top: 20px;
-    margin-bottom: 10px;
+    @include font-settings ($ff-inter, 400, 24px, 1.5);
+    margin: 0 0 6px;
   }
+}
+
+.updates__comments {
+  padding-left: 6px;
 }

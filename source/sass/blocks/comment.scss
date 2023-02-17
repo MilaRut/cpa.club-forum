@@ -1,24 +1,25 @@
 .comment {
   width: 100%;
   min-height: 372px;
-  display: flex;
+  display: grid;
+  grid-template-columns: 170px auto;
   background-color: #262931;
   border: 1px solid #2D3341;
   border-radius: 10px;
   padding: 20px;
-  margin-bottom: 21px;
+  margin-bottom: 19px;
 }
 
 .comment__user-block {
-  padding-right: 20px;
+  padding-right: 4px;
   border-right: 1px solid #32343C;
 }
 
 .comment__user-image {
   width: 150px;
-  height: 143px;
+  height: 150px;
   border-radius: 20px;
-  margin-bottom: 14px;
+  margin-bottom: 9px;
   overflow: hidden;
 
   img {
@@ -31,62 +32,80 @@
 .comment__user-info {
   display: flex;
   flex-direction: column;
-  align-items: center
+  align-items: center;
+  width: 100%;
+  padding-right: 15px;
 }
 
 .comment__user-name {
-  @include font-settings (400, 14px, 1);
-  margin-bottom: 5px;
+  @include font-settings ($ff-inter, 700, 16px, 1);
+  margin-bottom: 8px;
 }
 
 .comment__user-status {
-  @include font-settings (400, 16px, 1);
+  @include font-settings ($ff-inter, 400, 16px, 1);
   color: $color-accent;
   border: 1px solid $color-accent;
   border-radius: 140px;
-  margin-bottom: 23px;
-  padding: 5px 15px;
+  margin-bottom: 14px;
+  padding: 5px 10px;
 }
 
 .comment__user-stats span {
-  @include font-settings (300, 14px, 1);
+  @include font-settings ($ff-inter, 300, 14px, 1);
   opacity: 0.5;
 }
 
 .comment__user-stats {
-  margin-bottom: 5px;
+  width: 100%;
+  margin-bottom: 7px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
   b {
-    @include font-settings (600, 14px, 1);
+    @include font-settings ($ff-inter, 600, 14px, 1);
     color: $color-accent;
+    word-break: break-word;
+    margin-left: 5px;
   }
 
   &--msg {
     b {
       background-color: #2C2C2D;
       border-radius: 10px;
-      padding: 10px;
+      min-width: 46px;
+      padding: 10px 5px;
+      text-align: center;
     }
   }
 }
 
 .comment__user-contacts {
-  @include font-settings (500, 14px, 1);
+  @include font-settings ($ff-inter, 500, 14px, 1);
+  width: 100%;
   background: #1E2228;
   border-radius: 10px;
   color: $color-accent;
-  margin-top: 10px;
-  padding: 10px 15px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  margin-top: 7px;
+  padding: 10px;
+  word-break: break-word;
 
   &:hover {
     color: $color-default-white;
   }
+
+  span {
+    padding-right: 11px;
+  }
 }
 
 .comment__user-contacts-icon {
-  margin-right: 30px;
+  min-width: 20px;
+  min-height: 18px;
 }
 
 .comment__text-block {
@@ -94,22 +113,22 @@
   flex-direction: column;
   width: 100%;
   padding-left: 20px;
-  padding-right: 85px;
 }
 
 .comment__post-time {
   flex-shrink: 0;
-  margin-bottom: 42px;
+  margin-bottom: 36px;
 
   p {
-    @include font-settings (500, 14px, 1.5);
+    @include font-settings ($ff-inter, 500, 14px, 1.5);
     opacity: 0.5;
   }
 }
 
 .comment__text {
-  @include font-settings (500, 14px, 1.5);
+  @include font-settings ($ff-inter, 500, 14px, 1.5);
   flex-grow: 1;
+  padding-right: 85px;
 }
 
 .comment__btns-block {
@@ -128,12 +147,12 @@
 }
 
 .comment__btn {
-  @include font-settings (500, 14px, 1);
+  @include font-settings ($ff-inter, 500, 14px, 1);
   color: $color-accent;
   border: none;
   background-color: transparent;
   opacity: 0.8;
-  padding: 5px 20px;
+  padding: 5px 17px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -146,6 +165,10 @@
   &:hover {
     background-color: #262832;
   }
+}
+
+.comment__btns-secondary .comment__btn {
+  padding: 5px 12px;
 }
 
 .comment__btn svg {

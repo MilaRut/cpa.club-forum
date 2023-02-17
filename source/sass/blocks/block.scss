@@ -5,7 +5,7 @@
 
 .block__heading {
   background-color: #1A1D24;
-  padding: 10px 12px;
+  padding: 9px 11px 7px 20px;
   border-radius: 20px 20px 0 0;
   display: flex;
   justify-content: space-between;
@@ -16,37 +16,52 @@
   }
 }
 
+.forum-section--index .block__heading {
+  padding: 17px 20px;
+}
+
 .block__heading h2 {
-  @include font-settings (700, 16px, 1);
+  @include font-settings ($ff-inter, 700, 16px, 1);
 }
 
 .block__heading--vip h2 {
   color: $color-default-black;
 }
 
+.block__list {
+  padding: 0 20px;
+}
+
 .block__item {
   display: grid;
-  grid-template-columns: 420px 20px 138px auto;
+  grid-template-columns: 403px 31px 162px auto;
   column-gap: 20px;
-  padding: 15px 20px;
+  padding: 10px 0 8px;
 
   &:not(:last-child) {
     border-bottom: 1px solid #606368;
-    padding-bottom: 15px;
+  }
+
+  &:last-child {
+    padding-bottom: 17px;
   }
 }
 
 .block__col--1 {
+  padding-top: 5px;
+
   h3 {
-    @include font-settings (600, 14px, 1);
+    @include font-settings ($ff-inter, 600, 14px, 1);
+    margin-bottom: 3px;
   }
 
   p {
-    @include font-settings (300, 14px, 1);
+    @include font-settings ($ff-inter, 300, 14px, 1);
   }
 }
 
 .block__col--2 {
+  padding-top: 9px;
 
   .block__add-link {
     &:hover {
@@ -60,22 +75,24 @@
 }
 
 .block__col--3 {
+  padding-top: 5px;
+
   p {
-    @include font-settings (400, 14px, 1);
+    @include font-settings ($ff-inter, 400, 14px, 1);
   }
 
   span {
-    @include font-settings (600, 14px, 1);
+    @include font-settings ($ff-inter, 600, 14px, 1);
   }
 }
 
 .block__col--4 {
   a {
-    @include font-settings (400, 12px, 1.2);
+    @include font-settings ($ff-inter, 400, 12px, 1.2);
     display: block;
     text-decoration: underline;
     max-width: 208px;
-    margin-bottom: 8px;
+    margin-bottom: 3px;
 
     &:hover {
       opacity: 0.6;
@@ -83,7 +100,7 @@
   }
 
   p {
-    @include font-settings (400, 12px, 1);
+    @include font-settings ($ff-inter, 400, 12px, 1);
     display: inline;
   }
 

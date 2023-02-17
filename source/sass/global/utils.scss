@@ -40,6 +40,33 @@
   list-style: none;
 }
 
+.error-message {
+  display: none;
+}
+
+.error-message.active {
+  @include font-settings ($ff-inter, 400, 12px, 1);
+  display: inline-block;
+  position: absolute;
+  bottom: 3px;
+  left: 5px;
+  color: #ff4e64;
+}
+
+input[type="email"],
+input[type="number"],
+input[type="password"],
+input[type="tel"],
+input[type="text"],
+input[type="url"] {
+
+  &.invalid,
+  &:invalid {
+    border: 1px solid #ff4e64;
+  }
+}
+
+
 .scroll-lock-ios {
   position: fixed;
 

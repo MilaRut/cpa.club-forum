@@ -127,6 +127,9 @@
                 </ul>
                 <div class="adblock adblock-220x320">
                   <iframe width="220" height="320" frameborder="0"></iframe>
+                  <!-- <a href="#" class="adblock__link">
+                    <img src="" width="220" height="320" alt="">
+                  </a> -->
                 </div>
               </div>
             </nav>
@@ -137,9 +140,14 @@
 
     <main class="main main-block">
       <div class="container">
+
         <div class="adblock adblock-1240x110">
           <iframe width="1240" height="110" src="./img/banner-1240x110.png" frameborder="0"></iframe>
+          <!-- <a href="#" class="adblock__link">
+            <img src="" width="1240" height="110" alt="">
+          </a> -->
         </div>
+
         <div class="main-content article">
 
           <section class="article__content">
@@ -163,9 +171,15 @@
 
                 <div class="article__tags">
                   <ul class="article__tags-list">
-                    <li class="article__tags-item">Обзор</li>
-                    <li class="article__tags-item">Кейс</li>
-                    <li class="article__tags-item">Новости</li>
+                    <li class="article__tags-item">
+                      <span class="article__tag tag" data-tag="review">Обзор</span>
+                    </li>
+                    <li class="article__tags-item">
+                      <span class="article__tag tag" data-tag="case">Кейс</span>
+                    </li>
+                    <li class="article__tags-item">
+                      <span class="article__tag tag" data-tag="news">Новости</span>
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -190,6 +204,9 @@
 
               <div class="adblock adblock-760x110">
                 <iframe width="760" height="110" src="./img/banner-760x110.png" frameborder="0"></iframe>
+                <!-- <a href="#" class="adblock__link">
+                  <img src="" width="760" height="110" alt="">
+                </a> -->
               </div>
 
               <div class="article__image">
@@ -198,27 +215,25 @@
               </div>
 
               <div class="article__text">
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                  industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
-                  and scrambled it to make a type specimen book. It has survived not only five centuries, but also the
-                  leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
-                  with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
-                  publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                <h3>Why do we use it?</h3>
-                <p>It is a long established fact that a reader will be distracted by the readable content of a page
-                  when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal
-                  distribution of letters, as opposed to using 'Content here, content here', making it look like
-                  readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their
-                  default model text, and a search for 'lorem ipsum' will uncover many web sites still in their
-                  infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose
-                  (injected humour and the like).
+                <h3>Where does it come from?</h3>
+                <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
+                  classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin
+                  professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words,
+                  consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical
+                  literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of
+                  "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book
+                  is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem
+                  Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+                  The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested.
+                  Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in
+                  their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
                 </p>
               </div>
             </div>
 
             <div class="article__right-col">
               <div class="article__filters filters">
-                <form action="" method="post">
+                <form id="article-filters-form" action="" method="post">
                   <h2>Фильтры</h2>
                   <button class="filters__reset-btn" type="reset">
                     <svg width="20" height="20" fill="currentColor">
@@ -300,13 +315,18 @@
                       </li>
                     </ul>
                   </div>
-                  <button class="filters__submit-btn" type="submit">Показать</button>
+                  <button class="filters__submit-btn" form="article-filters-form" type="submit">Показать</button>
                 </form>
               </div>
 
               <div class="adblock adblock-360x430">
                 <iframe width="360" height="430" src="./img/banner-360x430.png" frameborder="0"></iframe>
+                <!-- <a href="#" class="adblock__link">
+                  <img src="" width="360" height="430" alt="">
+                </a> -->
               </div>
+
+
 
               <div class="article__news news">
                 <ul class="news__list list-reset">
@@ -344,8 +364,8 @@
                 </li>
               </ul>
 
-              <button class="blog__write-btn">
-                <svg width="17" height="17" fill="currentColor">
+              <button class="article__comments-add-btn">
+                <svg width="20" height="20" fill="currentColor">
                   <use xlink:href="./img/sprite.svg#add"></use>
                 </svg>
                 Добавить комментарий
@@ -547,7 +567,7 @@
               <label for="login-password">
                 <input type="password" name="login-password" id="login-password" placeholder="Пароль" required>
               </label>
-              <button type="submit" class="popup__submit-btn">Вход</button>
+              <button type="submit" form="login-form" class="popup__submit-btn">Вход</button>
             </form>
           </li>
 
@@ -583,13 +603,11 @@
                 <input type="password" name="signup-password" id="signup-password" placeholder="Пароль" required>
               </label>
               <div class="popup__checkbox-wrapper">
-                <label>Запомнить меня
-                  <input class="visually-hidden" type="checkbox" name="remember" id="remember" checked>
-                  <span class="popup__checkbox-mark"></span>
-                </label>
+                <input class="visually-hidden" type="checkbox" name="remember" id="remember" checked>
+                <label for="remember">Запомнить меня</label>
                 <a href="#" id="forgot-password-link" class="popup__forgot-password-link">Забыли пароль?</a>
               </div>
-              <button type="submit" class="popup__submit-btn">Вход</button>
+              <button type="submit" form="signup-form" class="popup__submit-btn">Вход</button>
               <div class="popup__signup-wrapper">
                 <span>Нет аккаунта?</span>
                 <button type="button" class="popup__signup-btn open-popup signup-btn">Регистрация</button>

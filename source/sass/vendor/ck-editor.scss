@@ -1,0 +1,194 @@
+:root {
+  --ck-border-radius: 6px !important;
+  --ck-color-base-foreground: #262931 !important;
+  --ck-color-base-background: #262931 !important;
+  --ck-color-base-border: #454954 !important;
+  --ck-color-base-focus: $color-accent !important;
+  --ck-color-base-text: #ffffff !important;
+  --ck-color-button-on-background: #454954 !important;
+  --ck-color-button-on-hover-background: #454954 !important;
+  --ck-color-tooltip-background: #454954 !important;
+  --ck-color-tooltip-text:  $color-default-black !important;
+}
+
+.ck {
+  color: #ffffff !important;
+}
+
+.ck.ck-button.ck-off:not(.ck-disabled):hover,
+a.ck.ck-button.ck-off:not(.ck-disabled):hover {
+  svg,
+  span.ck-button__label {
+    color: $color-default-black !important;
+  }
+}
+
+.ck-editor {
+  min-width: 715px;
+  border: 1px solid #454954 !important;
+  border-radius: 6px !important;
+}
+
+.ck.ck-reset.ck-editor.ck-rounded-corners {
+  border: 1px solid #454954 !important;
+
+  &>* {
+    border-radius: 6px 6px 0 0 !important;
+  }
+}
+
+.ck.ck-editor__main>.ck-editor__editable:not(.ck-focused) {
+  border: 1px solid #454954 !important;
+  border-radius: 0 0 6px 6px !important;
+  border-top: none !important;
+}
+
+.ck[role="textbox"]:focus {
+  border: 1px solid $color-accent !important;
+}
+
+span.ck-button__label {
+  width: 65px !important;
+}
+
+button.ck-splitbutton__arrow {
+  display: none !important;
+}
+
+.ck-dropdown__panel_visible {
+  border-top-left-radius: 6px !important;
+}
+
+ul.ck-list {
+  margin: 0 !important;
+  padding: 0 !important;
+  border-top-left-radius: 6px !important;
+}
+
+li.ck-list__item {
+  min-width: 135px !important;
+
+  button {
+
+    &:hover,
+    &:hover span {
+      background-color: #E7F5FF !important;
+      color: $color-default-black !important;
+    }
+  }
+}
+
+div.ck-color-table {
+  background-color: none !important;
+}
+
+
+.ck-toolbar_vertical button {
+
+  &:hover,
+  &:hover svg {
+    background-color: #E7F5FF !important;
+    color: $color-default-black !important;
+  }
+}
+
+
+// CONTENT STYLES
+
+.ck.ck-editor {
+  h2 {
+    @include font-settings ($ff-noto, 700, 24px, 1.25);
+    margin: 12px 0;
+  }
+
+  h3 {
+    @include font-settings ($ff-noto, 700, 18px, 1.25);
+    margin: 12px 0;
+  }
+
+  h4 {
+    @include font-settings ($ff-noto, 700, 16px, 1.25);
+    margin: 12px 0;
+  }
+}
+
+.ck.ck-editor {
+  p {
+    @include font-settings ($ff-noto, 400, 14px, 1.5);
+    margin: 10px 0;
+  }
+}
+
+.ck.ck-editor {
+  margin-bottom: 10px;
+
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+}
+
+.ck.ck-editor {
+  margin-bottom: 12px;
+
+  a {
+    @include font-settings ($ff-noto, 400, 14px, 1.5);
+    font-style: normal;
+    color: $color-accent;
+    text-decoration: underline;
+  }
+}
+
+.ck.ck-editor {
+
+  ul,
+  ol {
+    padding-left: 24px;
+    margin: 10px 0 16px;
+  }
+
+  ul {
+    li {
+      @include font-settings ($ff-noto, 400, 14px, 1.5);
+      margin-bottom: 6px;
+    }
+  }
+
+  ol {
+    li {
+      @include font-settings ($ff-noto, 400, 14px, 1.5);
+      margin-bottom: 6px;
+    }
+  }
+}
+
+.ck.ck-editor {
+  code {
+    @include font-settings ($ff-incon, 400, 14px, 1.5);
+    color: $color-default-black;
+    background-color: #F8F9FA;
+    border-radius: 4px;
+    padding: 5px 7px;
+  }
+}
+
+.ck.ck-editor {
+  blockquote {
+    @include font-settings ($ff-noto, 400, 14px, 1.5);
+    padding-left: 16px;
+    border-left: 2px solid #DEE2E6;
+
+    p {
+      margin: 0;
+    }
+  }
+}
+
+.ck.ck-editor {
+  .ck-content hr {
+    height: 1px;
+    margin: 12px 0;
+    background-color: #DEE2E6;
+  }
+}

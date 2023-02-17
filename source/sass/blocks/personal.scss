@@ -1,0 +1,231 @@
+.personal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #262931;
+  padding: 10px;
+  border-radius: 10px 0px 0px 10px;
+}
+
+.personal__edit-btn {
+  width: 37px;
+  height: 37px;
+  margin-left: auto;
+  margin-bottom: 6px;
+  background: #FFFFFF;
+  border: 0.5px solid rgba(73, 62, 250, 0.2);
+  border-radius: 10px;
+  opacity: 0.7;
+  cursor: pointer;
+
+  svg {
+    fill: #1E1E1E;
+    opacity: 0.7;
+  }
+
+  &:hover {
+    background-color: #76777C;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+}
+
+.personal__image-wrapper {
+  position: relative;
+  margin-bottom: 18px;
+}
+
+.personal__image {
+  width: 159px;
+  height: 152px;
+  border: 5px solid #ffffff;
+  border-radius: 26px;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.personal__alert {
+  @include font-settings ($ff-inter, 700, 16px, 1);
+  position: absolute;
+  bottom: -11px;
+  left: -13px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #FF0000;
+  color: $color-default-white;
+  text-align: center;
+  padding: 6px;
+}
+
+.personal__name p {
+  @include font-settings ($ff-inter, 700, 16px, 1);
+  margin-bottom: 12px;
+}
+
+.personal__status p {
+  @include font-settings ($ff-inter, 400, 14px, 1);
+  color: $color-accent;
+  border: 1px solid $color-accent-opacity-50;
+  border-radius: 140px;
+  margin-bottom: 23px;
+  padding: 5px 15px;
+}
+
+.personal__friends p {
+  @include font-settings ($ff-inter, 500, 14px, 1);
+  opacity: 0.5;
+  text-align: center;
+  margin-bottom: 11px;
+}
+
+.personal__friends-list {
+  width: 196px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 35px;
+}
+
+.personal__friends-item {
+  position: relative;
+}
+
+.personal__friends-image {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: 3px solid #FFFFFF;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+// Tooltip
+
+.personal__tooltip {
+  display: none;
+}
+
+.personal__friends-item:hover .personal__tooltip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: -47px;
+  left: -71px;
+  z-index: 10;
+
+  .personal__friends-delete-btn {
+    position: relative;
+    display: flex;
+    width: 183px;
+    height: 48px;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 4px;
+    background-color: #1A1D25;
+    cursor: pointer;
+
+    &::after {
+      position: absolute;
+      content: "";
+      bottom: -7px;
+      left: 46%;
+      width: 16px;
+      height: 16px;
+      transform: rotate(45deg);
+      background-color: #1A1D25;
+      border-radius: 4px;
+      z-index: 9;
+    }
+
+    &:hover {
+      background-color: #1f2129;
+
+      &::after {
+        background-color: #1f2129;
+      }
+    }
+
+    &:active {
+      background-color: #2b2e3a;
+
+      &::after {
+        background-color: #2b2e3a;
+      }
+    }
+  }
+
+  span {
+    @include font-settings ($ff-inter, 400, 12px, 1.33);
+    color: #D1D2D3;
+  }
+}
+
+// END Tooltip
+
+.personal__stats {
+  span {
+    @include font-settings ($ff-inter, 400, 14px, 1);
+    opacity: 0.5;
+  }
+
+  b {
+    @include font-settings ($ff-inter, 600, 14px, 1);
+    color: $color-accent;
+  }
+}
+
+.personal__stats div {
+  width: 190px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 28px;
+}
+
+.personal__btn {
+  display: none;
+}
+
+.personal__btn.active {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 190px;
+  min-height: 39px;
+  background-color: #15171E;
+  border: none;
+  border-radius: 6px;
+  margin-bottom: 7px;
+  cursor: pointer;
+
+  span {
+    @include font-settings ($ff-inter, 400, 12px, 1.33);
+    color: #D1D2D3;
+  }
+
+  svg {
+    margin-right: 6px;
+  }
+
+  &:hover {
+    background-color: #1A1D25;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}

@@ -3,25 +3,26 @@
   background-color: #1A1D24;
   border: 1px solid #2D3341;
   border-radius: 10px;
-  margin-top: 25px;
+  margin-top: 21px;
 }
 
-.blog__headings {
+.blog__heading {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 25px;
+  padding: 0 19px;
 
   h2 {
-    @include font-settings (700, 35px, 1);
+    @include font-settings ($ff-inter, 700, 35px, 1);
     letter-spacing: 0.9px;
     text-transform: uppercase;
   }
 }
 
 .blog__write-btn {
-  @include font-settings (500, 14px, 1);
-  min-width: 190px;
+  @include font-settings ($ff-inter, 500, 14px, 1);
+  min-width: 183px;
   background-color: $color-accent;
   border: none;
   border-radius: 10px;
@@ -29,7 +30,7 @@
   display: flex;
   align-items: center;
   text-align: center;
-  padding: 10px 20px;
+  padding: 12px 17px;
   cursor: pointer;
 
   svg {
@@ -50,23 +51,21 @@
   display: grid;
   grid-template-columns: auto 360px;
   column-gap: 40px;
+  margin-bottom: 47px;
   padding: 0 20px;
 }
 
 .blog__list {
   display: grid;
   grid-template-columns: repeat(2, auto);
-  gap: 28px 31px;
-  margin-bottom: 25px;
-
-  &--second {
-    gap: 60px 40px;
-  }
+  gap: 31px 26px;
+  margin-bottom: 23px;
 }
 
 .blog__item {
   background-color: #262931;
   border-radius: 20px;
+  max-width: 366px;
 
   &.pinned {
     position: relative;
@@ -98,7 +97,6 @@
   width: 365px;
   height: 205px;
   border-radius: 20px 20px 0px 0px;
-  margin-bottom: 32px;
   overflow: hidden;
 
   img {
@@ -109,7 +107,7 @@
 }
 
 .blog__article-tag {
-  @include font-settings (400, 14px, 1);
+  @include font-settings ($ff-inter, 400, 14px, 1);
   color: #14161B;
   text-align: center;
   letter-spacing: 0.3px;
@@ -122,10 +120,10 @@
 }
 
 .blog__article-text {
-  padding: 0 20px 34px;
+  padding: 32px 34px 34px 20px;
 
   p {
-    @include font-settings (400, 14px, 1.1);
+    @include font-settings ($ff-inter, 400, 14px, 1.1);
     opacity: 0.5;
     letter-spacing: 0.96px;
     text-transform: uppercase;
@@ -134,30 +132,44 @@
 }
 
 .blog__article-link {
-  @include font-settings (600, 18px, 1.4);
+  @include font-settings ($ff-inter, 600, 18px, 1.4);
+  letter-spacing: 0.3px;
+
+  &:hover {
+    color: $color-accent;
+  }
 }
 
 .blog__list--second {
-  margin-bottom: 40px;
+  gap: 60px 40px;
+
+  .blog__item {
+    max-width: 360px;
+  }
 
   .blog__article-image {
     width: 360px;
     height: 214px;
   }
 
+  .blog__article-tag {
+    bottom: 26px;
+    left: 24px;
+  }
+
   .blog__article-text {
-    padding: 0 49px 34px 40px;
+    padding: 33px 49px 47px 48px;
   }
 
   .blog__article-link {
-    @include font-settings (600, 24px, 1.42);
+    @include font-settings ($ff-inter, 600, 24px, 1.42);
     letter-spacing: 0.3px;
     display: block;
     margin-bottom: 18px;
   }
 
   p {
-    @include font-settings (500, 14px, 1);
+    @include font-settings ($ff-inter, 500, 14px, 1);
     color: $color-accent;
     letter-spacing: 0.3px;
     text-transform: none;
@@ -167,7 +179,7 @@
 }
 
 .blog__more-btn {
-  @include font-settings (600, 14px, 1);
+  @include font-settings ($ff-inter, 600, 14px, 1);
   display: block;
   width: 151px;
   background-color: $color-accent;
@@ -180,27 +192,29 @@
 
 .blog__cases {
   h2 {
-    @include font-settings (700, 35px, 1);
+    @include font-settings ($ff-inter, 700, 35px, 1);
     letter-spacing: 0.96px;
     text-transform: uppercase;
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 25px;
   }
 }
 
 .blog__cases-list {
   display: flex;
-  justify-content: space-between;
-  margin-bottom: 40px;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
 }
 
 .blog__cases-item {
-  max-width: 300px;
+  max-width: 299px;
+  min-height: 400px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   border-radius: 20px;
-  padding: 15px 16px;
+  margin-bottom: 20px;
+  padding: 15px 16px 12px;
 
   &:hover,
   &:active {
@@ -214,7 +228,7 @@
   height: 207px;
   border-radius: 20px 20px 0px 0px;
   overflow: hidden;
-  margin-bottom: 31px;
+  flex-shrink: 0;
 
   img {
     width: 100%;
@@ -224,19 +238,26 @@
 }
 
 .blog__cases-link {
-  @include font-settings (600, 17px, 1.56);
-  display: block;
-  letter-spacing: 0.29px;
-  margin-bottom: 40px;
+  flex-grow: 1;
+  padding: 34px 6px 8px 0px;
+
+  a {
+    @include font-settings ($ff-inter, 600, 17px, 1.56);
+    display: block;
+    letter-spacing: 0.29px;
+  }
 }
 
 .blog__cases-log {
   display: flex;
   align-items: center;
+  flex-shrink: 0;
 
-  p {
-    @include font-settings (400, 12px, 1.14);
-    opacity: 0.5;
+  p,
+  a,
+  time {
+    @include font-settings ($ff-inter, 400, 13px, 1.14);
+    color: #AAAAAA;
     letter-spacing: 0.96px;
     text-transform: uppercase;
   }
@@ -247,7 +268,7 @@
   height: 36px;
   border-radius: 50%;
   overflow: hidden;
-  margin-right: 6px;
+  margin-right: 13px;
 
   img {
     width: 100%;
@@ -256,22 +277,30 @@
   }
 }
 
-.blog__cases-show-more {
+.blog__cases-show-more,
+.blog__articles-show-more {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
+  text-align: center;
+  width: 97%;
   min-height: 47px;
+  margin-right: 19px;
+  margin-left: 19px;
   background-color: #262931;
   border: none;
   border-radius: 10px;
   color: $color-default-white;
   cursor: pointer;
 
-  svg {
-    margin-right: 14px;
+  span {
+    @include font-settings ($ff-inter, 500, 14px, 1);
   }
-  
+
+  svg {
+    margin-right: 17px;
+  }
+
   &:hover {
     background-color: #76777C;
     color: $color-default-white;
@@ -280,4 +309,9 @@
   &:active {
     opacity: 0.5;
   }
+}
+
+.blog__articles-show-more {
+  width: 100%;
+  margin: 0;
 }

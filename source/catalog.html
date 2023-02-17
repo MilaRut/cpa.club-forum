@@ -127,6 +127,9 @@
                 </ul>
                 <div class="adblock adblock-220x320">
                   <iframe width="220" height="320" frameborder="0"></iframe>
+                  <!-- <a href="#" class="adblock__link">
+                    <img src="" width="220" height="320" alt="">
+                  </a> -->
                 </div>
               </div>
             </nav>
@@ -137,11 +140,15 @@
 
     <main class="main main-block">
       <div class="container">
+
         <div class="adblock adblock-1240x110">
           <iframe width="1240" height="110" src="./img/banner-1240x110.png" frameborder="0"></iframe>
+          <!-- <a href="#" class="adblock__link">
+            <img src="" width="1240" height="110" alt="">
+          </a> -->
         </div>
         <div class="main-content catalog">
-          <div class="catalog__headings">
+          <div class="catalog__heading">
             <h2>Каталог компаний</h2>
             <div class="catalog__btn-wrapper">
               <button class="catalog__view-btn catalog__view-btn--tiles active">
@@ -178,7 +185,7 @@
                       </a>
                       <div class="catalog__logo-block">
                         <img src="./img/catalog-card-logo-1.png" srcset="./img/catalog-card-logo-1@2x.png 2x" width="81"
-                        height="32" alt="">
+                          height="32" alt="">
                       </div>
                     </div>
                     <div class="catalog__info-block">
@@ -221,7 +228,7 @@
                       </a>
                       <div class="catalog__logo-block">
                         <img src="./img/catalog-card-logo-2.png" srcset="./img/catalog-card-logo-2@2x.png 2x" width="81"
-                        height="32" alt="">
+                          height="32" alt="">
                       </div>
                     </div>
                     <div class="catalog__info-block">
@@ -263,7 +270,7 @@
                       </a>
                       <div class="catalog__logo-block">
                         <img src="./img/catalog-card-logo-1.png" srcset="./img/catalog-card-logo-1@2x.png 2x" width="81"
-                        height="32" alt="">
+                          height="32" alt="">
                       </div>
                     </div>
                     <div class="catalog__info-block">
@@ -305,7 +312,7 @@
                       </a>
                       <div class="catalog__logo-block">
                         <img src="./img/catalog-card-logo-1.png" srcset="./img/catalog-card-logo-1@2x.png 2x" width="81"
-                        height="32" alt="">
+                          height="32" alt="">
                       </div>
                     </div>
                     <div class="catalog__info-block">
@@ -347,7 +354,7 @@
                       </a>
                       <div class="catalog__logo-block">
                         <img src="./img/catalog-card-logo-1.png" srcset="./img/catalog-card-logo-1@2x.png 2x" width="81"
-                        height="32" alt="">
+                          height="32" alt="">
                       </div>
                     </div>
                     <div class="catalog__info-block">
@@ -389,7 +396,7 @@
                       </a>
                       <div class="catalog__logo-block">
                         <img src="./img/catalog-card-logo-1.png" srcset="./img/catalog-card-logo-1@2x.png 2x" width="81"
-                        height="32" alt="">
+                          height="32" alt="">
                       </div>
                     </div>
                     <div class="catalog__info-block">
@@ -431,7 +438,7 @@
                       </a>
                       <div class="catalog__logo-block">
                         <img src="./img/catalog-card-logo-1.png" srcset="./img/catalog-card-logo-1@2x.png 2x" width="81"
-                        height="32" alt="">
+                          height="32" alt="">
                       </div>
                     </div>
                     <div class="catalog__info-block">
@@ -473,7 +480,7 @@
                       </a>
                       <div class="catalog__logo-block">
                         <img src="./img/catalog-card-logo-1.png" srcset="./img/catalog-card-logo-1@2x.png 2x" width="81"
-                        height="32" alt="">
+                          height="32" alt="">
                       </div>
                     </div>
                     <div class="catalog__info-block">
@@ -515,7 +522,7 @@
                       </a>
                       <div class="catalog__logo-block">
                         <img src="./img/catalog-card-logo-1.png" srcset="./img/catalog-card-logo-1@2x.png 2x" width="81"
-                        height="32" alt="">
+                          height="32" alt="">
                       </div>
                     </div>
                     <div class="catalog__info-block">
@@ -557,7 +564,7 @@
                       </a>
                       <div class="catalog__logo-block">
                         <img src="./img/catalog-card-logo-1.png" srcset="./img/catalog-card-logo-1@2x.png 2x" width="81"
-                        height="32" alt="">
+                          height="32" alt="">
                       </div>
                     </div>
                     <div class="catalog__info-block">
@@ -773,70 +780,22 @@
 
                   <!-- SELECT -->
 
-                  <div class="filters__group filters__group--select filters__group--select-one">
+                  <div class="filters__group select select-one">
                     <fieldset>
-                      <legend class="visually-hidden">Select title</legend>
-                      <span class="filters__fieldset-name">Select title</span>
-                      <select id="select-one" name="select-one">
-                        <option></option>
-                        <option value="value1">Value-1</option>
-                        <option value="value2">Value-2</option>
-                        <option value="value3">Value-3</option>
+                      <label for="choices-single-default-catalog">
+                        <span class="select__title">Input label text</span>
+                      </label>
+                      <select class="form-control choices-single-default" data-trigger name="choices-single-default"
+                        id="choices-single-default-catalog">
+                        <option value="">Choose</option>
+                        <option value="Choice 1">Choice 1</option>
+                        <option value="Choice 2">Choice 2</option>
+                        <option value="Choice 3">Choice 3</option>
                       </select>
                     </fieldset>
                   </div>
 
                   <!-- END OF SELECT -->
-
-                  <!-- MULTIPLE SELECT -->
-
-                  <div class="filters__group filters__group--select filters__select--select-multiple">
-                    <fieldset>
-                      <legend class="visually-hidden">Select-multiple title</legend>
-                      <span class="filters__fieldset-name">Select-multiple title</span>
-                      <select id="select-multiple" name="select-multiple" multiple>
-                        <option></option>
-                        <option value="value4">Value-4</option>
-                        <option value="value5">Value-5</option>
-                        <option value="value6">Value-6</option>
-                        <option value="value7">Value-7</option>
-                        <option value="value8">Value-8</option>
-                      </select>
-                    </fieldset>
-                  </div>
-
-                  <!-- END OF MULTIPLE SELECT -->
-
-                  <!-- RADIO -->
-
-                  <div class="filters__group filters__group--radio">
-                    <h3>Radio title</h3>
-                    <ul class="filters__list list-reset">
-                      <li class="filters__item">
-                        <label>
-                          <input class="visually-hidden" type="radio" name="radio" value="radio1" checked>
-                          <span class="filters__mark filters__mark--radio"></span>
-                          Radio-1
-                        </label>
-                      </li>
-                      <li class="filters__item">
-                        <label>
-                          <input class="visually-hidden" type="radio" name="radio" value="radio2">
-                          <span class="filters__mark filters__mark--radio"></span>
-                          Radio-2
-                        </label>
-                      </li>
-                      <li class="filters__item">
-                        <label>
-                          <input class="visually-hidden" type="radio" name="radio" value="radio3">
-                          <span class="filters__mark filters__mark--radio"></span>
-                          Radio-3
-                        </label>
-                      </li>
-                    </ul>
-                  </div>
-
-                  <!-- END OF RADIO -->
 
                   <button class="filters__submit-btn" type="submit">Показать</button>
                 </form>
@@ -1074,10 +1033,8 @@
                 <input type="password" name="signup-password" id="signup-password" placeholder="Пароль" required>
               </label>
               <div class="popup__checkbox-wrapper">
-                <label>Запомнить меня
-                  <input class="visually-hidden" type="checkbox" name="remember" id="remember" checked>
-                  <span class="popup__checkbox-mark"></span>
-                </label>
+                <input class="visually-hidden" type="checkbox" name="remember" id="remember" checked>
+                <label for="remember">Запомнить меня</label>
                 <a href="#" id="forgot-password-link" class="popup__forgot-password-link">Забыли пароль?</a>
               </div>
               <button type="submit" class="popup__submit-btn">Вход</button>

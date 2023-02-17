@@ -4,7 +4,7 @@
 
 .range-slider__price-input {
   display: flex;
-  margin: 0 0 22px;
+  margin: 0 0 25px;
 }
 
 .range-slider__price-input .range-slider__price-field {
@@ -13,7 +13,7 @@
 }
 
 .range-slider__price-field input {
-  @include font-settings (500, 14px, 1);
+  @include font-settings ($ff-inter, 500, 14px, 1);
   width: 100px;
   height: 40px;
   outline: none;
@@ -31,7 +31,7 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 .range-slider__price-input .range-slider__separator {
-  @include font-settings (400, 14px, 1.1);
+  @include font-settings ($ff-inter, 400, 14px, 1.1);
   width: 24px;
   display: flex;
   align-items: center;
@@ -72,7 +72,7 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .range-slider__range-input {
   position: relative;
-  margin-bottom: 7px;
+  margin-bottom: 13px;
 }
 
 .range-slider__range-input input {
@@ -111,9 +111,9 @@ input[type="range"]::-moz-range-thumb {
 .range-slider__diapason {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 24px;
+  margin-bottom: 13px;
 
   span {
-    @include font-settings (500, 14px, 1);
+    @include font-settings ($ff-inter, 500, 14px, 1);
   }
 }

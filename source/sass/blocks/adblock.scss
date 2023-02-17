@@ -11,7 +11,11 @@
 .adblock-925x110 {
   width: 925px;
   height: 110px;
-  margin-bottom: 21px;
+  margin-bottom: 28px;
+
+  &--index {
+    margin-bottom: 21px;
+  }
 }
 
 .adblock-760x110 {

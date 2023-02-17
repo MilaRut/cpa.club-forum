@@ -2,27 +2,36 @@
   background-color: #262931;
   border-radius: 20px;
   padding: 18px;
+  padding-bottom: 28px;
   margin-bottom: 30px;
 }
 
 .aside__block {
+
+  &:not(:last-child) {
+    margin-bottom: 35px;
+  }
+
   h3 {
-    @include font-settings (600, 18px, 1.56);
+    @include font-settings ($ff-inter, 600, 18px, 1.56);
     border-bottom: 1px solid #363840;
-    margin-bottom: 20px;
-    padding-bottom: 5px;
+    margin-bottom: 15px;
+    padding-bottom: 3px;
   }
 }
 
 .aside__item {
   display: flex;
-  margin-bottom: 10px;
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
 }
 
 .aside__block-image {
   width: 45px;
   height: 45px;
-  margin-right: 10px;
+  margin-right: 18px;
   border-radius: 8px;
   overflow: hidden;
 
@@ -35,7 +44,14 @@
 
 .aside__block-content {
   h4 {
-    @include font-settings (600, 18px, 1.56);
+    @include font-settings ($ff-inter, 600, 18px, 1.56);
     text-transform: uppercase;
+    margin-bottom: 5px;
+  }
+
+  p {
+    @include font-settings ($ff-inter, 400, 13px, 1.18);
+    opacity: 0.5;
+    padding-left: 5px;
   }
 }

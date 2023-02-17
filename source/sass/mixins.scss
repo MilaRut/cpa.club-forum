@@ -1,5 +1,5 @@
-@mixin font-settings ($weight, $fs, $lh) {
-  font-family: $ff-inter;
+@mixin font-settings ($ff, $weight, $fs, $lh) {
+  font-family: $ff;
   font-style: normal;
   font-weight: $weight;
   font-size: $fs;

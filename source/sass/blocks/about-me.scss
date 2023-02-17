@@ -1,0 +1,138 @@
+.about-me {
+  display: grid;
+  grid-template-columns: 400px 485px;
+  gap: 24px 21px;
+}
+
+.about-me__inner-block {
+  background-color: #262931;
+  border-radius: 10px;
+  padding: 20px 29px;
+
+  &--basic {
+    grid-column: 1 / 2;
+  }
+
+  &--contacts {
+    grid-column: 2 / 3;
+  }
+
+  &--signature {
+    grid-column: 1 / 3;
+  }
+
+  &--stats {
+    grid-column: 1 / 3;
+  }
+}
+
+.about-me__heading {
+  display: flex;
+  align-items: center;
+
+  h3 {
+    @include font-settings ($ff-inter, 600, 18px, 1);
+    margin-right: 13px;
+  }
+}
+
+.about-me__edit-btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: $color-default-white;
+  border-radius: 4px;
+  padding: 4px;
+  line-height: 1;
+
+  &:hover {
+    background-color: #14161B;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+}
+
+.about-me__user-info {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  margin: 0;
+  margin-top: 20px;
+}
+
+.about-me dt {
+  @include font-settings ($ff-inter, 400, 14px, 1.6);
+  opacity: 0.7;
+}
+
+.about-me dd {
+  @include font-settings ($ff-inter, 600, 14px, 1.6);
+  text-transform: uppercase;
+}
+
+.about-me__contacts-list {
+  display: flex;
+  margin-top: 11px;
+}
+
+.about-me__contacts-item {
+  margin-right: 6px;
+  background-color: #1E2228;
+  border-radius: 10px;
+  padding: 7px;
+}
+
+.about-me__contacts-link {
+  display: flex;
+  align-items: center;
+  color: $color-accent;
+
+  &:hover {
+    color: $color-default-white;
+  }
+
+  svg {
+    margin-right: 9px;
+    fill: $color-accent;
+  }
+}
+
+.about-me__inner-block--signature p {
+  @include font-settings ($ff-inter, 600, 14px, 1.6);
+  text-transform: uppercase;
+  margin-top: 15px;
+}
+
+.about-me__stats-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.about-me__stats-item {
+  margin-right: 65px;
+  margin-top: 7px;
+}
+
+
+.about-me__stats--msgs {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+}
+
+.about-me__stats-last-msg {
+  &:hover {
+    opacity: 0.6;
+  }
+}
+
+.about-me__stats {
+  dt {
+    margin-right: 10px;
+  }
+
+  dd,
+  dl {
+    margin: 0;
+  }
+}

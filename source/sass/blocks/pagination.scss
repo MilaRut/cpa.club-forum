@@ -4,10 +4,12 @@
   border-radius: 10px;
   display: flex;
   align-items: center;
-  padding: 8px 12px 6px;
+  padding: 10px 8px 8px;
 }
 
 .pagination__icon {
+  width: 26px;
+  height: 26px;
 
   &--last,
   &--next {
@@ -17,7 +19,7 @@
 }
 
 .pagination__link {
-  @include font-settings (500, 14px, 1);
+  @include font-settings ($ff-inter, 500, 14px, 1);
   color: $color-accent;
 
   &:hover,
@@ -29,5 +31,9 @@
 
   span {
     padding: 0 5px;
+  }
+
+  &:not(:last-child) {
+    margin-right: 4px;
   }
 }

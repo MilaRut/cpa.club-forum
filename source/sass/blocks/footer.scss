@@ -2,26 +2,27 @@
   // max-width: 1240px;
   background: #262931;
   border-radius: 10px 10px 0px 0px;
-  padding: 35px 40px 28px;
+  padding: 39px 9px 27px 40px
 }
 
 .footer__nav {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 80px;
+  margin-bottom: 87px;
+  margin-right: 70px;
 }
 
 .footer__item--heading h3 {
-  @include font-settings (600, 14px, 1);
+  @include font-settings ($ff-inter, 600, 14px, 1);
   text-transform: uppercase;
   margin-bottom: 12px;
 }
 
 .footer__item {
-  margin-bottom: 5px;
+  margin-bottom: 4px;
 
   a {
-    @include font-settings (400, 14px, 1);
+    @include font-settings ($ff-inter, 400, 14px, 1);
     color: #B8B8B8;
 
     &:hover {
@@ -34,7 +35,7 @@
   display: flex;
   flex-wrap: wrap;
   max-width: 120px;
-
+  margin-top: 22px;
 }
 
 .footer__socials-item {
@@ -60,13 +61,13 @@
 }
 
 .footer__copyright span {
-  @include font-settings (500, 14px, 1);
+  @include font-settings ($ff-inter, 500, 14px, 1);
   color: #6B6161;
   margin-right: auto;
 }
 
 .footer__menu a {
-  @include font-settings (400, 14px, 1);
+  @include font-settings ($ff-inter, 400, 14px, 1);
   color: #6B6161;
   margin-right: 30px;
 

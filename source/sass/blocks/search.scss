@@ -3,7 +3,7 @@
 }
 
 .search input {
-  @include font-settings (400, 14px, 1.7);
+  @include font-settings ($ff-inter, 400, 14px, 1.7);
   border: 1px solid #2D3341;
   border-radius: 10px;
   background-color: transparent;
@@ -54,7 +54,7 @@ input::placeholder {
 
   h3,
   a {
-    @include font-settings (400, 14px, 1.71);
+    @include font-settings ($ff-inter, 400, 14px, 1.71);
     color: #D1D2D3;
   }
 

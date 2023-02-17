@@ -1,31 +1,31 @@
-.ca-examples__headings {
+.ca-examples__heading {
   h1 {
-    @include font-settings (700, 24px, 1.25);
-    margin: 20px 0;
+    @include font-settings ($ff-noto, 700, 24px, 1.25);
+    margin: 12px 0;
   }
 
   h2 {
-    @include font-settings (700, 18px, 1.25);
-    margin: 16px 0;
+    @include font-settings ($ff-noto, 700, 18px, 1.25);
+    margin: 12px 0;
   }
 
   h3 {
-    @include font-settings (700, 16px, 1.25);
-    margin: 14px 0;
+    @include font-settings ($ff-noto, 700, 16px, 1.25);
+    margin: 12px 0;
   }
 }
 
 .ca-examples__paragraphs {
   p {
-    @include font-settings (400, 14px, 1.5);
-    margin: 12px 0;
+    @include font-settings ($ff-noto, 400, 14px, 1.5);
+    margin: 10px 0;
   }
 }
 
 .ca-examples__image {
   width: 683px;
   height: 495px;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 
   img {
     width: 100%;
@@ -35,8 +35,10 @@
 }
 
 .ca-examples__link {
+  margin-bottom: 12px;
+
   a {
-    @include font-settings (400, 14px, 1.5);
+    @include font-settings ($ff-noto, 400, 14px, 1.5);
     color: $color-accent;
     text-decoration: underline;
   }
@@ -44,18 +46,37 @@
 
 .ca-examples__unordered-list,
 .ca-examples__ordered-list {
-  li {
-    @include font-settings (400, 14px, 1.5);
+
+  ul,
+  ol {
+    padding-left: 24px;
+    margin: 10px 0 16px;
+  }
+
+  ul {
+    li {
+      @include font-settings ($ff-noto, 400, 14px, 1.5);
+      margin-bottom: 6px;
+    }
+  }
+
+  ol {
+    li {
+      @include font-settings ($ff-noto, 400, 14px, 1.5);
+      margin-bottom: 6px;
+    }
   }
 }
 
 .ca-examples__code {
+  margin: 12px 0 14px;
+
   code {
-    @include font-settings (400, 14px, 1.5);
+    @include font-settings ($ff-incon, 400, 14px, 1.5);
     color: $color-default-black;
     background-color: #F8F9FA;
     border-radius: 4px;
-    padding: 2px 8px;
+    padding: 5px 7px;
   }
 }
 
@@ -63,7 +84,7 @@
   position: relative;
 
   p {
-    @include font-settings (400, 14px, 1.5);
+    @include font-settings ($ff-noto, 400, 14px, 1.5);
     padding-left: 16px;
   }
 

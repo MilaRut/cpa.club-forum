@@ -1,35 +1,35 @@
 .company-admin {
-  padding-top: 20px;
+  padding-top: 33px;
 }
 
 .company-admin__name {
   input {
-    @include font-settings (400, 14px, 1.43);
+    @include font-settings ($ff-inter, 400, 14px, 1.43);
     width: 100%;
     background-color: #262931;
     border: 1px solid #454954;
     border-radius: 6px;
-    padding: 10px 12px;
-    margin-bottom: 44px;
+    padding: 9px 12px;
+    margin-bottom: 33px;
   }
 }
 
 .company-admin h3 {
-  @include font-settings (400, 14px, 1.5);
-  margin-bottom: 13px;
+  @include font-settings ($ff-inter, 400, 14px, 1.5);
+  margin-bottom: 9px;
 }
 
-.company-admin__file-dwnld {
+.company-admin__file-load {
   display: flex;
 
   p {
-    @include font-settings (400, 14px, 1.5);
+    @include font-settings ($ff-inter, 400, 14px, 1.5);
     text-align: center;
     margin-bottom: 15px;
   }
 
   label {
-    @include font-settings (500, 16px, 1.4);
+    @include font-settings ($ff-inter, 500, 16px, 1.4);
     color: $color-default-black;
     display: block;
     width: 150px;
@@ -41,9 +41,14 @@
     padding: 10px;
     cursor: pointer;
   }
+
+  input[type=file]:focus+label {
+    outline: 1px solid $color-default-white;
+    outline: -webkit-focus-ring-color auto 5px;
+  }
 }
 
-.company-admin__logo-dwnld {
+.company-admin__logo-load {
   margin-right: 50px;
 }
 
@@ -55,11 +60,11 @@
   padding: 20px 10px;
 
   p {
-    padding: 0 68px;
+    padding: 0 50px;
   }
 
   span {
-    @include font-settings (400, 13px, 1.69);
+    @include font-settings ($ff-inter, 400, 13px, 1.69);
     opacity: 0.5;
     font-style: italic;
     display: block;
@@ -71,19 +76,25 @@
   }
 }
 
+// EDITOR
+
 .company-admin__edit-section {
-  display: flex;
-  margin-top: 35px;
+  margin-top: 28px;
+  display: grid;
+  grid-template-columns: auto auto;
+  column-gap: 20px;
 }
 
 .company-admin__text {
   min-width: 715px;
-  background-color: #262931;
-  border: 1px solid #454954;
-  border-radius: 6px;
-  margin-right: 20px;
-  margin-bottom: 16px;
-  padding: 12px 14px;
+  // background-color: #262931;
+  // border: 1px solid #454954;
+  // border-radius: 6px;
+  margin-top: 8px;
+}
+
+.company-admin__examples {
+  padding: 5px;
 }
 
 .company-admin__links {
@@ -91,7 +102,7 @@
   flex-direction: column;
 
   input {
-    @include font-settings (400, 14px, 1.43);
+    @include font-settings ($ff-inter, 400, 14px, 1.43);
     width: 400px;
     height: 40px;
     background-color: #262931;
@@ -103,7 +114,7 @@
 }
 
 .company-admin__links-first-block {
-  margin-bottom: 35px;
+  margin-bottom: 37px;
 }
 
 .company-admin {
@@ -129,7 +140,7 @@
   padding: 0;
 
   span {
-    @include font-settings (400, 14px, 1.4);
+    @include font-settings ($ff-inter, 400, 14px, 1.4);
     display: inline-block;
     vertical-align: middle;
     margin-bottom: 10px;
@@ -144,13 +155,14 @@
 }
 
 .company-admin__submit-btn {
-  @include font-settings (500, 14px, 1);
+  @include font-settings ($ff-inter, 500, 14px, 1);
   width: 202px;
   height: 47px;
   background-color: $color-accent;
   border: none;
   border-radius: 10px;
   color: #14161B;
+  margin-top: 20px;
   margin-bottom: 3px;
   cursor: pointer;
 
@@ -161,4 +173,11 @@
   &:active {
     opacity: 0.6;
   }
+}
+
+// drag-and-drop
+
+.company-admin__drop-zone.dragover {
+  background-color: #262832;
+  outline-offset: -17px;
 }

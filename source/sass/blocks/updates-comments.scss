@@ -9,7 +9,7 @@
   border-radius: 8px;
   padding: 24px;
   display: flex;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 
   &--secondary {
     max-width: 642px;
@@ -30,7 +30,7 @@
 }
 
 .updates__btn {
-  @include font-settings (500, 20px, 1);
+  @include font-settings ($ff-inter, 500, 20px, 1);
   width: 40px;
   height: 34px;
   background-color: transparent;
@@ -52,7 +52,7 @@
   }
 
   span {
-    @include font-settings (500, 16px, 1);
+    @include font-settings ($ff-inter, 500, 16px, 1);
   }
 }
 
@@ -82,16 +82,16 @@
 }
 
 .updates-comments__author-link {
-  @include font-settings (500, 16px, 1);
+  @include font-settings ($ff-inter, 500, 16px, 1);
   margin-right: 18px;
 }
 
 .updates-comments__time {
-  @include font-settings (400, 16px, 1.5);
+  @include font-settings ($ff-inter, 400, 16px, 1.5);
 }
 
 .updates-comments__reply-btn {
-  @include font-settings (500, 16px, 1.5);
+  @include font-settings ($ff-inter, 500, 16px, 1.5);
   background-color: transparent;
   border: none;
   margin-left: auto;
@@ -123,7 +123,7 @@
   height: 40px;
   border-radius: 50%;
   overflow: hidden;
-  margin-right: 10px;
+  margin-right: 15px;
 
   img {
     width: 100%;
@@ -138,7 +138,7 @@
   }
 
   textarea {
-    @include font-settings (400, 16px, 1.5);
+    @include font-settings ($ff-inter, 400, 16px, 1.5);
     min-width: 506px;
     min-height: 96px;
     color: $color-default-white;
@@ -156,7 +156,7 @@
 }
 
 .updates-comments__submit-btn {
-  @include font-settings (500, 14px, 1.71);
+  @include font-settings ($ff-inter, 500, 14px, 1.71);
   min-width: 104px;
   max-height: 48px;
   background: #FFFFFF;

@@ -1,26 +1,26 @@
 .events {
-  margin-top: 22px;
+  margin-top: 20px;
   background: #1A1D24;
   border: 1px solid #2D3341;
   border-radius: 10px;
-  padding: 60px 40px 40px;
+  padding: 53px 40px 73px;
 }
 
-.events__headings {
+.events__heading {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 82px;
+  margin-bottom: 68px;
 
   h2 {
-    @include font-settings (700, 35px, 1);
+    @include font-settings ($ff-inter, 700, 35px, 1);
     letter-spacing: 0.9px;
     text-transform: uppercase;
   }
 }
 
 .events__add-btn {
-  @include font-settings (500, 14px, 1);
+  @include font-settings ($ff-inter, 500, 14px, 1);
   min-width: 190px;
   background-color: $color-accent;
   border: none;
@@ -29,13 +29,13 @@
   display: flex;
   align-items: center;
   text-align: center;
-  padding: 10px 20px;
+  padding: 12px 22px;
   cursor: pointer;
-  margin-right: 5px;
+  margin-right: 4px;
 
   svg {
     fill: $color-default-black;
-    margin-right: 5px;
+    margin-right: 13px;
   }
 
   &:hover {
@@ -74,12 +74,12 @@
   height: 82px;
   background-color: #FFC600;
   border-radius: 10px;
-  top: -40px;
+  top: -33px;
   left: 29px;
   padding: 16px 10px 14px;
 
   p {
-    @include font-settings (600, 31px, 1);
+    @include font-settings ($ff-inter, 600, 31px, 1);
     text-align: center;
     letter-spacing: 0.96px;
     color: #14161B;
@@ -87,7 +87,7 @@
   }
 
   span {
-    @include font-settings (600, 15px, 1);
+    @include font-settings ($ff-inter, 600, 15px, 1);
     display: block;
     text-align: center;
     text-transform: uppercase;
@@ -109,29 +109,29 @@
 }
 
 .events__text {
-  padding: 25px 20px;
+  padding: 29px 20px 25px;
 
   h4 {
-    @include font-settings (400, 14px, 1);
+    @include font-settings ($ff-inter, 400, 14px, 1);
     display: inline-block;
     letter-spacing: 0.96px;
     text-transform: uppercase;
     color: #14161B;
     background-color: $color-accent;
     border-radius: 29px;
-    padding: 5px 17px;
+    padding: 5px 14px;
     margin-bottom: 15px;
   }
 
   h3 {
-    @include font-settings (600, 17px, 1.56);
-    letter-spacing: 0.28px;
+    @include font-settings ($ff-inter, 600, 17px, 1.56);
+    letter-spacing: 0.5px;
     text-transform: uppercase;
-    margin-bottom: 9px;
+    margin-bottom: 18px;
   }
 
   p {
-    @include font-settings (600, 13px, 1);
+    @include font-settings ($ff-inter, 600, 13.5px, 1);
     letter-spacing: 0.96px;
     text-transform: uppercase;
     color: $color-accent;

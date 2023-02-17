@@ -6,10 +6,14 @@
 .wysiwyg__btn {
   background-color: transparent;
   border: none;
-  margin-right: 25px;
+  margin-right: 20px;
   cursor: pointer;
 
   &--paperclip {
-    margin-right: 80px;
+    margin-right: 70px;
+  }
+
+  &--link {
+    margin-right: 0;
   }
 }

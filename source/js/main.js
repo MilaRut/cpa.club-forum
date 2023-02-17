@@ -1,11 +1,16 @@
 import {iosVhFix} from './utils/ios-vh-fix';
+import {initCookiesPopup} from './modules/cookies-popup';
 import {openAlerts, closeAlerts} from './modules/alerts';
 import {openSorting, closeSorting} from './modules/sort';
 import {openHeaderNav, closeHeaderNav} from './modules/header-nav';
 import {initRangeSlider} from './modules/range-slider';
 import {toggleCatalogView} from './modules/catalog-toggle';
 import {initPopup} from './modules/popup';
-import {initTabs} from './modules/tabs';
+import {initAdminPopup} from './modules/admin-popup';
+import {initTabs, initSubTabs} from './modules/tabs';
+import {checkArticles} from './modules/user-articles';
+import {initDefaultSelect, initMultipleSelect} from './modules/default-select';
+import {initEditor} from './modules/ck-editor';
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -17,21 +22,28 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // Modules
   // ---------------------------------
-
+  initCookiesPopup();
   initPopup();
+  initAdminPopup();
+  openAlerts();
+  closeAlerts();
+  openHeaderNav();
+  closeHeaderNav();
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
-    openAlerts();
-    closeAlerts();
+
     openSorting();
     closeSorting();
-    openHeaderNav();
-    closeHeaderNav();
     initRangeSlider();
     toggleCatalogView();
     initTabs();
+    initSubTabs();
+    checkArticles();
+    initDefaultSelect();
+    initMultipleSelect();
+    initEditor();
   });
 });
 

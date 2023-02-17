@@ -5,7 +5,7 @@
   padding: 40px;
 }
 
-.set-rating {
+.set-rating fieldset {
   margin: 0 0 1em 0;
   padding: 0;
   border: none;
@@ -15,10 +15,11 @@
 
 .set-rating__group {
   position: relative;
-  width: 5em;
-  height: 1em;
+  width: 92px;
+  height: 14px;
   background-image: url("../img/svg/set-rating-grey.svg");
-  background-size: 1em;
+  // background-size: 1em;
+  background-size: 18px 14px;
   background-repeat: repeat-x;
 }
 
@@ -32,14 +33,24 @@
   clip: rect(0 0 0 0);
 }
 
-.set-rating__input:focus ~ .set-rating__focus {
+.set-rating {
+
+  input:focus-within+label,
+  input:focus-visible+label {
+    outline: 1px solid $color-accent;
+    outline-offset: 0.2em;
+  }
+}
+
+.set-rating__star:focus~.set-rating__focus,
+label:focus~.set-rating__focus {
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
   z-index: -1;
-  outline: 0.2em solid $color-accent;
+  border: 0.2em solid $color-accent;
   outline-offset: 0.2em;
 }
 
@@ -50,8 +61,10 @@
   top: 0;
   left: 0;
   margin: 0;
-  height: 1em;
-  background-size: 1em 1em;
+  // height: 1em;
+  height: 14px;
+  // background-size: 1em 1em;
+  background-size: 18px 14px;
   background-repeat: repeat-x;
   cursor: pointer;
 
@@ -61,11 +74,12 @@
 }
 
 .set-rating__star:hover,
-.set-rating__input:checked + .set-rating__star {
+.set-rating__input:checked+.set-rating__star {
   background-image: url("../img/svg/set-rating-gold.svg");
+  outline: none;
 }
 
-.set-rating__star:hover ~ .set-rating__star {
+.set-rating__star:hover~.set-rating__star {
   background-image: url("../img/svg/set-rating-grey.svg");
 }
 
@@ -73,25 +87,43 @@
 
 .set-rating__star:nth-of-type(1) {
   z-index: 5;
-  width: 1em;
+  // width: 1em;
+  width: 18px;
 }
 
 .set-rating__star:nth-of-type(2) {
   z-index: 4;
-  width: 2em;
+  // width: 2em;
+  width: calc(18px * 2);
 }
 
 .set-rating__star:nth-of-type(3) {
   z-index: 3;
-  width: 3em;
+  // width: 3em;
+  width: calc(18px * 3);
 }
 
 .set-rating__star:nth-of-type(4) {
   z-index: 2;
-  width: 4em;
+  // width: 4em;
+  width: calc(18px * 4);
 }
 
 .set-rating__star:nth-of-type(5) {
   z-index: 1;
-  width: 5em;
+  // width: 5em;
+  width: calc(18px * 5);
+}
+
+.filters__group {
+
+  input:hover + span,
+  input:active + span {
+    outline: none;
+  }
+
+  input:focus-visible + span {
+    outline: 1px solid $color-accent;
+    outline-offset: 0.2em;
+  }
 }

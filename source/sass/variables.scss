@@ -13,6 +13,9 @@ $color-transparent:                 rgba(255, 255, 255, 0);
 $color-accent:                      #fccd03;
 $color-accent-hover:                #977B02;
 
+$color-accent-opacity-50:           fade-out($color-accent, 0.5);
+$color-white-opacity-50:            fade-out($color-default-white, 0.5);
+
 // Gradient
 
 $black-to-right:                    linear-gradient(90deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 75%);
@@ -26,7 +29,9 @@ $fz-default:                        16px;
 // у некоторых шрифтов в ios возникают проблемы с символом рубля
 // https://www.artlebedev.ru/kovodstvo/sections/159/#13
 
-$ff-inter:                          "Inter", Arial, sans-serif;
+$ff-inter:                          "Inter", "Arial", sans-serif;
+$ff-incon:                          "Inconsolata", "Courier New", monospace;
+$ff-noto:                           "NotoSans", "Arial", sans-serif;
 
 // Viewports
 // ---------------------------------

@@ -127,6 +127,9 @@
                 </ul>
                 <div class="adblock adblock-220x320">
                   <iframe width="220" height="320" frameborder="0"></iframe>
+                  <!-- <a href="#" class="adblock__link">
+                    <img src="" width="220" height="320" alt="">
+                  </a> -->
                 </div>
               </div>
             </nav>
@@ -137,18 +140,22 @@
 
     <main class="main main-block">
       <div class="container">
+
         <div class="adblock adblock-1240x110">
           <iframe width="1240" height="110" src="./img/banner-1240x110.png" frameborder="0"></iframe>
+          <!-- <a href="#" class="adblock__link">
+            <img src="" width="1240" height="110" alt="">
+          </a> -->
         </div>
         <div class="main-content company-card">
           <div class="company-card__image-wrapper">
             <div class="company-card__background">
-              <img src="./img/company-bg.png" srcset="./img/company-bg@2x.png 2x"
-              width="1200" height="600" loading="lazy" alt="">
+              <img src="./img/company-bg.png" srcset="./img/company-bg@2x.png 2x" width="1200" height="600"
+                loading="lazy" alt="">
             </div>
             <div class="company-card__logo">
-              <img src="./img/company-logo.png" srcset="./img/company-logo@2x.png 2x"
-              width="333" height="88" loading="lazy" alt="Company logo.">
+              <img src="./img/company-logo.png" srcset="./img/company-logo@2x.png 2x" width="333" height="88"
+                loading="lazy" alt="Company logo.">
             </div>
           </div>
           <div class="company-card__text">
@@ -184,20 +191,20 @@
             </div>
             <div class="company-card__stats-block">
               <h3>Статистика на форуме</h3>
-              <dl class="company-card__stats">
-                <dt>Статей</dt>
-                <dd class="company-card__msg-count">
-                  <span>12</span>
-                </dd>
-                <dt>Лайков</dt>
-                <dd class="company-card__likes-count">
-                  <span>14679</span>
-                </dd>
-                <dt>Комментариев</dt>
-                <dd class="company-card__comments-count">
-                  <span>1344</span>
-                </dd>
-              </dl>
+              <ul class="company-card__stats-list list-reset">
+                <li class="company-card__stats-item">
+                  <p>Статей</p>
+                  <span class="company-card__msg-count">12</span>
+                </li>
+                <li class="company-card__stats-item">
+                  <p>Лайков</p>
+                  <span class="company-card__likes-count">14679</span>
+                </li>
+                <li class="company-card__stats-item">
+                  <p>Комментариев</p>
+                  <span class="company-card__comments-count">1344</span>
+                </li>
+              </ul>
             </div>
             <div class="company-card__contacts-block">
               <h3>Ссылки на компанию</h3>
@@ -486,10 +493,8 @@
                 <input type="password" name="signup-password" id="signup-password" placeholder="Пароль" required>
               </label>
               <div class="popup__checkbox-wrapper">
-                <label>Запомнить меня
-                  <input class="visually-hidden" type="checkbox" name="remember" id="remember" checked>
-                  <span class="popup__checkbox-mark"></span>
-                </label>
+                <input class="visually-hidden" type="checkbox" name="remember" id="remember" checked>
+                <label for="remember">Запомнить меня</label>
                 <a href="#" id="forgot-password-link" class="popup__forgot-password-link">Забыли пароль?</a>
               </div>
               <button type="submit" class="popup__submit-btn">Вход</button>
@@ -501,7 +506,7 @@
           </li>
         </ul>
         <div class="popup__image">
-                <img src="./img/popup-bg.png" srcset="./img/popup-bg@2x.png 2x" width="455" height="635" loading="lazy"
+          <img src="./img/popup-bg.png" srcset="./img/popup-bg@2x.png 2x" width="455" height="635" loading="lazy"
             alt="">
         </div>
       </div>

@@ -127,6 +127,9 @@
                 </ul>
                 <div class="adblock adblock-220x320">
                   <iframe width="220" height="320" frameborder="0"></iframe>
+                  <!-- <a href="#" class="adblock__link">
+                    <img src="" width="220" height="320" alt="">
+                  </a> -->
                 </div>
               </div>
             </nav>
@@ -137,202 +140,534 @@
 
     <main class="main main-block">
       <div class="container">
+
         <div class="adblock adblock-1240x110">
           <iframe width="1240" height="110" src="./img/banner-1240x110.png" frameborder="0"></iframe>
+          <!-- <a href="#" class="adblock__link">
+            <img src="" width="1240" height="110" alt="">
+          </a> -->
         </div>
         <div class="main-content user-card">
-          <div class="user-card__personal">
-            <button class="user-card__edit-btn">
+          <div class="user-card__personal personal">
+            <button class="personal__edit-btn">
               <svg width="24" height="24" fill="currentColor">
                 <use xlink:href="./img/sprite.svg#edit"></use>
               </svg>
             </button>
-            <div class="user-card__image-wrapper">
-              <div class="user-card__image">
-                <img src="./img/comment-user-photo-1.png" srcset="./img/comment-user-photo-1@2x.png 2x"
-                width="150" height="150" loading="lazy" alt="User photo.">
+            <div class="personal__image-wrapper">
+              <div class="personal__image">
+                <img src="./img/comment-user-photo-1.png" srcset="./img/comment-user-photo-1@2x.png 2x" width="150"
+                  height="150" loading="lazy" alt="User photo.">
               </div>
-              <span class="user-card__alert">1</span>
+              <span class="personal__alert">1</span>
             </div>
-            <div class="user-card__name">
+            <div class="personal__name">
               <p>minai4ev</p>
             </div>
-            <div class="user-card__status">
+            <div class="personal__status">
               <p>Resident</p>
             </div>
-            <div class="user-card__friends">
+            <div class="personal__friends">
               <p>Друзья</p>
-              <ul class="user-card__friends-list list-reset">
-                <li class="user-card__friends-item">
-                  <a href="#" class="user-card__friends-link">
-                    <img src="./img/friends-1.png" class="user-card__friends-img" alt="">
+              <ul class="personal__friends-list list-reset">
+                <li class="personal__friends-item">
+                  <a href="#" class="personal__friends-link">
+                    <div class="personal__friends-image">
+                      <img src="./img/friends-1.png" alt="">
+                    </div>
                   </a>
+                  <div class="personal__tooltip">
+                    <button class="personal__friends-delete-btn">
+                      <svg width="24" height="24" fill="currentColor">
+                        <use xlink:href="./img/sprite.svg#delete"></use>
+                      </svg>
+                      <span>Удалить из друзей</span>
+                    </button>
+                  </div>
                 </li>
-                <li class="user-card__friends-item">
-                  <a href="#" class="user-card__friends-link">
-                    <img src="./img/friends-2.png" class="user-card__friends-img" alt="">
+                <li class="personal__friends-item">
+                  <a href="#" class="personal__friends-link">
+                    <div class="personal__friends-image">
+                      <img src="./img/friends-2.png" alt="">
+                    </div>
                   </a>
+                  <div class="personal__tooltip">
+                    <button class="personal__friends-delete-btn">
+                      <svg width="24" height="24" fill="currentColor">
+                        <use xlink:href="./img/sprite.svg#delete"></use>
+                      </svg>
+                      <span>Удалить из друзей</span>
+                    </button>
+                  </div>
                 </li>
-                <li class="user-card__friends-item">
-                  <a href="#" class="user-card__friends-link">
-                    <img src="./img/friends-3.png" class="user-card__friends-img" alt="">
+                <li class="personal__friends-item">
+                  <a href="#" class="personal__friends-link">
+                    <div class="personal__friends-image">
+                      <img src="./img/friends-3.png" alt="">
+                    </div>
                   </a>
+                  <div class="personal__tooltip">
+                    <button class="personal__friends-delete-btn">
+                      <svg width="24" height="24" fill="currentColor">
+                        <use xlink:href="./img/sprite.svg#delete"></use>
+                      </svg>
+                      <span>Удалить из друзей</span>
+                    </button>
+                  </div>
                 </li>
-                <li class="user-card__friends-item">
-                  <a href="#" class="user-card__friends-link">
-                    <img src="./img/friends-4.png" class="user-card__friends-img" alt="">
+                <li class="personal__friends-item">
+                  <a href="#" class="personal__friends-link">
+                    <div class="personal__friends-image">
+                      <img src="./img/friends-4.png" alt="">
+                    </div>
                   </a>
+                  <div class="personal__tooltip">
+                    <button class="personal__friends-delete-btn">
+                      <svg width="24" height="24" fill="currentColor">
+                        <use xlink:href="./img/sprite.svg#delete"></use>
+                      </svg>
+                      <span>Удалить из друзей</span>
+                    </button>
+                  </div>
                 </li>
               </ul>
             </div>
-            <div class="user-card__stats">
-              <div class="user-card__stats-regdate">
+            <div class="personal__stats">
+              <div class="personal__stats-regdate">
                 <span>Регистрация:</span>
                 <b>20.04.21</b>
               </div>
-              <div class="user-card__stats-msgs">
+              <div class="personal__stats-msgs">
                 <span>Сообщений:</span>
                 <b>240</b>
               </div>
-              <div class="user-card__stats-city">
+              <div class="personal__stats-city">
                 <span>Город:</span>
                 <b>Амстердам</b>
               </div>
             </div>
+            <div class="personal__btns">
+              <button class="personal__btn personal__btn--add-friend active">
+                <svg class="personal__btn-icon" width="19" height="19" fill="currentColor">
+                  <use xlink:href="./img/sprite.svg#circle-plus"></use>
+                </svg>
+                <span>Добавить в друзья</span>
+              </button>
+              <button class="personal__btn personal__btn--delete-friend">
+                <svg class="personal__btn-icon" width="19" height="19" fill="currentColor">
+                  <use xlink:href="./img/sprite.svg#circle-minus"></use>
+                </svg>
+                <span>Удалить из друзей</span>
+              </button>
+            </div>
           </div>
 
-          <div class="user-card__info tabs">
-            <div class="tabs__buttons">
-              <button class="tabs__btn" data-tab="#tab_1"><span>Моя активность</span></button>
-              <button class="tabs__btn" data-tab="#tab_2"><span>Публичные сообщения</span></button>
-              <button class="tabs__btn active" data-tab="#tab_3"><span>Обо мне</span></button>
-              <button class="tabs__btn" data-tab="#tab_4"><span>Репутация</span></button>
+          <div class="user-card__tabs tabs">
+            <div class="user-card__tabs-buttons">
+              <button class="user-card__tabs-btn tabs__btn" data-tab="#tab_1"><span>Обо мне</span></button>
+              <button class="user-card__tabs-btn tabs__btn active" data-tab="#tab_2"><span>Статьи компании</span></button>
+              <button class="user-card__tabs-btn tabs__btn" data-tab="#tab_3"><span>Друзья</span></button>
             </div>
 
             <div class="tabs__content" id="tab_1">
-              <div class="tabs__content-item tabs__content-item--activity">
-                Моя активность
-              </div>
-            </div>
-            <div class="tabs__content" id="tab_2">
-              <div class="tabs__content-item tabs__content-item--messages">
-                Публичные сообщения
-              </div>
-            </div>
-            <div class="tabs__content active" id="tab_3">
-              <div class="tabs__content-item tabs__content-item--about-me">
-                <div class="tabs__content-block tabs__content-block--basic">
-                  <div class="tabs__heading">
-                    <h3>Базовая информация</h3>
-                    <button class="tabs__edit-btn">
-                      <svg width="20" height="20" fill="currentColor">
-                        <use xlink:href="./img/sprite.svg#edit"></use>
-                      </svg>
-                    </button>
+                <div class="user-card__about-me about-me">
+                  <div class="about-me__inner-block about-me__inner-block--basic">
+                    <div class="about-me__heading">
+                      <h3>Базовая информация</h3>
+                      <button class="about-me__edit-btn">
+                        <svg width="20" height="20" fill="currentColor">
+                          <use xlink:href="./img/sprite.svg#edit"></use>
+                        </svg>
+                      </button>
+                    </div>
+                    <dl class="about-me__user-info">
+                      <dt>Имя</dt>
+                      <dd>Мария</dd>
+                      <dt>Город</dt>
+                      <dd>Москва</dd>
+                      <dt>Статус</dt>
+                      <dd>Недоступно</dd>
+                      <dt>Род деятельности</dt>
+                      <dd>Команда клуба</dd>
+                    </dl>
                   </div>
-                  <dl class="tabs__user-info">
-                    <dt>Имя</dt>
-                    <dd>Мария</dd>
-                    <dt>Город</dt>
-                    <dd>Москва</dd>
-                    <dt>Статус</dt>
-                    <dd>Недоступно</dd>
-                    <dt>Род деятельности</dt>
-                    <dd>Команда клуба</dd>
-                  </dl>
+                  <div class="about-me__inner-block about-me__inner-block--contacts">
+                    <div class="about-me__heading">
+                      <h3>Контакты</h3>
+                      <button class="about-me__edit-btn">
+                        <svg width="20" height="20" fill="#ffffff">
+                          <use xlink:href="./img/sprite.svg#edit"></use>
+                        </svg>
+                      </button>
+                    </div>
+                    <ul class="about-me__contacts-list list-reset">
+                      <li class="about-me__contacts-item">
+                        <a href="#" class="about-me__contacts-link">
+                          <svg width="20" height="18" fill="currentColor">
+                            <use xlink:href="./img/sprite.svg#tg-icon"></use>
+                          </svg>
+                          <span>@username</span>
+                        </a>
+                      </li>
+                      <li class="about-me__contacts-item">
+                        <a href="#" class="about-me__contacts-link">
+                          <svg width="18" height="18" fill="currentColor">
+                            <use xlink:href="./img/sprite.svg#skype-icon"></use>
+                          </svg>
+                          <span>@username</span>
+                        </a>
+                      </li>
+                      <li class="about-me__contacts-item">
+                        <a href="#" class="about-me__contacts-link">
+                          <svg width="24" height="24" fill="currentColor">
+                            <use xlink:href="./img/sprite.svg#lnkdn-icon"></use>
+                          </svg>
+                          <span>@username</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="about-me__inner-block about-me__inner-block--signature">
+                    <div class="about-me__heading">
+                      <h3>Подпись</h3>
+                      <button class="about-me__edit-btn">
+                        <svg width="20" height="20" fill="currentColor">
+                          <use xlink:href="./img/sprite.svg#edit"></use>
+                        </svg>
+                      </button>
+                    </div>
+                    <p>Все вопросы / пожелания / предложения по развитию CPA.CLUB - ко мне.</p>
+                  </div>
+                  <div class="about-me__inner-block about-me__inner-block--stats">
+                    <div class="about-me__heading">
+                      <h3>Статистика</h3>
+                    </div>
+                    <ul class="about-me__stats-list list-reset">
+                      <li class="about-me__stats-item">
+                        <dl class="about-me__stats about-me__stats--msgs">
+                          <dt>Всего сообщений</dt>
+                          <dd>526</dd>
+                          <dt>Последнее сообщение</dt>
+                          <dd>
+                            <a class="about-me__stats-last-msg" href="#">Накрутка Reels <time
+                                datetime="2022-11-20T16:23">20.11.2022 16:23</time></a>
+                          </dd>
+                        </dl>
+                      </li>
+                      <li class="about-me__stats-item">
+                        <dl class="about-me__stats about-me__stats--remark">
+                          <dt>Замечания</dt>
+                          <dd>Оставить замечание пользователю</dd>
+                        </dl>
+                      </li>
+                      <li class="about-me__stats-item">
+                        <dl class="about-me__stats about-me__stats--thanks">
+                          <dt>Благодарности</dt>
+                          <dd>Благодарностей: <span>218</span> (сообщений: <span>76</span>)
+                          </dd>
+                        </dl>
+                      </li>
+                      <li class="about-me__stats-item">
+                        <dl class="about-me__stats about-me__stats--additional">
+                          <dt>Дополнительная информация</dt>
+                          <dd>
+                            <p>Последняя активность <time datetime="2022-11-20T16:23">20.11.2022 16:23</time></p>
+                            <p>Регистрация <time datetime="2013-11-07">07.11.2013</time></p>
+                          </dd>
+                        </dl>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
-                <div class="tabs__content-block tabs__content-block--contacts">
-                  <div class="tabs__heading">
-                    <h3>Контакты</h3>
-                    <button class="tabs__edit-btn">
-                      <svg width="20" height="20" fill="#ffffff">
-                        <use xlink:href="./img/sprite.svg#edit"></use>
+            </div>
+
+            <div class="tabs__content active" id="tab_2">
+              <div class="user-card__user-articles user-articles">
+                <div class="user-articles__inner-block">
+                  <div class="user-articles__heading">
+                    <div class="user-articles__subtabs-btns subtabs-btns">
+                      <button class="user-articles__subtabs-btn subtabs__btn active" data-tab="#sub-tab_1">
+                        <span>Статьи компании 1</span>
+                      </button>
+                      <button class="user-articles__subtabs-btn subtabs__btn" data-tab="#sub-tab_2">
+                        <span>Статьи компании 2</span>
+                      </button>
+                    </div>
+                    <button class="user-articles__article-btn user-articles__article-btn--delete-all">
+                      <svg width="18" height="18" fill="currentColor">
+                        <use xlink:href="./img/sprite.svg#delete"></use>
                       </svg>
                     </button>
                   </div>
-                  <ul class="tabs__contacts-list list-reset">
-                    <li class="tabs__contacts-item">
-                      <a href="#" class="tabs__contacts-link">
-                        <svg class="tabs__contacts-icon" width="20" height="18" fill="currentColor">
-                          <use xlink:href="./img/sprite.svg#tg-icon"></use>
-                        </svg>
-                        <span>@username</span>
-                      </a>
+                  <div class="user-articles__content subtabs__content active" id="sub-tab_1">
+                    <form action="" method="get">
+                      <ul class="user-articles__list list-reset">
+                        <li class="user-articles__item user-articles__item-heading">
+                          <p>Статья</p>
+                          <p>Дата</p>
+                          <p>Статус</p>
+                        </li>
+                        <li class="user-articles__item">
+                          <fieldset>
+                            <input class="visually-hidden" type="checkbox" name="article" id="article1_1">
+                            <label for="article1_1">Полное название статьи</label>
+                          </fieldset>
+                          <p class="user-articles__post-date"><time datetime="2023-11-01">01.11.2023</time></p>
+                          <p class="user-articles__status">Опубликована</p>
+                          <button class="user-articles__article-btn user-articles__article-btn--edit">
+                            <svg width="18" height="18" fill="currentColor">
+                              <use xlink:href="./img/sprite.svg#article-edit"></use>
+                            </svg>
+                          </button>
+                          <button class="user-articles__article-btn user-articles__article-btn--delete">
+                            <svg width="18" height="18" fill="currentColor">
+                              <use xlink:href="./img/sprite.svg#delete"></use>
+                            </svg>
+                          </button>
+                        </li>
+                        <li class="user-articles__item">
+                          <fieldset>
+                            <input class="visually-hidden" type="checkbox" name="article" id="article1_2">
+                            <label for="article1_2">Полное название статьи</label>
+                          </fieldset>
+                          <p class="user-articles__post-date"><time datetime="2023-11-01">01.11.2023</time></p>
+                          <p class="user-articles__status">На модерации</p>
+                          <button class="user-articles__article-btn user-articles__article-btn--edit">
+                            <svg width="18" height="18" fill="currentColor">
+                              <use xlink:href="./img/sprite.svg#article-edit"></use>
+                            </svg>
+                          </button>
+                          <button class="user-articles__article-btn user-articles__article-btn--delete">
+                            <svg width="18" height="18" fill="currentColor">
+                              <use xlink:href="./img/sprite.svg#delete"></use>
+                            </svg>
+                          </button>
+                        </li>
+                        <li class="user-articles__item">
+                          <fieldset>
+                            <input class="visually-hidden" type="checkbox" name="article" id="article1_3">
+                            <label for="article1_3">Полное название статьи</label>
+                          </fieldset>
+                          <p class="user-articles__post-date"><time datetime="2023-11-01">01.11.2023</time></p>
+                          <p class="user-articles__status">Опубликована</p>
+                          <button class="user-articles__article-btn user-articles__article-btn--edit">
+                            <svg width="18" height="18" fill="currentColor">
+                              <use xlink:href="./img/sprite.svg#article-edit"></use>
+                            </svg>
+                          </button>
+                          <button class="user-articles__article-btn user-articles__article-btn--delete">
+                            <svg width="18" height="18" fill="currentColor">
+                              <use xlink:href="./img/sprite.svg#delete"></use>
+                            </svg>
+                          </button>
+                        </li>
+                        <li class="user-articles__item">
+                          <fieldset>
+                            <input class="visually-hidden" type="checkbox" name="article" id="article1_4">
+                            <label for="article1_4">Полное название статьи</label>
+                          </fieldset>
+                          <p class="user-articles__post-date"><time datetime="2023-11-01">01.11.2023</time></p>
+                          <p class="user-articles__status">Опубликована</p>
+                          <button class="user-articles__article-btn user-articles__article-btn--edit">
+                            <svg width="18" height="18" fill="currentColor">
+                              <use xlink:href="./img/sprite.svg#article-edit"></use>
+                            </svg>
+                          </button>
+                          <button class="user-articles__article-btn user-articles__article-btn--delete">
+                            <svg width="18" height="18" fill="currentColor">
+                              <use xlink:href="./img/sprite.svg#delete"></use>
+                            </svg>
+                          </button>
+                        </li>
+                        <li class="user-articles__item">
+                          <fieldset>
+                            <input class="visually-hidden" type="checkbox" name="article" id="article1_5">
+                            <label for="article1_5">Полное название статьи</label>
+                          </fieldset>
+                          <p class="user-articles__post-date"><time datetime="2023-11-01">01.11.2023</time></p>
+                          <p class="user-articles__status">Опубликована</p>
+                          <button class="user-articles__article-btn user-articles__article-btn--edit">
+                            <svg width="18" height="18" fill="currentColor">
+                              <use xlink:href="./img/sprite.svg#article-edit"></use>
+                            </svg>
+                          </button>
+                          <button class="user-articles__article-btn user-articles__article-btn--delete">
+                            <svg width="18" height="18" fill="currentColor">
+                              <use xlink:href="./img/sprite.svg#delete"></use>
+                            </svg>
+                          </button>
+                        </li>
+                      </ul>
+                    </form>
+                  </div>
+
+                  <div class="user-articles__content subtabs__content" id="sub-tab_2">
+                    <form action="" method="get">
+                      <ul class="user-articles__list list-reset">
+                        <li class="user-articles__item user-articles__item-heading">
+                          <p>Статья</p>
+                          <p>Дата</p>
+                          <p>Статус</p>
+                        </li>
+                        <li class="user-articles__item">
+                          <fieldset>
+                            <input class="visually-hidden" type="checkbox" name="article" id="article2_1">
+                            <label for="article2_1">Полное название статьи2</label>
+                          </fieldset>
+                          <p class="user-articles__post-date"><time datetime="2023-11-01">01.11.2023</time></p>
+                          <p class="user-articles__status">Опубликована</p>
+                          <button class="user-articles__article-btn user-articles__article-btn--edit">
+                            <svg width="18" height="18" fill="currentColor">
+                              <use xlink:href="./img/sprite.svg#article-edit"></use>
+                            </svg>
+                          </button>
+                          <button class="user-articles__article-btn user-articles__article-btn--delete">
+                            <svg width="18" height="18" fill="currentColor">
+                              <use xlink:href="./img/sprite.svg#delete"></use>
+                            </svg>
+                          </button>
+                        </li>
+                        <li class="user-articles__item">
+                          <fieldset>
+                            <input class="visually-hidden" type="checkbox" name="article" id="article2_2">
+                            <label for="article2_2">Полное название статьи2</label>
+                          </fieldset>
+                          <p class="user-articles__post-date"><time datetime="2023-11-01">01.11.2023</time></p>
+                          <p class="user-articles__status">На модерации</p>
+                          <button class="user-articles__article-btn user-articles__article-btn--edit">
+                            <svg width="18" height="18" fill="currentColor">
+                              <use xlink:href="./img/sprite.svg#article-edit"></use>
+                            </svg>
+                          </button>
+                          <button class="user-articles__article-btn user-articles__article-btn--delete">
+                            <svg width="18" height="18" fill="currentColor">
+                              <use xlink:href="./img/sprite.svg#delete"></use>
+                            </svg>
+                          </button>
+                        </li>
+                        <li class="user-articles__item">
+                          <fieldset>
+                            <input class="visually-hidden" type="checkbox" name="article" id="article2_3">
+                            <label for="article2_3">Полное название статьи2</label>
+                          </fieldset>
+                          <p class="user-articles__post-date"><time datetime="2023-11-01">01.11.2023</time></p>
+                          <p class="user-articles__status">Опубликована</p>
+                          <button class="user-articles__article-btn user-articles__article-btn--edit">
+                            <svg width="18" height="18" fill="currentColor">
+                              <use xlink:href="./img/sprite.svg#article-edit"></use>
+                            </svg>
+                          </button>
+                          <button class="user-articles__article-btn user-articles__article-btn--delete">
+                            <svg width="18" height="18" fill="currentColor">
+                              <use xlink:href="./img/sprite.svg#delete"></use>
+                            </svg>
+                          </button>
+                        </li>
+                        <li class="user-articles__item">
+                          <fieldset>
+                            <input class="visually-hidden" type="checkbox" name="article" id="article2_4">
+                            <label for="article2_4">Полное название статьи2</label>
+                          </fieldset>
+                          <p class="user-articles__post-date"><time datetime="2023-11-01">01.11.2023</time></p>
+                          <p class="user-articles__status">Опубликована</p>
+                          <button class="user-articles__article-btn user-articles__article-btn--edit">
+                            <svg width="18" height="18" fill="currentColor">
+                              <use xlink:href="./img/sprite.svg#article-edit"></use>
+                            </svg>
+                          </button>
+                          <button class="user-articles__article-btn user-articles__article-btn--delete">
+                            <svg width="18" height="18" fill="currentColor">
+                              <use xlink:href="./img/sprite.svg#delete"></use>
+                            </svg>
+                          </button>
+                        </li>
+                        <li class="user-articles__item">
+                          <fieldset>
+                            <input class="visually-hidden" type="checkbox" name="article" id="article2_5">
+                            <label for="article2_5">Полное название статьи2</label>
+                          </fieldset>
+                          <p class="user-articles__post-date"><time datetime="2023-11-01">01.11.2023</time></p>
+                          <p class="user-articles__status">Опубликована</p>
+                          <button class="user-articles__article-btn user-articles__article-btn--edit">
+                            <svg width="18" height="18" fill="currentColor">
+                              <use xlink:href="./img/sprite.svg#article-edit"></use>
+                            </svg>
+                          </button>
+                          <button class="user-articles__article-btn user-articles__article-btn--delete">
+                            <svg width="18" height="18" fill="currentColor">
+                              <use xlink:href="./img/sprite.svg#delete"></use>
+                            </svg>
+                          </button>
+                        </li>
+                      </ul>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="tabs__content" id="tab_3">
+              <div class="user-card__friends friends">
+                <div class="friends__inner-block">
+                  <div class="friends__heading">
+                    <h3>Мои друзья</h3>
+                  </div>
+                  <ul class="friends__list friends__list--requests list-reset">
+                    <li class="friends__item friends__item--requests">
+                      <div class="friends__content">
+                        <h4>Новая заявка в друзья</h4>
+                        <div class="friends__inner-content">
+                          <div class="friends__image">
+                            <img src="./img/friends-avatar.png" width="56" height="56" alt="">
+                          </div>
+                          <p>Иван Иванов</p>
+                        </div>
+                      </div>
+                      <div class="friends__btns">
+                        <button class="friends__btn friends__btn--accept" type="button">
+                          <svg class="friends__btn-icon" width="24" height="24" fill="currentColor">
+                            <use xlink:href="./img/sprite.svg#accept"></use>
+                          </svg>
+                        </button>
+                        <button class="friends__btn friends__btn--decline" type="button">
+                          <svg class="friends__btn-icon" width="24" height="24" fill="currentColor">
+                            <use xlink:href="./img/sprite.svg#decline"></use>
+                          </svg>
+                        </button>
+                      </div>
                     </li>
-                    <li class="tabs__contacts-item">
-                      <a href="#" class="tabs__contacts-link">
-                        <svg class="tabs__contacts-icon" width="18" height="18" fill="currentColor">
-                          <use xlink:href="./img/sprite.svg#skype-icon"></use>
+                  </ul>
+                  <ul class="friends__list friends__list--accepted list-reset">
+                    <li class="friends__item friends__item--accepted">
+                      <div class="friends__inner-content">
+                        <div class="friends__image">
+                          <img src="./img/friends-avatar.png" width="100" height="100" alt="">
+                        </div>
+                        <p>Влад Минайчев</p>
+                        <span>Resident</span>
+                      </div>
+                      <button class="friends__btn friends__btn--delete" type="button">
+                        <svg class="friends__btn-icon" width="24" height="24" fill="currentColor">
+                          <use xlink:href="./img/sprite.svg#delete"></use>
                         </svg>
-                        <span>@username</span>
-                      </a>
+                      </button>
                     </li>
-                    <li class="tabs__contacts-item">
-                      <a href="#" class="tabs__contacts-link">
-                        <svg class="tabs__contacts-icon" width="24" height="24" fill="currentColor">
-                          <use xlink:href="./img/sprite.svg#lnkdn-icon"></use>
+                    <li class="friends__item friends__item--accepted">
+                      <div class="friends__inner-content">
+                        <div class="friends__image">
+                          <img src="./img/friends-avatar.png" width="100" height="100" alt="">
+                        </div>
+                        <p>User Name</p>
+                        <span>Resident</span>
+                      </div>
+                      <button class="friends__btn friends__btn--delete" type="button">
+                        <svg class="friends__btn-icon" width="24" height="24" fill="currentColor">
+                          <use xlink:href="./img/sprite.svg#delete"></use>
                         </svg>
-                        <span>@username</span>
-                      </a>
+                      </button>
                     </li>
                   </ul>
                 </div>
-                <div class="tabs__content-block tabs__content-block--signature">
-                  <div class="tabs__heading">
-                    <h3>Подпись</h3>
-                    <button class="tabs__edit-btn">
-                      <svg width="20" height="20" fill="currentColor">
-                        <use xlink:href="./img/sprite.svg#edit"></use>
-                      </svg>
-                    </button>
-                  </div>
-                  <p>Все вопросы / пожелания / предложения по развитию CPA.CLUB - ко мне.</p>
-                </div>
-                <div class="tabs__content-block tabs__content-block--stats">
-                  <div class="tabs__heading">
-                    <h3>Статистика</h3>
-                  </div>
-                  <ul class="tabs__stats-list list-reset">
-                    <li class="tabs__stats-item">
-                      <dl class="tabs__stats tabs__stats--msgs">
-                        <dt>Всего сообщений</dt>
-                        <dd>526</dd>
-                        <dt>Последнее сообщение</dt>
-                        <dd>
-                          <a class="tabs__stats-last-msg" href="#">Накрутка Reels <time
-                              datetime="2022-11-20T16:23">20.11.2022 16:23</time></a>
-                        </dd>
-                      </dl>
-                    </li>
-                    <li class="tabs__stats-item">
-                      <dl class="tabs__stats tabs__stats--remark">
-                        <dt>Замечания</dt>
-                        <dd>Оставить замечание пользователю</dd>
-                      </dl>
-                    </li>
-                    <li class="tabs__stats-item">
-                      <dl class="tabs__stats tabs__stats--thanks">
-                        <dt>Благодарности</dt>
-                        <dd>Благодарностей: <span>218</span> (сообщений: <span>76</span>)
-                        </dd>
-                      </dl>
-                    </li>
-                    <li class="tabs__stats-item">
-                      <dl class="tabs__stats tabs__stats--additional">
-                        <dt>Дополнительная информация</dt>
-                        <dd>
-                          <p>Последняя активность <time datetime="2022-11-20T16:23">20.11.2022 16:23</time></p>
-                          <p>Регистрация <time datetime="2013-11-07">07.11.2013</time></p>
-                        </dd>
-                      </dl>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="tabs__content" id="tab_4">
-              <div class="tabs__content-item tabs__content-item--reputation">
-                Репутация
               </div>
             </div>
           </div>
@@ -568,10 +903,8 @@
                 <input type="password" name="signup-password" id="signup-password" placeholder="Пароль" required>
               </label>
               <div class="popup__checkbox-wrapper">
-                <label>Запомнить меня
-                  <input class="visually-hidden" type="checkbox" name="remember" id="remember" checked>
-                  <span class="popup__checkbox-mark"></span>
-                </label>
+                <input class="visually-hidden" type="checkbox" name="remember" id="remember" checked>
+                <label for="remember">Запомнить меня</label>
                 <a href="#" id="forgot-password-link" class="popup__forgot-password-link">Забыли пароль?</a>
               </div>
               <button type="submit" class="popup__submit-btn">Вход</button>
@@ -583,7 +916,7 @@
           </li>
         </ul>
         <div class="popup__image">
-                <img src="./img/popup-bg.png" srcset="./img/popup-bg@2x.png 2x" width="455" height="635" loading="lazy"
+          <img src="./img/popup-bg.png" srcset="./img/popup-bg@2x.png 2x" width="455" height="635" loading="lazy"
             alt="">
         </div>
       </div>

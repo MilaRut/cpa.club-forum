@@ -1,0 +1,48 @@
+.cookies-popup {
+  display: none;
+}
+
+.cookies-popup.active {
+  display: block;
+  position: fixed;
+  bottom: 12px;
+  right: 12px;
+  transition: 0.5s all;
+  width: 360px;
+  height: 263px;
+  background-color: #101116;
+  padding: 24px;
+  box-shadow: 0px 12px 24px -6px rgba(96, 96, 96, 0.15), 0px 0px 1px rgba(96, 96, 96, 0.1);
+  border-radius: 6px;
+  z-index: 1000;
+}
+
+.cookies-popup__content {
+  h2 {
+    @include font-settings ($ff-inter, 500, 16px, 1.25);
+    margin-bottom: 10px;
+  }
+
+  p {
+    @include font-settings ($ff-inter, 300, 14px, 1.2);
+    margin-bottom: 16px;
+  }
+}
+
+.cookies-popup__submit-btn {
+  @include font-settings ($ff-inter, 500, 14px, 1.2);
+  display: block;
+  color: $color-default-black;
+  min-width: 99px;
+  height: 33px;
+  background: #FCCD03;
+  box-shadow: 0px 2px 2px -2px rgba(34, 38, 50, 0.3);
+  border: none;
+  border-radius: 6px;
+  margin: 0 auto;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $color-accent-hover;
+  }
+}
