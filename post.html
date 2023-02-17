@@ -127,6 +127,9 @@
                 </ul>
                 <div class="adblock adblock-220x320">
                   <iframe width="220" height="320" frameborder="0"></iframe>
+                  <!-- <a href="#" class="adblock__link">
+                    <img src="" width="220" height="320" alt="">
+                  </a> -->
                 </div>
               </div>
             </nav>
@@ -137,11 +140,15 @@
 
     <main class="main main-block">
       <div class="container">
+
         <div class="adblock adblock-1240x110">
           <iframe width="1240" height="110" src="./img/banner-1240x110.png" frameborder="0"></iframe>
+          <!-- <a href="#" class="adblock__link">
+            <img src="" width="1240" height="110" alt="">
+          </a> -->
         </div>
         <div class="main-content post">
-          <div class="post__headings">
+          <div class="post__heading">
             <h2>Рекламная сеть RichAds: премиальные пуши, ин-пейдж, попсы, доменный трафик (по запросу)</h2>
             <div class="post__info">
               <p class="post__time"><time datetime="2023-01-30T20:47">Вчера, <span>20:47</span></time></p>
@@ -377,7 +384,7 @@
                             <use xlink:href="./img/sprite.svg#edit"></use>
                           </svg>
                         </button>
-                        <button class="comment__btn comment__btn--chat">
+                        <button class="comment__btn comment__btn--comment-add">
                           <svg width="24" height="24" fill="currentColor">
                             <use xlink:href="./img/sprite.svg#comment-add"></use>
                           </svg>
@@ -436,7 +443,7 @@
 
             <div class="new-comment">
               <form action="#" method="post">
-                <textarea id="new-comment" rows="9" placeholder="Введите сообщение" name="comment"></textarea>
+                <textarea id="new-comment" rows="7" placeholder="Введите сообщение" name="comment"></textarea>
                 <div class="new-comment__edit-panel">
                   <div class="new-comment__wysiwyg wysiwyg">
                     <button class="wysiwyg__btn wysiwyg__btn--b">
@@ -706,10 +713,8 @@
                 <input type="password" name="signup-password" id="signup-password" placeholder="Пароль" required>
               </label>
               <div class="popup__checkbox-wrapper">
-                <label>Запомнить меня
-                  <input class="visually-hidden" type="checkbox" name="remember" id="remember" checked>
-                  <span class="popup__checkbox-mark"></span>
-                </label>
+                <input class="visually-hidden" type="checkbox" name="remember" id="remember" checked>
+                <label for="remember">Запомнить меня</label>
                 <a href="#" id="forgot-password-link" class="popup__forgot-password-link">Забыли пароль?</a>
               </div>
               <button type="submit" class="popup__submit-btn">Вход</button>

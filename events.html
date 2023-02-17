@@ -127,6 +127,9 @@
                 </ul>
                 <div class="adblock adblock-220x320">
                   <iframe width="220" height="320" frameborder="0"></iframe>
+                  <!-- <a href="#" class="adblock__link">
+                    <img src="" width="220" height="320" alt="">
+                  </a> -->
                 </div>
               </div>
             </nav>
@@ -137,12 +140,16 @@
 
     <main class="main main-block">
       <div class="container">
+
         <div class="adblock adblock-1240x110">
           <iframe width="1240" height="110" src="./img/banner-1240x110.png" frameborder="0"></iframe>
+          <!-- <a href="#" class="adblock__link">
+            <img src="" width="1240" height="110" alt="">
+          </a> -->
         </div>
         <div class="main-content events">
           <section class="events__content">
-            <div class="events__headings">
+            <div class="events__heading">
               <h2>Афиша мероприятий</h2>
               <button class="events__add-btn">
                 <svg width="24" height="24" fill="currentColor">
@@ -163,7 +170,9 @@
                 </div>
                 <div class="events__text">
                   <a class="events__link" href="#">
-                    <h4>Conference</h4>
+                    <h4>
+                      <span class="events__tag tag" data-tag="conference">Conference</span>
+                    </h4>
                     <h3>RIDDICK'S CALL. GLOBAL CONFERENCE FOR BUSINESS</h3>
                     <p class="events__more-info" href="#">Подробнее</p>
                   </a>
@@ -180,7 +189,9 @@
                 </div>
                 <div class="events__text">
                   <a class="events__link" href="#">
-                    <h4>Conference</h4>
+                    <h4>
+                      <span class="events__tag tag" data-tag="conference">Conference</span>
+                    </h4>
                     <h3>RIDDICK'S CALL. GLOBAL CONFERENCE FOR BUSINESS</h3>
                     <p class="events__more-info" href="#">Подробнее</p>
                   </a>
@@ -197,7 +208,9 @@
                 </div>
                 <div class="events__text">
                   <a class="events__link" href="#">
-                    <h4>Conference</h4>
+                    <h4>
+                      <span class="events__tag tag" data-tag="conference">Conference</span>
+                    </h4>
                     <h3>RIDDICK'S CALL. GLOBAL CONFERENCE FOR BUSINESS</h3>
                     <p class="events__more-info" href="#">Подробнее</p>
                   </a>
@@ -436,10 +449,8 @@
                 <input type="password" name="signup-password" id="signup-password" placeholder="Пароль" required>
               </label>
               <div class="popup__checkbox-wrapper">
-                <label>Запомнить меня
-                  <input class="visually-hidden" type="checkbox" name="remember" id="remember" checked>
-                  <span class="popup__checkbox-mark"></span>
-                </label>
+                <input class="visually-hidden" type="checkbox" name="remember" id="remember" checked>
+                <label for="remember">Запомнить меня</label>
                 <a href="#" id="forgot-password-link" class="popup__forgot-password-link">Забыли пароль?</a>
               </div>
               <button type="submit" class="popup__submit-btn">Вход</button>

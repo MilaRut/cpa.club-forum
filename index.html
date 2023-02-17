@@ -127,6 +127,9 @@
                 </ul>
                 <div class="adblock adblock-220x320">
                   <iframe width="220" height="320" frameborder="0"></iframe>
+                  <!-- <a href="#" class="adblock__link">
+                    <img src="" width="220" height="320" alt="">
+                  </a> -->
                 </div>
               </div>
             </nav>
@@ -216,6 +219,9 @@
 
           <div class="adblock adblock-925x110 adblock-925x110--index">
             <iframe width="925" height="110" src="./img/banner-925x110.png" frameborder="0"></iframe>
+            <!-- <a href="#" class="adblock__link">
+              <img src="" width="925" height="110" alt="">
+            </a> -->
           </div>
 
           <section class="forum-section forum-section--index">
@@ -914,7 +920,11 @@
 
           <div class="adblock adblock-295x430">
             <iframe width="295" height="430" src="./img/banner-295x430.png" frameborder="0"></iframe>
+            <!-- <a href="#" class="adblock__link">
+              <img src="" width="295" height="430" alt="">
+            </a> -->
           </div>
+
         </aside>
       </div>
     </main>
@@ -1072,6 +1082,8 @@
 
   <!-- Modals -->
 
+  <!-- LOGIN/SIGNUP POPUP -->
+
   <div class="popup-overlay">
     <div class="popup">
       <div class="popup__content">
@@ -1104,12 +1116,15 @@
             <form action="" method="post" id="login-form">
               <label for="login-userlogin">
                 <input type="text" name="login-userlogin" id="login-userlogin" placeholder="Логин" required>
+                <span class="error-message">Заполните это поле</span>
               </label>
               <label for="login-email">
                 <input type="email" name="login-email" id="login-email" placeholder="Email" required>
+                <span class="error-message">Заполните это поле</span>
               </label>
               <label for="login-password">
                 <input type="password" name="login-password" id="login-password" placeholder="Пароль" required>
+                <span class="error-message">Заполните это поле</span>
               </label>
               <button type="submit" class="popup__submit-btn">Вход</button>
             </form>
@@ -1142,15 +1157,15 @@
             <form action="" method="post" id="signup-form">
               <label for="signup-userlogin">
                 <input type="text" name="signup-userlogin" id="signup-userlogin" placeholder="Логин" required>
+                <span class="error-message active">Заполните это поле</span>
               </label>
               <label for="signup-password">
                 <input type="password" name="signup-password" id="signup-password" placeholder="Пароль" required>
+                <span class="error-message active">Заполните это поле</span>
               </label>
               <div class="popup__checkbox-wrapper">
-                <label>Запомнить меня
-                  <input class="visually-hidden" type="checkbox" name="remember" id="remember" checked>
-                  <span class="popup__checkbox-mark"></span>
-                </label>
+                <input class="visually-hidden" type="checkbox" name="remember" id="remember" checked>
+                <label for="remember">Запомнить меня</label>
                 <a href="#" id="forgot-password-link" class="popup__forgot-password-link">Забыли пароль?</a>
               </div>
               <button type="submit" class="popup__submit-btn">Вход</button>
@@ -1168,6 +1183,86 @@
       </div>
     </div>
   </div>
+
+  <!-- END LOGIN/SIGNUP POPUP -->
+
+  <!-- ADMIN POPUP -->
+
+  <div class="admin-popup-overlay"> <!--add class "active" to show the popup-->
+    <div class="admin-popup"> <!--add class "active" to show the popup-->
+      <div class="admin-popup__content">
+        <button type="button" class="popup__close-btn admin-popup__close-btn" aria-label="Закрыть окно."></button>
+        <h2>Закрытый контент</h2>
+        <p>Войдите или
+          <button type="button" class="admin-popup__signup-btn">
+            <span>зарегистрируйтесь</span>
+          </button>
+        </p>
+        <form action="" method="post" id="admin-login-form">
+          <label for="admin-userlogin">
+            <input type="text" name="admin-userlogin" id="admin-userlogin" placeholder="Login" required>
+            <span class="error-message">Заполните это поле</span>
+          </label>
+          <label for="admin-password">
+            <input type="password" name="admin-password" id="admin-password" placeholder="Password" required>
+            <span class="error-message">Заполните это поле</span>
+          </label>
+          <button type="button" class="admin-popup__password-toggle-btn">Показать</button>
+          <button type="submit" form="admin-login-form" class="admin-popup__submit-btn">Войти</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- END ADMIN POPUP -->
+
+  <!-- CUSTOM EDIT POPUP -->
+
+  <div class="custom-edit-popup-overlay"> <!--add class "active" to show the popup-->
+    <div class="custom-edit-popup"> <!--add class "active" to show the popup-->
+      <div class="custom-edit-popup__content">
+        <button type="button" class="popup__close-btn custom-edit__close-btn" aria-label="Закрыть окно."></button>
+        <h2>Редактирование</h2>
+        <form action="" method="post" id="custom-edit-form">
+          <label for="input_1">
+            <input type="text" name="input_1" id="input_1" placeholder="Input label text">
+            <span class="error-message">Заполните это поле</span>
+          </label>
+          <label for="input_2">
+            <input type="text" name="input_1" id="input_2" placeholder="Input label text">
+            <span class="error-message">Заполните это поле</span>
+          </label>
+          <label for="input_3">
+            <input type="text" name="input_1" id="input_3" placeholder="Input label text">
+            <span class="error-message">Заполните это поле</span>
+          </label>
+          <label for="input_4">
+            <input class="invalid" type="text" name="input_1" id="input_4" placeholder="Input label text">
+            <span class="error-message active">Заполните это поле</span>
+          </label>
+
+          <button type="submit" form="admin-login-form" class="custom-edit-popup__submit-btn">Сохранить</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- END CUSTOM EDIT POPUP -->
+
+  <!-- COOKIES POPUP -->
+
+  <div class="cookies-popup"> <!--add class "active" to show the popup-->
+    <div class="cookies-popup__content">
+      <h2>🍪 Уведомление</h2>
+      <p>Этот сайт использует файлы cookies
+        и сервисы сбора технических данных посетителей (данные об IP-адресе, местоположении и др.) для обеспечения
+        работоспособности и улучшения качества обслуживания. Продолжая использовать наш сайт, вы автоматически
+        соглашаетесь с использованием данных технологий.</p>
+      <button type="button" class="cookies-popup__submit-btn">Принять</button>
+    </div>
+  </div>
+
+  <!-- END COOKIES POPUP -->
 
   <script src="js/main.min.js"></script>
 </body>

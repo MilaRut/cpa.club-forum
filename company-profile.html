@@ -127,6 +127,9 @@
                 </ul>
                 <div class="adblock adblock-220x320">
                   <iframe width="220" height="320" frameborder="0"></iframe>
+                  <!-- <a href="#" class="adblock__link">
+                    <img src="" width="220" height="320" alt="">
+                  </a> -->
                 </div>
               </div>
             </nav>
@@ -137,12 +140,16 @@
 
     <main class="main main-block">
       <div class="container">
+
         <div class="adblock adblock-1240x110">
           <iframe width="1240" height="110" src="./img/banner-1240x110.png" frameborder="0"></iframe>
+          <!-- <a href="#" class="adblock__link">
+            <img src="" width="1240" height="110" alt="">
+          </a> -->
         </div>
         <div class="main-content company-profile">
           <section class="company-profile__profile profile">
-            <div class="profile__headings">
+            <div class="profile__heading">
               <h2>Pin-Up</h2>
               <a href="https://pu-partners.com/" class="profile__link">pu-partners.com</a>
               <div class="profile__rating rating">
@@ -338,7 +345,7 @@
               <div class="updates__cover">
                 <img src="./img/article-cover.png" srcset="./img/article-cover@2x.png 2x" loading="lazy" width="1090"
                   height="210" alt="">
-                <h2>What is lorem ipsum?</h2>
+                <h3>What is lorem ipsum?</h3>
                 <p><time datetime="2022-11-29">29 ноября 2022</time></p>
               </div>
               <div class="updates__author">
@@ -723,10 +730,8 @@
                 <input type="password" name="signup-password" id="signup-password" placeholder="Пароль" required>
               </label>
               <div class="popup__checkbox-wrapper">
-                <label>Запомнить меня
-                  <input class="visually-hidden" type="checkbox" name="remember" id="remember" checked>
-                  <span class="popup__checkbox-mark"></span>
-                </label>
+                <input class="visually-hidden" type="checkbox" name="remember" id="remember" checked>
+                <label for="remember">Запомнить меня</label>
                 <a href="#" id="forgot-password-link" class="popup__forgot-password-link">Забыли пароль?</a>
               </div>
               <button type="submit" class="popup__submit-btn">Вход</button>
