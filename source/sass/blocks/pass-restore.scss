@@ -1,0 +1,283 @@
+.pass-restore {
+  padding: 0;
+  min-height: 636px;
+}
+
+.pass-restore__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+  height: 100%;
+}
+
+.pass-restore__slides-item {
+  display: none;
+}
+
+.pass-restore__slides-item.active {
+  display: flex;
+  flex-direction: column;
+}
+
+.pass-restore__slides-item {
+  h3 {
+    @include font-settings ($ff-inter, 700, 35px, 1);
+    letter-spacing: 0.96px;
+    margin-bottom: 8px;
+    text-align: center
+  }
+
+  p {
+    @include font-settings ($ff-inter, 400, 13px, 1);
+    color: #76777C;
+    text-align: center;
+    opacity: 1;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.pass-restore__slides-item:nth-child(1) {
+  padding-top: 180px;
+
+  input {
+    @include font-settings ($ff-inter, 400, 16px, 1.5);
+    width: 396px;
+    height: 56px;
+    background: #1A1D25;
+    border: 1px solid #76777C;
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 26px;
+
+    &::placeholder {
+      color: #A3A5A8;
+    }
+  }
+
+  p {
+    margin-bottom: 33px;
+  }
+}
+
+.pass-restore__slides-item:nth-child(2) {
+  padding-top: 180px;
+
+  p {
+    margin-bottom: 55px;
+  }
+
+  .pass-restore__email {
+    color: $color-default-white;
+    font-weight: 600;
+  }
+
+  .pass-restore__inputs {
+    position: relative;
+    margin-left: 8px;
+    display: flex;
+    margin-bottom: 44px;
+  }
+
+  input[type="number"] {
+    @include font-settings ($ff-inter, 400, 24px, 1.33);
+    color: #D1D2D3;
+    width: 46px;
+    height: 56px;
+    background: #1A1D25;
+    border: 1px solid #76777C;
+    border-radius: 8px;
+    padding: 15px;
+    margin-right: 8px;
+
+    &:focus {
+      border: 1px solid #FCCD03;
+    }
+
+    &.invalid {
+      border: 1px solid #FF4E64;
+      color: #FF4E64;
+    }
+  }
+}
+
+.pass-restore__btn-wrapper {
+  display: flex;
+  margin: 23px auto 0;
+
+  span {
+    @include font-settings ($ff-inter, 400, 14px, 1);
+    color: #76777C;
+    margin-right: 18px;
+  }
+}
+
+.pass-restore__slides-item:nth-child(3) {
+  padding-top: 116px;
+
+  p {
+    margin-bottom: 36px;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  input {
+    @include font-settings ($ff-inter, 400, 16px, 1.5);
+    width: 288px;
+    height: 56px;
+    background: #1A1D25;
+    border: 1px solid #76777C;
+    border-radius: 12px;
+    margin-bottom: 7px;
+    padding: 16px;
+
+    &::placeholder {
+      color: #A3A5A8;
+    }
+  }
+
+  label {
+    @include font-settings ($ff-inter, 400, 12px, 1.33);
+    width: 100%;
+    align-self: flex-start;
+    margin-bottom: 27px;
+    padding-left: 80px;
+    color: #D1D2D3;
+
+    .error-message {
+      bottom: -14px;
+      left: 80px;
+    }
+  }
+
+  .pass-restore__btn--pass {
+    margin-top: 10px;
+    margin-bottom: 13px;
+  }
+}
+
+.pass-restore__slides-item:nth-child(4) {
+  padding-top: 249px;
+
+  h3 {
+    position: relative;
+    padding-right: 44px;
+
+    &::after {
+      position: absolute;
+      content: url('../img/reset-success.png');
+      width: 36px;
+      height: 36px;
+      top: 0;
+      right: 0;
+    }
+  }
+
+  p {
+    margin-bottom: 27px;
+  }
+}
+
+.pass-restore__btn {
+  cursor: pointer;
+  border: none;
+  background: transparent;
+
+  &--email,
+  &--code,
+  &--pass {
+    @include font-settings ($ff-inter, 400, 16px, 1.25);
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    background: #434549;
+    border-radius: 10px;
+    padding: 15px 24px 16px;
+    margin: 0 auto;
+
+    svg {
+      margin-left: 12px;
+    }
+  }
+
+  &--resend {
+    @include font-settings ($ff-inter, 400, 14px, 1);
+    text-decoration: underline;
+
+  }
+
+  &--return {
+    @include font-settings ($ff-inter, 500, 16px, 1.5);
+    background-color: transparent;
+    border: none;
+    color: #D1D2D3;
+  }
+
+}
+
+.pass-restore__login-btn {
+
+  &--exit {
+    @include font-settings ($ff-inter, 500, 16px, 1.5);
+    background-color: transparent;
+    border: none;
+    color: #D1D2D3;
+    margin: 14px auto auto;
+    text-align: center;
+    justify-self: center;
+    cursor: pointer;
+  }
+
+  &--completed {
+    @include font-settings ($ff-inter, 400, 16px, 1.25);
+    width: fit-content;
+    border: none;
+    background: #434549;
+    border-radius: 10px;
+    margin: 0 auto;
+    padding: 16px 24px;
+    cursor: pointer;
+  }
+}
+
+.pass-restore__pagination {
+  display: flex;
+  margin: 0 auto -7px;
+}
+
+.pass-restore__pagination-list {
+  display: flex;
+}
+
+.pass-restore__pagination-item {
+  width: 33px;
+  height: 33px;
+  background: transparent;
+  border-radius: 50%;
+  border: 1px solid #76777C;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+
+  &.active {
+    background: #1A1D25;
+  }
+
+  p {
+    @include font-settings ($ff-inter, 500, 12px, 1.5);
+    color: #D1D2D3;
+    margin: 0;
+  }
+}

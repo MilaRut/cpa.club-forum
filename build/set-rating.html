@@ -52,8 +52,9 @@
         </div>
         <div class="header__user-menu user-menu">
           <div class="user-menu__unlogged">
-            <button class="user-menu__login-btn open-popup login-btn">Вход</button>
-            <button class="user-menu__signup-btn open-popup signup-btn">Регистрация</button>
+            <button type="button" class="user-menu__login-btn open-popup login-btn" data-value="#login">Вход</button>
+            <button type="button" class="user-menu__signup-btn open-popup signup-btn"
+              data-value="#signup">Регистрация</button>
           </div>
           <div class="user-menu__logged active">
             <div class="user-menu__alerts">
@@ -86,7 +87,7 @@
                 <img src="./img/avatar.png" loading="lazy" width="30" height="30" alt="User avatar.">
               </a>
             </div>
-            <button class="user-menu__nav-btn">
+            <button type="button" class="user-menu__nav-btn">
               <svg class="user-menu__nav-icon" width="24" height="24" fill="currentColor">
                 <use xlink:href="./img/sprite.svg#apps"></use>
               </svg>
@@ -252,31 +253,31 @@
               <!-- RADIO -->
 
               <div class="filters__group filters__group--radio radio">
-                    <h3>Radio title</h3>
-                    <ul class="filters__list list-reset">
-                      <li class="filters__item">
-                        <label>
-                          <input class="visually-hidden" type="radio" name="radio" value="radio1" checked>
-                          <span class="filters__mark filters__mark--radio"></span>
-                          Radio-1
-                        </label>
-                      </li>
-                      <li class="filters__item">
-                        <label>
-                          <input class="visually-hidden" type="radio" name="radio" value="radio2">
-                          <span class="filters__mark filters__mark--radio"></span>
-                          Radio-2
-                        </label>
-                      </li>
-                      <li class="filters__item">
-                        <label>
-                          <input class="visually-hidden" type="radio" name="radio" value="radio3">
-                          <span class="filters__mark filters__mark--radio"></span>
-                          Radio-3
-                        </label>
-                      </li>
-                    </ul>
-                  </div>
+                <h3>Radio title</h3>
+                <ul class="filters__list list-reset">
+                  <li class="filters__item">
+                    <label>
+                      <input class="visually-hidden" type="radio" name="radio" value="radio1" checked>
+                      <span class="filters__mark filters__mark--radio"></span>
+                      Radio-1
+                    </label>
+                  </li>
+                  <li class="filters__item">
+                    <label>
+                      <input class="visually-hidden" type="radio" name="radio" value="radio2">
+                      <span class="filters__mark filters__mark--radio"></span>
+                      Radio-2
+                    </label>
+                  </li>
+                  <li class="filters__item">
+                    <label>
+                      <input class="visually-hidden" type="radio" name="radio" value="radio3">
+                      <span class="filters__mark filters__mark--radio"></span>
+                      Radio-3
+                    </label>
+                  </li>
+                </ul>
+              </div>
 
               <!-- END OF RADIO -->
 

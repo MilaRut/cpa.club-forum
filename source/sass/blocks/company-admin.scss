@@ -2,6 +2,16 @@
   padding-top: 33px;
 }
 
+.company-admin {
+  label {
+    position: relative;
+  }
+
+  .error-message {
+    bottom: -23px;
+  }
+}
+
 .company-admin__name {
   input {
     @include font-settings ($ff-inter, 400, 14px, 1.43);
@@ -87,9 +97,6 @@
 
 .company-admin__text {
   min-width: 715px;
-  // background-color: #262931;
-  // border: 1px solid #454954;
-  // border-radius: 6px;
   margin-top: 8px;
 }
 

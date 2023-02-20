@@ -71,17 +71,23 @@
 
 // styles
 
-.popup__content {
-  display: grid;
-  grid-template-columns: auto 455px;
-  column-gap: 57px;
-}
-
 .popup__content-item {
   display: none;
 }
 
 .popup__content-item.active {
+  display: block;
+}
+
+.popup__content-item--login.active,
+.popup__content-item--signup.active {
+  display: grid;
+  grid-template-columns: auto 455px;
+  column-gap: 57px;
+}
+
+.popup__content-inner {
+  position: relative;
   display: flex;
   flex-direction: column;
   padding-left: 22px;
@@ -238,7 +244,6 @@
 }
 
 .popup__content-item--login.active {
-  padding-top: 64px;
 
   p {
     margin-bottom: 39px;
@@ -309,7 +314,11 @@
 }
 
 .popup__forgot-password-link {
+  @include font-settings ($ff-inter, 400, 13px, 1);
+  color: $color-default-white;
   text-decoration: underline;
+  border: none;
+  background-color: transparent;
 
   &:hover {
     opacity: 0.6;
@@ -344,4 +353,24 @@
       opacity: 0.4;
     }
   }
+}
+
+.popup__content-item--signup {
+  position: relative;
+}
+
+.popup__login-btn {
+  @include font-settings ($ff-inter, 500, 14px, 1);
+  position: absolute;
+  top: 30px;
+  left: 730px;
+  min-width: 102px;
+  height: 42px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000000;
+  border: none;
+  border-radius: 140px;
+  cursor: pointer;
 }

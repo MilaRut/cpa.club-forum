@@ -215,4 +215,12 @@
     fill: $color-default-black;
     margin-right: 13px;
   }
+
+  &:hover {
+    background-color: $color-accent-hover;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }

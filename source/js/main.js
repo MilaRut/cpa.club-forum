@@ -1,12 +1,14 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initCookiesPopup} from './modules/cookies-popup';
+import {initLoginPopup} from './modules/popup';
+import {initPassRestore} from './modules/pass-restore';
+import {initAdminPopup} from './modules/admin-popup';
+import {initEditPopup} from './modules/custom-edit-popup';
 import {openAlerts, closeAlerts} from './modules/alerts';
 import {openSorting, closeSorting} from './modules/sort';
 import {openHeaderNav, closeHeaderNav} from './modules/header-nav';
 import {initRangeSlider} from './modules/range-slider';
 import {toggleCatalogView} from './modules/catalog-toggle';
-import {initPopup} from './modules/popup';
-import {initAdminPopup} from './modules/admin-popup';
 import {initTabs, initSubTabs} from './modules/tabs';
 import {checkArticles} from './modules/user-articles';
 import {initDefaultSelect, initMultipleSelect} from './modules/default-select';
@@ -23,8 +25,10 @@ window.addEventListener('DOMContentLoaded', () => {
   // Modules
   // ---------------------------------
   initCookiesPopup();
-  initPopup();
+  initLoginPopup();
+  initPassRestore();
   initAdminPopup();
+  initEditPopup();
   openAlerts();
   closeAlerts();
   openHeaderNav();

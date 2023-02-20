@@ -117,12 +117,12 @@ label:focus~.set-rating__focus {
 
 .filters__group {
 
-  input:hover + span,
-  input:active + span {
+  input:hover+span,
+  input:active+span {
     outline: none;
   }
 
-  input:focus-visible + span {
+  input:focus-visible+span {
     outline: 1px solid $color-accent;
     outline-offset: 0.2em;
   }
