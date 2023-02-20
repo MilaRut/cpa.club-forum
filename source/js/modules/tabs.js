@@ -4,7 +4,7 @@ function initTabs() {
   const tabsBtn = document.querySelectorAll('.tabs__btn');
   const tabsItems = document.querySelectorAll('.tabs__content');
 
-  if (document.contains(tabs)) {
+  if (tabs) {
     tabsBtn.forEach(function (item) {
       item.addEventListener('click', function () {
         let currentBtn = item;

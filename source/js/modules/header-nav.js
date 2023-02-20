@@ -9,7 +9,7 @@ function prepareClosing() {
 }
 
 function openHeaderNav() {
-  if (userMenuLogged.classList.contains('active')) {
+  if (userMenuLogged && userMenuLogged.classList.contains('active')) {
     headerNavBtn.addEventListener('click', function () {
       if (headerNav.classList.contains('active')) {
         prepareClosing();
@@ -22,7 +22,7 @@ function openHeaderNav() {
 }
 
 function closeHeaderNav() {
-  if (userMenuLogged.classList.contains('active')) {
+  if (userMenuLogged && userMenuLogged.classList.contains('active')) {
     headerNavLinks.forEach((link) => {
       link.addEventListener('click', function () {
         prepareClosing();

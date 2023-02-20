@@ -2,7 +2,7 @@ function checkArticles() {
 
   const articlesBlock = document.querySelector('.user-articles');
 
-  if (document.contains(articlesBlock)) {
+  if (articlesBlock) {
     const checkboxes = articlesBlock.querySelectorAll('[type="checkbox"]');
     const articleItems = articlesBlock.querySelectorAll('.user-articles__item');
     const delBtns = articlesBlock.querySelectorAll('.user-articles__article-btn--delete');
