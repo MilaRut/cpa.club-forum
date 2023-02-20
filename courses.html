@@ -52,8 +52,9 @@
         </div>
         <div class="header__user-menu user-menu">
           <div class="user-menu__unlogged">
-            <button class="user-menu__login-btn open-popup login-btn">Вход</button>
-            <button class="user-menu__signup-btn open-popup signup-btn">Регистрация</button>
+            <button type="button" class="user-menu__login-btn open-popup login-btn" data-value="#login">Вход</button>
+            <button type="button" class="user-menu__signup-btn open-popup signup-btn"
+              data-value="#signup">Регистрация</button>
           </div>
           <div class="user-menu__logged active">
             <div class="user-menu__alerts">
@@ -86,7 +87,7 @@
                 <img src="./img/avatar.png" loading="lazy" width="30" height="30" alt="User avatar.">
               </a>
             </div>
-            <button class="user-menu__nav-btn">
+            <button type="button" class="user-menu__nav-btn">
               <svg class="user-menu__nav-icon" width="24" height="24" fill="currentColor">
                 <use xlink:href="./img/sprite.svg#apps"></use>
               </svg>
@@ -388,7 +389,9 @@
     </footer>
   </div>
 
-  <!-- Modals -->
+<!-- Modals -->
+
+  <!-- MAIN POPUP -->
 
   <div class="popup-overlay">
     <div class="popup">
@@ -396,94 +399,279 @@
         <button type="button" class="popup__close-btn" aria-label="Закрыть окно."></button>
         <ul class="popup__content-list list-reset">
           <li class="popup__content-item popup__content-item--signup" id="signup">
-            <h2>Регистрация</h2>
-            <p>Добро пожаловать! Введите данные для регистрации</p>
-            <ul class="popup__reg-btn-list list-reset">
-              <li class="popup__reg-btn-item">
-                <a href="#" class="popup__reg-btn-link popup__reg-btn-link--google">
-                  <svg class="popup__reg-btn-icon" width="18" height="18" fill="currentColor">
-                    <use xlink:href="./img/sprite.svg#reg-google"></use>
-                  </svg>
-                  <span>Регистрация с Google</span>
-                </a>
-              </li>
-              <li class="popup__reg-btn-item">
-                <a href="#" class="popup__reg-btn-link popup__reg-btn-link--apple">
-                  <svg class="popup__reg-btn-icon" width="15" height="18" fill="currentColor">
-                    <use xlink:href="./img/sprite.svg#reg-apple"></use>
-                  </svg>
-                  <span>Регистрация с Apple</span>
-                </a>
-              </li>
-            </ul>
-            <div class="popup__divider">
-              <p>или</p>
+            <div class="popup__content-inner">
+              <h2>Регистрация</h2>
+              <p>Добро пожаловать! Введите данные для регистрации</p>
+              <ul class="popup__reg-btn-list list-reset">
+                <li class="popup__reg-btn-item">
+                  <a href="#" class="popup__reg-btn-link popup__reg-btn-link--google">
+                    <svg class="popup__reg-btn-icon" width="18" height="18" fill="currentColor">
+                      <use xlink:href="./img/sprite.svg#reg-google"></use>
+                    </svg>
+                    <span>Регистрация с Google</span>
+                  </a>
+                </li>
+                <li class="popup__reg-btn-item">
+                  <a href="#" class="popup__reg-btn-link popup__reg-btn-link--apple">
+                    <svg class="popup__reg-btn-icon" width="15" height="18" fill="currentColor">
+                      <use xlink:href="./img/sprite.svg#reg-apple"></use>
+                    </svg>
+                    <span>Регистрация с Apple</span>
+                  </a>
+                </li>
+              </ul>
+              <div class="popup__divider">
+                <p>или</p>
+              </div>
+              <form action="" method="post" id="login-form">
+                <label for="login-userlogin">
+                  <input type="text" name="login-userlogin" id="login-userlogin" placeholder="Логин" required>
+                  <span class="error-message">Заполните это поле</span>
+                </label>
+                <label for="login-email">
+                  <input type="email" name="login-email" id="login-email" placeholder="Email" required>
+                  <span class="error-message">Заполните это поле</span>
+                </label>
+                <label for="login-password">
+                  <input type="password" name="login-password" id="login-password" placeholder="Пароль" required>
+                  <span class="error-message">Заполните это поле</span>
+                </label>
+                <button type="submit" class="popup__submit-btn">Вход</button>
+              </form>
+              <button type="button" class="popup__login-btn open-popup login-btn" data-value="#login">Вход</button>
             </div>
-            <form action="" method="post" id="login-form">
-              <label for="login-userlogin">
-                <input type="text" name="login-userlogin" id="login-userlogin" placeholder="Логин" required>
-              </label>
-              <label for="login-email">
-                <input type="email" name="login-email" id="login-email" placeholder="Email" required>
-              </label>
-              <label for="login-password">
-                <input type="password" name="login-password" id="login-password" placeholder="Пароль" required>
-              </label>
-              <button type="submit" class="popup__submit-btn">Вход</button>
-            </form>
+            <div class="popup__image">
+              <img src="./img/popup-bg.png" srcset="./img/popup-bg@2x.png 2x" width="455" height="635" loading="lazy"
+                alt="">
+            </div>
           </li>
-
           <li class="popup__content-item popup__content-item--login" id="login">
-            <h2>Вход</h2>
-            <p>Добро пожаловать! Введите данные для входа</p>
-            <ul class="popup__reg-btn-list list-reset">
-              <li class="popup__reg-btn-item">
-                <a href="#" class="popup__reg-btn-link popup__reg-btn-link--google">
-                  <svg class="popup__reg-btn-icon" width="18" height="18" fill="currentColor">
-                    <use xlink:href="./img/sprite.svg#reg-google"></use>
-                  </svg>
-                  <span>Вход с Google</span>
-                </a>
-              </li>
-              <li class="popup__reg-btn-item">
-                <a href="#" class="popup__reg-btn-link popup__reg-btn-link--apple">
-                  <svg class="popup__reg-btn-icon" width="15" height="18" fill="currentColor">
-                    <use xlink:href="./img/sprite.svg#reg-apple"></use>
-                  </svg>
-                  <span>Вход с Apple</span>
-                </a>
-              </li>
-            </ul>
-            <div class="popup__divider">
-              <p>или</p>
+            <div class="popup__content-inner">
+              <h2>Вход</h2>
+              <p>Добро пожаловать! Введите данные для входа</p>
+              <ul class="popup__reg-btn-list list-reset">
+                <li class="popup__reg-btn-item">
+                  <a href="#" class="popup__reg-btn-link popup__reg-btn-link--google">
+                    <svg class="popup__reg-btn-icon" width="18" height="18" fill="currentColor">
+                      <use xlink:href="./img/sprite.svg#reg-google"></use>
+                    </svg>
+                    <span>Вход с Google</span>
+                  </a>
+                </li>
+                <li class="popup__reg-btn-item">
+                  <a href="#" class="popup__reg-btn-link popup__reg-btn-link--apple">
+                    <svg class="popup__reg-btn-icon" width="15" height="18" fill="currentColor">
+                      <use xlink:href="./img/sprite.svg#reg-apple"></use>
+                    </svg>
+                    <span>Вход с Apple</span>
+                  </a>
+                </li>
+              </ul>
+              <div class="popup__divider">
+                <p>или</p>
+              </div>
+              <form action="" method="post" id="signup-form">
+                <label for="signup-userlogin">
+                  <input type="text" name="signup-userlogin" id="signup-userlogin" placeholder="Логин" required>
+                  <span class="error-message">Заполните это поле</span>
+                </label>
+                <label for="signup-password">
+                  <input type="password" name="signup-password" id="signup-password" placeholder="Пароль" required>
+                  <span class="error-message">Заполните это поле</span>
+                </label>
+                <div class="popup__checkbox-wrapper">
+                  <input class="visually-hidden" type="checkbox" name="remember" id="remember" checked>
+                  <label for="remember">Запомнить меня</label>
+                  <button type="button" class="popup__forgot-password-link open-popup pass-restore-btn"
+                    data-value="#pass-restore">Забыли
+                    пароль?</button>
+                </div>
+                <button type="submit" class="popup__submit-btn">Вход</button>
+                <div class="popup__signup-wrapper">
+                  <span>Нет аккаунта?</span>
+                  <button type="button" class="popup__signup-btn open-popup signup-btn"
+                    data-value="#signup">Регистрация</button>
+                </div>
+              </form>
             </div>
-            <form action="" method="post" id="signup-form">
-              <label for="signup-userlogin">
-                <input type="text" name="signup-userlogin" id="signup-userlogin" placeholder="Логин" required>
-              </label>
-              <label for="signup-password">
-                <input type="password" name="signup-password" id="signup-password" placeholder="Пароль" required>
-              </label>
-              <div class="popup__checkbox-wrapper">
-                <input class="visually-hidden" type="checkbox" name="remember" id="remember" checked>
-                <label for="remember">Запомнить меня</label>
-                <a href="#" id="forgot-password-link" class="popup__forgot-password-link">Забыли пароль?</a>
+            <div class="popup__image">
+              <img src="./img/popup-bg.png" srcset="./img/popup-bg@2x.png 2x" width="455" height="635" loading="lazy"
+                alt="">
+            </div>
+          </li>
+          <li class="popup__content-item popup__content-item--pass-restore" id="pass-restore">
+            <div class="popup__content-inner popup__content-inner--pass-restore pass-restore">
+              <div class="pass-restore__content">
+                <ul class="pass-restore__slides-list list-reset">
+                  <li class="pass-restore__slides-item active" id="reset-slide_1">
+                    <h3>Забыли пароль?</h3>
+                    <p>Не переживайте. Введите почту и мы отправим инструкции</p>
+                    <form id="pass-restore-email-form" action="" method="post">
+                      <label for="pass-restore-email">
+                        <input type="email" name="pass-restore-email" id="pass-restore-email" placeholder="Ваш E-mail"
+                          required>
+                        <span class="error-message">Текст сообщения</span>
+                      </label>
+                      <button type="submit" class="pass-restore__btn pass-restore__btn--email"
+                        data-value="#reset-slide_2" data-dot="#pag_2">
+                        <span>Сбросить пароль</span>
+                        <svg width="21" height="17" fill="currentColor">
+                          <use xlink:href="./img/sprite.svg#arrow-right"></use>
+                        </svg>
+                      </button>
+                    </form>
+                    <button type="button"
+                      class="pass-restore__login-btn pass-restore__login-btn--exit open-popup login-btn"
+                      data-value="#login">←
+                      Назад</button>
+                  </li>
+                  <li class="pass-restore__slides-item" id="reset-slide_2">
+                    <h3>Сброс пароля</h3>
+                    <p>Отправили вам код на <span class="pass-restore__email">mail@mail.ru</span></p>
+                    <form id="pass-restore-code-form" action="" method="post">
+                      <div class="pass-restore__inputs">
+                        <input type="number" id="pass-restore-code_1" maxlength="1" autofocus>
+                        <input type="number" id="pass-restore-code_2" maxlength="1">
+                        <input type="number" id="pass-restore-code_3" maxlength="1">
+                        <input type="number" id="pass-restore-code_4" maxlength="1">
+                        <input type="number" id="pass-restore-code_5" maxlength="1">
+                        <input type="number" id="pass-restore-code_6" maxlength="1">
+                        <span class="error-message">Не подходит :( Попробуйте снова</span>
+                      </div>
+                      <button type="submit" class="pass-restore__btn pass-restore__btn--code"
+                        data-value="#reset-slide_3" data-dot="#pag_3">
+                        <span>Далее</span>
+                        <svg width="21" height="17" fill="currentColor">
+                          <use xlink:href="./img/sprite.svg#arrow-right"></use>
+                        </svg>
+                      </button>
+                    </form>
+                    <div class="pass-restore__btn-wrapper">
+                      <span>Не пришел код?</span>
+                      <button type="button" class="pass-restore__btn pass-restore__btn--resend"
+                        data-value="#reset-slide_1" data-dot="#pag_1">Отправить еще раз</button>
+                    </div>
+                  </li>
+                  <li class="pass-restore__slides-item" id="reset-slide_3">
+                    <h3>Введите новый пароль</h3>
+                    <p>Не менее 8 знаков</p>
+                    <form id="pass-restore-pass-form" action="" method="post">
+                      <input type="text" name="pass-restore-pass" id="pass-restore-pass_1" placeholder="Введите пароль"
+                        pattern="[0-9a-zA-Z!@#$%^&*]{8,}" title="Не менее 8 знаков" required>
+                      <label for="pass-restore-pass_1">Ваш пароль
+                        <span class="error-message">Текст сообщения</span>
+                      </label>
+                      <input type="text" name="pass-restore-pass" id="pass-restore-pass_2" placeholder="Подтверждение"
+                        pattern="[0-9a-zA-Z!@#$%^&*]{8,}" title="Не менее 8 знаков" required>
+                      <label for="pass-restore-pass_2">Подтвердите пароль
+                        <span class="error-message">Текст сообщения</span>
+                      </label>
+                      <button type="submit" class="pass-restore__btn pass-restore__btn--pass"
+                        data-value="#reset-slide_4" data-dot="#pag_4">
+                        <span>Сбросить пароль</span>
+                        <svg width="21" height="17" fill="currentColor">
+                          <use xlink:href="./img/sprite.svg#arrow-right"></use>
+                        </svg>
+                      </button>
+                    </form>
+                    <button type="button" class="pass-restore__btn pass-restore__btn--return"
+                      data-value="#reset-slide_2" data-dot="#pag_2">←
+                      Назад</button>
+                  </li>
+                  <li class="pass-restore__slides-item" id="reset-slide_4">
+                    <h3>Готово!</h3>
+                    <p>Пароль сброшен</p>
+                    <button type="button"
+                      class="pass-restore__login-btn pass-restore__login-btn--completed open-popup login-btn"
+                      data-value="#login">Войти</button>
+                  </li>
+                </ul>
               </div>
-              <button type="submit" class="popup__submit-btn">Вход</button>
-              <div class="popup__signup-wrapper">
-                <span>Нет аккаунта?</span>
-                <button type="button" class="popup__signup-btn open-popup signup-btn">Регистрация</button>
+              <div class="pass-restore__pagination">
+                <ul class="pass-restore__pagination-list list-reset">
+                  <li class="pass-restore__pagination-item active" id="pag_1">
+                    <p>1</p>
+                  </li>
+                  <li class="pass-restore__pagination-item" id="pag_2">
+                    <p>2</p>
+                  </li>
+                  <li class="pass-restore__pagination-item" id="pag_3">
+                    <p>3</p>
+                  </li>
+                  <li class="pass-restore__pagination-item" id="pag_4">
+                    <p>4</p>
+                  </li>
+                </ul>
               </div>
-            </form>
+            </div>
+          </li>
+          <li class="popup__content-item popup__content-item--admin" id="admin">
+            <div class="popup__content-inner popup__content-inner--admin admin-popup">
+              <h2>Закрытый контент</h2>
+              <p>Войдите или
+                <button type="button" class="admin-popup__signup-btn open-popup signup-btn" data-value="#signup">
+                  <span>зарегистрируйтесь</span>
+                </button>
+              </p>
+              <form action="" method="post" id="admin-login-form">
+                <label for="admin-userlogin">
+                  <input type="text" name="admin-userlogin" id="admin-userlogin" placeholder="Login" required>
+                  <span class="error-message">Заполните это поле</span>
+                </label>
+                <label for="admin-password">
+                  <input type="password" name="admin-password" id="admin-password" placeholder="Password" required>
+                  <span class="error-message">Заполните это поле</span>
+                </label>
+                <button type="button" class="admin-popup__password-toggle-btn">Показать</button>
+                <button type="submit" form="admin-login-form" class="admin-popup__submit-btn">Войти</button>
+              </form>
+            </div>
+          </li>
+          <li class="popup__content-item popup__content-item--edit" id="edit">
+            <div class="popup__content-inner popup__content-inner--edit custom-edit-popup">
+              <h2>Редактирование</h2>
+              <form action="" method="post" id="custom-edit-form">
+                <label for="input_1">
+                  <input type="text" name="input_1" id="input_1" placeholder="Input label text">
+                  <span class="error-message">Заполните это поле</span>
+                </label>
+                <label for="input_2">
+                  <input type="text" name="input_1" id="input_2" placeholder="Input label text">
+                  <span class="error-message">Заполните это поле</span>
+                </label>
+                <label for="input_3">
+                  <input type="text" name="input_1" id="input_3" placeholder="Input label text">
+                  <span class="error-message">Заполните это поле</span>
+                </label>
+                <label for="input_4">
+                  <input class="invalid" type="text" name="input_1" id="input_4" placeholder="Input label text">
+                  <span class="error-message active">Заполните это поле</span>
+                </label>
+                <button type="submit" form="admin-login-form" class="custom-edit-popup__submit-btn">Сохранить</button>
+              </form>
+            </div>
           </li>
         </ul>
-        <div class="popup__image">
-          <img src="./img/popup-bg.png" srcset="./img/popup-bg@2x.png 2x" width="455" height="635" loading="lazy"
-            alt="">
-        </div>
       </div>
     </div>
   </div>
+
+  <!-- END MAIN POPUP -->
+
+  <!-- COOKIES POPUP -->
+
+  <div class="cookies-popup"> <!--add class "active" to show the popup-->
+    <div class="cookies-popup__content">
+      <h2>Уведомление</h2>
+      <p>Этот сайт использует файлы cookies
+        и сервисы сбора технических данных посетителей (данные об IP-адресе, местоположении и др.) для обеспечения
+        работоспособности и улучшения качества обслуживания. Продолжая использовать наш сайт, вы автоматически
+        соглашаетесь с использованием данных технологий.</p>
+      <button type="button" class="cookies-popup__submit-btn">Принять</button>
+    </div>
+  </div>
+
+  <!-- END COOKIES POPUP -->
 
   <script src="js/main.min.js"></script>
 </body>
