@@ -1176,6 +1176,7 @@ div.ck-color-table {
   color: #000000 !important;
 }
 
+.result-text h2,
 .ck.ck-editor h2 {
   font-family: "NotoSans", "Arial", sans-serif;
   font-style: normal;
@@ -1186,6 +1187,7 @@ div.ck-color-table {
   margin: 12px 0;
 }
 
+.result-text h3,
 .ck.ck-editor h3 {
   font-family: "NotoSans", "Arial", sans-serif;
   font-style: normal;
@@ -1196,6 +1198,7 @@ div.ck-color-table {
   margin: 12px 0;
 }
 
+.result-text h4,
 .ck.ck-editor h4 {
   font-family: "NotoSans", "Arial", sans-serif;
   font-style: normal;
@@ -1206,6 +1209,7 @@ div.ck-color-table {
   margin: 12px 0;
 }
 
+.result-text p,
 .ck.ck-editor p {
   font-family: "NotoSans", "Arial", sans-serif;
   font-style: normal;
@@ -1216,21 +1220,16 @@ div.ck-color-table {
   margin: 10px 0;
 }
 
-.ck.ck-editor {
-  margin-bottom: 10px;
-}
-
+.result-text img,
 .ck.ck-editor img {
   width: 100%;
   height: auto;
   -o-object-fit: cover;
   object-fit: cover;
+  margin-bottom: 10px;
 }
 
-.ck.ck-editor {
-  margin-bottom: 12px;
-}
-
+.result-text a,
 .ck.ck-editor a {
   font-family: "NotoSans", "Arial", sans-serif;
   font-style: normal;
@@ -1241,14 +1240,18 @@ div.ck-color-table {
   font-style: normal;
   color: #fccd03;
   text-decoration: underline;
+  margin-bottom: 12px;
 }
 
+.result-text ul,
+.result-text ol,
 .ck.ck-editor ul,
 .ck.ck-editor ol {
   padding-left: 24px;
   margin: 10px 0 16px;
 }
 
+.result-text ul li,
 .ck.ck-editor ul li {
   font-family: "NotoSans", "Arial", sans-serif;
   font-style: normal;
@@ -1259,6 +1262,7 @@ div.ck-color-table {
   margin-bottom: 6px;
 }
 
+.result-text ol li,
 .ck.ck-editor ol li {
   font-family: "NotoSans", "Arial", sans-serif;
   font-style: normal;
@@ -1269,6 +1273,7 @@ div.ck-color-table {
   margin-bottom: 6px;
 }
 
+.result-text code,
 .ck.ck-editor code {
   font-family: "Inconsolata", "Courier New", monospace;
   font-style: normal;
@@ -1282,6 +1287,13 @@ div.ck-color-table {
   padding: 5px 7px;
 }
 
+.result-text pre,
+.ck.ck-editor pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.result-text blockquote,
 .ck.ck-editor blockquote {
   font-family: "NotoSans", "Arial", sans-serif;
   font-style: normal;
@@ -1293,11 +1305,13 @@ div.ck-color-table {
   border-left: 2px solid #DEE2E6;
 }
 
+.result-text blockquote p,
 .ck.ck-editor blockquote p {
   margin: 0;
 }
 
-.ck.ck-editor .ck-content hr {
+.result-text hr,
+.ck.ck-editor hr {
   height: 1px;
   margin: 12px 0;
   background-color: #DEE2E6;
@@ -5145,6 +5159,11 @@ button.user-menu__signup-btn:active {
   line-height: 1.5;
   color: #ffffff;
   margin: 23px 0 7px;
+}
+
+.article__text pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
 }
 
 .article__image {

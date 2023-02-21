@@ -8,7 +8,7 @@
   --ck-color-button-on-background: #454954 !important;
   --ck-color-button-on-hover-background: #454954 !important;
   --ck-color-tooltip-background: #454954 !important;
-  --ck-color-tooltip-text:  $color-default-black !important;
+  --ck-color-tooltip-text: $color-default-black !important;
 }
 
 .ck {
@@ -17,6 +17,7 @@
 
 .ck.ck-button.ck-off:not(.ck-disabled):hover,
 a.ck.ck-button.ck-off:not(.ck-disabled):hover {
+
   svg,
   span.ck-button__label {
     color: $color-default-black !important;
@@ -95,6 +96,7 @@ div.ck-color-table {
 
 // CONTENT STYLES
 
+.result-text,
 .ck.ck-editor {
   h2 {
     @include font-settings ($ff-noto, 700, 24px, 1.25);
@@ -110,37 +112,26 @@ div.ck-color-table {
     @include font-settings ($ff-noto, 700, 16px, 1.25);
     margin: 12px 0;
   }
-}
 
-.ck.ck-editor {
   p {
     @include font-settings ($ff-noto, 400, 14px, 1.5);
     margin: 10px 0;
   }
-}
-
-.ck.ck-editor {
-  margin-bottom: 10px;
 
   img {
     width: 100%;
     height: auto;
     object-fit: cover;
+    margin-bottom: 10px;
   }
-}
-
-.ck.ck-editor {
-  margin-bottom: 12px;
 
   a {
     @include font-settings ($ff-noto, 400, 14px, 1.5);
     font-style: normal;
     color: $color-accent;
     text-decoration: underline;
+    margin-bottom: 12px;
   }
-}
-
-.ck.ck-editor {
 
   ul,
   ol {
@@ -161,9 +152,7 @@ div.ck-color-table {
       margin-bottom: 6px;
     }
   }
-}
 
-.ck.ck-editor {
   code {
     @include font-settings ($ff-incon, 400, 14px, 1.5);
     color: $color-default-black;
@@ -171,9 +160,12 @@ div.ck-color-table {
     border-radius: 4px;
     padding: 5px 7px;
   }
-}
 
-.ck.ck-editor {
+  pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
   blockquote {
     @include font-settings ($ff-noto, 400, 14px, 1.5);
     padding-left: 16px;
@@ -183,10 +175,8 @@ div.ck-color-table {
       margin: 0;
     }
   }
-}
 
-.ck.ck-editor {
-  .ck-content hr {
+  hr {
     height: 1px;
     margin: 12px 0;
     background-color: #DEE2E6;

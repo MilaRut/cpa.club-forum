@@ -123,6 +123,11 @@
     @include font-settings ($ff-inter, 400, 24px, 1.5);
     margin: 23px 0 7px;
   }
+
+  pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
 }
 
 .article__image {
