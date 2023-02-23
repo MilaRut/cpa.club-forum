@@ -139,18 +139,9 @@ div.ck-color-table {
     margin: 10px 0 16px;
   }
 
-  ul {
-    li {
-      @include font-settings ($ff-noto, 400, 14px, 1.5);
-      margin-bottom: 6px;
-    }
-  }
-
-  ol {
-    li {
-      @include font-settings ($ff-noto, 400, 14px, 1.5);
-      margin-bottom: 6px;
-    }
+  li {
+    @include font-settings ($ff-noto, 400, 14px, 1.5);
+    margin-bottom: 6px;
   }
 
   code {
@@ -162,22 +153,23 @@ div.ck-color-table {
   }
 
   pre {
+    @include font-settings ($ff-noto, 400, 14px, 1.5);
     white-space: pre-wrap;
     word-wrap: break-word;
+    color: $color-default-black;
+    background-color: #F8F9FA;
+    border-radius: 4px;
+    padding: 5px 7px;
   }
 
   blockquote {
     @include font-settings ($ff-noto, 400, 14px, 1.5);
     padding-left: 16px;
     border-left: 2px solid #DEE2E6;
-
-    p {
-      margin: 0;
-    }
+    margin: 10px 0;
   }
 
   hr {
-    height: 1px;
     margin: 12px 0;
     background-color: #DEE2E6;
   }

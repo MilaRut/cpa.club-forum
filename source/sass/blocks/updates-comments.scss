@@ -1,3 +1,18 @@
+.updates-comments {
+  h3 {
+    @include font-settings ($ff-inter, 500, 22px, 1.58);
+    letter-spacing: 0.96px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+
+    span,
+    b {
+      @include font-settings ($ff-inter, 500, 22px, 1.58);
+      color: #A3A5A8;
+    }
+  }
+}
+
 .updates-comments__list {
   display: flex;
   flex-direction: column;

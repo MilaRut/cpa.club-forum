@@ -224,24 +224,24 @@
                   </label>
                   <select class="form-control choices-multiple-remove-button" name="choices-multiple-remove-button"
                     id="choices-multiple-remove-button" multiple>
-                    <option value="Choice 1" selected>Пункт списка</option>
-                    <option value="Choice 2">Пункт списка</option>
-                    <option value="Choice 3">Пункт списка</option>
-                    <option value="Choice 4">Пункт списка</option>
-                    <option value="Choice 5">Пункт списка</option>
-                    <option value="Choice 6">Пункт списка</option>
-                    <option value="Choice 7">Пункт списка</option>
-                    <option value="Choice 8">Пункт списка</option>
+                    <option value="Choice 1" selected>Пункт списка1</option>
+                    <option value="Choice 2">Пункты2</option>
+                    <option value="Choice 3">Пункт списка3</option>
+                    <option value="Choice 4">Пункт пункт списка4</option>
+                    <option value="Choice 5">Пункт5</option>
+                    <option value="Choice 6">Пункт списка6</option>
+                    <option value="Choice 7">Пнктспск7</option>
+                    <option value="Choice 8">Пункт списка8</option>
                   </select>
-                  <div class="select-multiple__hidden-items">
-                    <button class="select-multiple__reset-btn" type="reset"></button>
+                  <div class="select-multiple__controls active">
                     <div class="select-multiple__hidden-items popover">
                       <p>+<span class="popover__count">3</span></p>
                       <div class="popover__content" id="popover">
                         <span class="popover__item">Пункт списка</span>
-                        <span class="popover__item">Пункт списка</span>
+                        <!-- <span class="popover__item">Пункт списка</span> -->
                       </div>
                     </div>
+                    <button class="select-multiple__reset-btn" type="reset"></button>
                   </div>
                 </fieldset>
               </div>
@@ -282,6 +282,65 @@
               <!-- END OF RADIO -->
 
             </form>
+          </section>
+          <section class="result-text">
+            <h2>TEXT EXAMPLES</h2>
+
+            <h2>Heading2</h2>
+            <h3>Heading3</h3>
+            <h4>Heading4</h4>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis nisl cursus bibendum sit
+              nulla accumsan sodales ornare. At urna viverra non suspendisse neque, lorem. Pretium condimentum
+              pellentesque gravida id etiam sit sed arcu euismod. Rhoncus proin orci duis scelerisque molestie
+              cursus tincidunt aliquam.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis nisl cursus bibendum sit
+              nulla accumsan sodales ornare. At urna viverra non suspendisse neque, lorem. Pretium condimentum
+              pellentesque gravida id etiam sit sed arcu euismod. Rhoncus proin orci duis scelerisque molestie
+              cursus tincidunt aliquam.</p>
+
+            <img src="./img/ca-bg.png" alt="">
+
+            <a href="#">Link text reuse anchor component</a>
+
+            <hr>
+
+            <ul>
+              <li>unordered list item</li>
+              <li>unordered list itemunordered list itemunordered list itemunordered list itemunordered list
+                itemunordered list itemunordered list itemunordered list item</li>
+              <li>unordered list item</li>
+            </ul>
+
+            <h2>Heading1</h2>
+            <h3>Heading2</h3>
+            <h4>Heading3</h4>
+
+            <pre>function sliceIntoChunks(arr, chunkSize) {
+              const res = [];
+              for (let i = 0; i < arr.length; i += chunkSize) {const chunk = arr.slice(i, i + chunkSize);res.push(chunk);}
+              return res;
+          }
+
+          const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+          console.log(sliceIntoChunks(arr, 3));</pre>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis nisl cursus bibendum sit
+              nulla accumsan sodales ornare. At urna viverra non suspendisse neque, lorem. Pretium condimentum
+              pellentesque gravida id etiam sit sed arcu euismod. Rhoncus proin orci duis scelerisque molestie
+              cursus tincidunt aliquam.</p>
+
+            <code>code textcode textcode textcode textcode textcode text</code>
+
+            <ol>
+              <li>ordered list item</li>
+              <li>ordered list item</li>
+              <li>ordered list item</li>
+              <li>ordered list item</li>
+            </ol>
+
+            <blockquote>Nothing is impossible, the word itself says "I'm possible!"</blockquote>
+
           </section>
         </div>
       </div>

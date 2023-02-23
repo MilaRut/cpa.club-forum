@@ -1,15 +1,5 @@
-.news__item {
-  padding-bottom: 13px;
-  border-bottom: 1px solid rgba(194, 194, 194, 0.2);
-
-  &:not(:last-child) {
-    margin-bottom: 42px;
-  }
-
-  &:last-child {
-    margin-bottom: 20px;
-  }
-
+.news {
+  margin-bottom: 28px;
 
   h3 {
     @include font-settings ($ff-inter, 400, 14px, 1.1);
@@ -18,6 +8,12 @@
     text-transform: uppercase;
     margin-bottom: 13px;
   }
+}
+
+.news__item {
+  padding-bottom: 13px;
+  border-bottom: 1px solid rgba(194, 194, 194, 0.2);
+  margin-bottom: 20px;
 
   a {
     @include font-settings ($ff-inter, 600, 18px, 1.56);
