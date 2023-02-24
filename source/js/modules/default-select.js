@@ -46,35 +46,26 @@ function initMultipleSelect() {
 
         const items = Array.from(selectedList.children);
         const containerPaddings = Math.floor(Number(window.getComputedStyle(selectedContainer).paddingLeft.slice(0, -2))) + Math.floor(Number(window.getComputedStyle(selectedContainer).paddingRight.slice(0, -2)));
-        const frameWidth = selectedContainer.offsetWidth - containerPaddings - 4;
+        const frameWidth = selectedContainer.offsetWidth - containerPaddings;
 
-        let widthsArr = [];
-        let textsArr = [];
-        let textsArr2 = [];
-
+        let visible = [];
+        let hidden = [];
+        let widthsSum = 0;
         items.forEach((item) => {
           let width = Math.floor(Number(window.getComputedStyle(item).width.slice(0, -2)) + Number(window.getComputedStyle(item).marginRight.slice(0, -2)));
-          widthsArr.push(width);
-          let text = item.innerText.slice(0, -11);
-          textsArr.push(text);
+          widthsSum += width;
+          if (widthsSum > frameWidth) {
+            let text = item.innerText.slice(0, -11);
+            hidden.push(text);
+            popover.classList.add('active');
+            popoverCount.innerText = hidden.length;
+            popoverContent.innerText = hidden.join(', ');
+          } else {
+            visible.push(item);
+            popover.classList.remove('active');
+          }
         });
-
-        let widthsSum = widthsArr.reduce((sum, current) => sum + current, 0);
-
-        if (widthsSum > frameWidth) {
-
-          popover.classList.add('active');
-
-          let result = textsArr.splice(-1);
-          textsArr2.push(result);
-          popoverCount.innerText = textsArr2.length;
-          popoverContent.innerText = textsArr2;
-
-        } else {
-          popover.classList.remove('active');
-        }
       });
-
 
       // end multiselect functions
 
