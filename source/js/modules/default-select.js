@@ -42,11 +42,11 @@ function initMultipleSelect() {
       const popoverCount = document.querySelector('.popover__count');
       const popoverContent = document.querySelector('.popover__item');
 
-      window.addEventListener('change', function () {
+      multipleSelect.addEventListener('change', function () {
 
         const items = Array.from(selectedList.children);
         const containerPaddings = Math.floor(Number(window.getComputedStyle(selectedContainer).paddingLeft.slice(0, -2))) + Math.floor(Number(window.getComputedStyle(selectedContainer).paddingRight.slice(0, -2)));
-        const frameWidth = selectedContainer.offsetWidth - containerPaddings;
+        const frameWidth = selectedContainer.offsetWidth - containerPaddings - 4;
 
         let widthsArr = [];
         let textsArr = [];
@@ -61,45 +61,14 @@ function initMultipleSelect() {
 
         let widthsSum = widthsArr.reduce((sum, current) => sum + current, 0);
 
-        // eslint-disable-next-line
-        console.log('framewidth: ' + frameWidth);
-        // eslint-disable-next-line
-        console.log('widthsSum: ' + widthsSum);
-        // eslint-disable-next-line
-        console.log('textsArr: ' + textsArr);
-        // eslint-disable-next-line
-        console.log('textsArr.length: ' + textsArr.length);
-
-        // eslint-disable-next-line
-        console.log('');
-
         if (widthsSum > frameWidth) {
-          // eslint-disable-next-line
-          console.log('Oops!');
-          // eslint-disable-next-line
-          console.log('framewidth: ' + frameWidth);
-          // eslint-disable-next-line
-          console.log('widthsSum: ' + widthsSum);
-          // eslint-disable-next-line
 
           popover.classList.add('active');
 
-          let result = textsArr.splice(textsArr.length - 1);
+          let result = textsArr.splice(-1);
           textsArr2.push(result);
           popoverCount.innerText = textsArr2.length;
           popoverContent.innerText = textsArr2;
-
-
-          // eslint-disable-next-line
-          console.log('textsArr: ' + textsArr);
-          // eslint-disable-next-line
-          console.log('textsArr.length: ' + textsArr.length);
-          // eslint-disable-next-line
-          console.log('textsArr2: ' + textsArr2);
-          // eslint-disable-next-line
-          console.log('textsArr2length: ' + textsArr2.length);
-          // eslint-disable-next-line
-          console.log('');
 
         } else {
           popover.classList.remove('active');
