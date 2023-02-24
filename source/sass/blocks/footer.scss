@@ -12,10 +12,14 @@
   margin-right: 70px;
 }
 
-.footer__item--heading h3 {
-  @include font-settings ($ff-inter, 600, 14px, 1);
-  text-transform: uppercase;
-  margin-bottom: 12px;
+.footer__item--heading {
+
+  h3,
+  h3 a {
+    @include font-settings ($ff-inter, 600, 14px, 1);
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
 }
 
 .footer__item {

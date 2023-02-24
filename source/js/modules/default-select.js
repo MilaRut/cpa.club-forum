@@ -39,49 +39,68 @@ function initMultipleSelect() {
       const selectedContainer = multipleSelect.querySelector('.choices__inner');
       const selectedList = multipleSelect.querySelector('.choices__list--multiple');
       const popover = document.querySelector('.popover');
+      const popoverCount = document.querySelector('.popover__count');
+      const popoverContent = document.querySelector('.popover__item');
 
       window.addEventListener('change', function () {
 
-        // eslint-disable-next-line
-        // console.log('listwidth: ' + selectedList.offsetWidth);
-
-        let items = Array.from(selectedList.children);
+        const items = Array.from(selectedList.children);
+        const containerPaddings = Math.floor(Number(window.getComputedStyle(selectedContainer).paddingLeft.slice(0, -2))) + Math.floor(Number(window.getComputedStyle(selectedContainer).paddingRight.slice(0, -2)));
+        const frameWidth = selectedContainer.offsetWidth - containerPaddings;
 
         let widthsArr = [];
         let textsArr = [];
-        // let textsArr2 =[];
+        let textsArr2 = [];
 
         items.forEach((item) => {
-          let text = item.innerText.slice(0, -11);
-          // eslint-disable-next-line
-          console.log('text: ' + text);
-          textsArr.push(text);
-
-          let width = Number(window.getComputedStyle(item).width.slice(0, -2));
+          let width = Math.floor(Number(window.getComputedStyle(item).width.slice(0, -2)) + Number(window.getComputedStyle(item).marginRight.slice(0, -2)));
           widthsArr.push(width);
+          let text = item.innerText.slice(0, -11);
+          textsArr.push(text);
         });
+
         let widthsSum = widthsArr.reduce((sum, current) => sum + current, 0);
 
         // eslint-disable-next-line
-        console.log('textsArr: ' + textsArr);
-        // eslint-disable-next-line
-        // console.log('widthsArr: ' + widthsArr);
-        // eslint-disable-next-line
-        console.log('framewidth: ' + (selectedContainer.offsetWidth - 118));
+        console.log('framewidth: ' + frameWidth);
         // eslint-disable-next-line
         console.log('widthsSum: ' + widthsSum);
         // eslint-disable-next-line
+        console.log('textsArr: ' + textsArr);
+        // eslint-disable-next-line
+        console.log('textsArr.length: ' + textsArr.length);
+
+        // eslint-disable-next-line
         console.log('');
 
-        if (widthsSum > (selectedContainer.offsetWidth - 118)) {
+        if (widthsSum > frameWidth) {
           // eslint-disable-next-line
           console.log('Oops!');
-          let removed = textsArr.splice(-1);
           // eslint-disable-next-line
-          console.log(textsArr);
+          console.log('framewidth: ' + frameWidth);
           // eslint-disable-next-line
-          console.log(removed);
+          console.log('widthsSum: ' + widthsSum);
+          // eslint-disable-next-line
+
           popover.classList.add('active');
+
+          let result = textsArr.splice(textsArr.length - 1);
+          textsArr2.push(result);
+          popoverCount.innerText = textsArr2.length;
+          popoverContent.innerText = textsArr2;
+
+
+          // eslint-disable-next-line
+          console.log('textsArr: ' + textsArr);
+          // eslint-disable-next-line
+          console.log('textsArr.length: ' + textsArr.length);
+          // eslint-disable-next-line
+          console.log('textsArr2: ' + textsArr2);
+          // eslint-disable-next-line
+          console.log('textsArr2length: ' + textsArr2.length);
+          // eslint-disable-next-line
+          console.log('');
+
         } else {
           popover.classList.remove('active');
         }
@@ -97,12 +116,16 @@ function initMultipleSelect() {
 
         setTimeout(() => {
           choice.init();
-        }, 400);
+          popover.classList.remove('active');
+        }, 500);
 
+        setTimeout(() => {
+          initMultipleSelect();
+        }, 1000);
       });
     });
   }
 }
 
-
-export {initDefaultSelect, initMultipleSelect};
+// eslint-disable-next-line
+export { initDefaultSelect, initMultipleSelect };

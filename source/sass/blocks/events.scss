@@ -137,10 +137,13 @@
   }
 }
 
-.events__text {
-  padding: 29px 20px;
+.events__tags-list {
+  display: flex;
+  flex-wrap: wrap;
+}
 
-  h4 {
+.events__tags-item {
+  span {
     @include font-settings ($ff-inter, 400, 14px, 1);
     display: inline-block;
     letter-spacing: 0.96px;
@@ -149,8 +152,13 @@
     background-color: $color-accent;
     border-radius: 29px;
     padding: 5px 14px;
+    margin-right: 7px;
     margin-bottom: 15px;
   }
+}
+
+.events__text {
+  padding: 29px 20px;
 
   h3 {
     @include font-settings ($ff-inter, 600, 17px, 1.56);

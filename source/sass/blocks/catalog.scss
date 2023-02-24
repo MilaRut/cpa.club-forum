@@ -3,7 +3,7 @@
   border: 1px solid #2D3341;
   border-radius: 10px;
   margin-top: 20px;
-  padding: 52px 40px 7px;
+  padding: 52px 40px 20px;
 }
 
 .catalog__heading {
@@ -105,7 +105,7 @@
       flex-direction: row;
       justify-content: space-between;
       flex-wrap: wrap;
-      padding: 22px 17px 15px 5px;
+      padding: 22px 17px 5px 5px;
     }
 
     .catalog__cover {
@@ -147,7 +147,7 @@
 .catalog__card {
   background-color: #262931;
   border-radius: 20px;
-  padding: 29px 20px 23px;
+  padding: 30px 20px 12px;
   display: flex;
   flex-direction: column;
 
@@ -208,14 +208,14 @@
 }
 
 .catalog__logo-block {
-  width: 111px;
+  max-width: 111px;
   height: 53px;
   background: #FFFFFF;
   border-radius: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px;
+  padding: 10px 13px;
   z-index: 10;
 
   img {
@@ -338,6 +338,37 @@
   }
 }
 
+.catalog__show-more-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  min-height: 47px;
+  background-color: #262931;
+  border: none;
+  border-radius: 10px;
+  color: $color-default-white;
+  cursor: pointer;
+
+  span {
+    @include font-settings ($ff-inter, 500, 14px, 1);
+  }
+
+  svg {
+    margin-right: 17px;
+  }
+
+  &:hover {
+    background-color: #76777C;
+    color: $color-default-white;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+}
+
 .catalog__filters.filters {
   padding: 25px 20px 15px;
 
@@ -375,8 +406,4 @@
   .filters__submit-btn {
     margin-top: 10px;
   }
-}
-
-.catalog__text-block {
-
 }
