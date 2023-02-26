@@ -87,5 +87,4 @@ function initMultipleSelect() {
   }
 }
 
-// eslint-disable-next-line
-export { initDefaultSelect, initMultipleSelect };
+export {initDefaultSelect, initMultipleSelect};

@@ -620,8 +620,9 @@
                         <div class="friends__inner-content">
                           <div class="friends__image">
                             <img src="./img/friends-avatar.png" width="56" height="56" alt="">
+                            <abbr class="friends__abbr">ИИ</abbr>
                           </div>
-                          <p>Иван Иванов</p>
+                          <p><span class="friends__name">Иван</span> <span class="friends__surname">Иванов</span></p>
                         </div>
                       </div>
                       <div class="friends__btns">
@@ -642,10 +643,11 @@
                     <li class="friends__item friends__item--accepted">
                       <div class="friends__inner-content">
                         <div class="friends__image">
-                          <img src="./img/friends-avatar.png" width="100" height="100" alt="">
+                          <!-- <img src="./img/friends-avatar.png" width="100" height="100" alt=""> -->
+                          <abbr class="friends__abbr">ВМ</abbr>
                         </div>
-                        <p>Влад Минайчев</p>
-                        <span>Resident</span>
+                        <p><span class="friends__name">Влад</span> <span class="friends__surname">Минайчев</span></p>
+                        <b>Resident</b>
                       </div>
                       <button class="friends__btn friends__btn--delete" type="button">
                         <svg class="friends__btn-icon" width="24" height="24" fill="currentColor">
@@ -656,10 +658,11 @@
                     <li class="friends__item friends__item--accepted">
                       <div class="friends__inner-content">
                         <div class="friends__image">
-                          <img src="./img/friends-avatar.png" width="100" height="100" alt="">
+                          <!-- <img src="./img/friends-avatar.png" width="100" height="100" alt=""> -->
+                          <abbr class="friends__abbr">UN</abbr>
                         </div>
-                        <p>User Name</p>
-                        <span>Resident</span>
+                        <p><span class="friends__name">User</span> <span class="friends__surname">Name</span></p>
+                        <b>Resident</b>
                       </div>
                       <button class="friends__btn friends__btn--delete" type="button">
                         <svg class="friends__btn-icon" width="24" height="24" fill="currentColor">
@@ -1119,7 +1122,23 @@
     </div>
   </div>
 
-  <!-- END COOKIES POPUP -->
+<!-- END COOKIES POPUP -->
+
+  <!-- ALERT POPUP -->
+
+  <div class="alert-popup"> <!--add class "active" to show the popup-->
+    <button type="button" class="alert-popup__close-btn">
+
+    </button>
+    <div class="alert-popup__content alert-popup__content--error">
+      <p>Wrong password!</p>
+    </div>
+    <!-- <div class="alert-popup__content alert-popup__content--success">
+      <p>Success!</p>
+    </div> -->
+  </div>
+
+  <!-- END ALERT POPUP -->
 
   <script src="js/main.min.js"></script>
 </body>

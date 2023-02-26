@@ -1,5 +1,6 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initCookiesPopup} from './modules/cookies-popup';
+import {initAlertPopup} from './modules/alert-popup';
 import {initLoginPopup} from './modules/popup';
 import {initPassRestore} from './modules/pass-restore';
 import {initAdminPopup} from './modules/admin-popup';
@@ -10,6 +11,7 @@ import {openHeaderNav, closeHeaderNav} from './modules/header-nav';
 import {initRangeSlider} from './modules/range-slider';
 import {toggleCatalogView} from './modules/catalog-toggle';
 import {initTabs, initSubTabs} from './modules/tabs';
+import {renderAbbr} from './modules/render-abbr';
 import {checkArticles} from './modules/user-articles';
 import {initDefaultSelect, initMultipleSelect} from './modules/default-select';
 import {initEditor} from './modules/ck-editor';
@@ -25,6 +27,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // Modules
   // ---------------------------------
   initCookiesPopup();
+  initAlertPopup();
   initLoginPopup();
   initPassRestore();
   initAdminPopup();
@@ -44,6 +47,7 @@ window.addEventListener('DOMContentLoaded', () => {
     toggleCatalogView();
     initTabs();
     initSubTabs();
+    renderAbbr();
     checkArticles();
     initDefaultSelect();
     initMultipleSelect();
