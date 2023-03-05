@@ -98,23 +98,40 @@
 
     .catalog__item {
       max-width: 100%;
-      margin-bottom: 19px;
+      margin-bottom: 18px;
     }
 
     .catalog__card {
       flex-direction: row;
       justify-content: space-between;
       flex-wrap: wrap;
-      padding: 22px 17px 5px 5px;
+      padding: 13px 17px 5px 18px;
+    }
+
+    .catalog__title {
+      margin: 0;
+
     }
 
     .catalog__cover {
-      display: none;
+      min-height: 53px;
+      max-width: 100%;
+      padding: 10px 0 0 0;
+      border-radius: 0;
+
+      img,
+      &::before {
+        display: none;
+      }
     }
 
     .catalog__logo-block {
       order: -1;
       margin-right: 20px;
+
+      img {
+        display: block;
+      }
     }
 
     .catalog__title {
@@ -124,7 +141,7 @@
 
     .catalog__info-block {
       justify-content: flex-start;
-      padding-top: 10px;
+      margin: 0;
     }
 
     .catalog__rating {
@@ -134,20 +151,19 @@
 
     .catalog__text-block {
       min-width: 100%;
-      padding: 0 12px;
     }
   }
 }
 
 .catalog__item {
   max-width: 360px;
-  margin-bottom: 24px;
+  margin-bottom: 22px;
 }
 
 .catalog__card {
   background-color: #262931;
   border-radius: 20px;
-  padding: 30px 20px 12px;
+  padding: 19px 20px 14px;
   display: flex;
   flex-direction: column;
 
@@ -161,19 +177,14 @@
 }
 
 .catalog__title {
+  @include font-settings ($ff-inter, 700, 20px, 1.74);
+  letter-spacing: 0.96px;
+  text-transform: uppercase;
   position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 14px;
-  margin-bottom: 19px;
-
-  h3 {
-    @include font-settings ($ff-inter, 700, 20px, 1.74);
-    letter-spacing: 0.96px;
-    text-transform: uppercase;
-    z-index: 10;
-  }
+  margin-bottom: 10px;
 }
 
 .catalog__company-link {
@@ -181,18 +192,24 @@
 }
 
 .catalog__cover {
-  position: absolute;
-  top: -10px;
-  left: 2px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
+  padding: 10px 14px;
   max-width: 320px;
-  max-height: 73px;
+  min-height: 73px;
   border-radius: 20px;
   overflow: hidden;
 
   img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
     max-width: 320px;
-    max-height: 73px;
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -201,14 +218,18 @@
   &::before {
     position: absolute;
     content: "";
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     background: rgba(20, 22, 27, 0.7);
+    z-index: 10;
   }
 }
 
 .catalog__logo-block {
   max-width: 111px;
+  min-width: 53px;
   height: 53px;
   background: #FFFFFF;
   border-radius: 10px;
@@ -219,6 +240,7 @@
   z-index: 10;
 
   img {
+    position: relative;
     width: 100%;
     height: 100%;
     object-fit: contain;
