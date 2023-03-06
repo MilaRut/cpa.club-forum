@@ -278,17 +278,31 @@
 }
 
 .blog__cases-log-img {
+  position: relative;
   width: 36px;
   height: 36px;
   border-radius: 50%;
   overflow: hidden;
   margin-right: 13px;
+  background-color: #14161B;
 
   img {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
+}
+
+.blog__abbr {
+  @include font-settings ($ff-inter, 600, 13px, 1.6);
+  text-transform: uppercase;
+  color: #D1D2D3;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
 }
 
 .blog__cases-show-more,

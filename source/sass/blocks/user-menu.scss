@@ -10,6 +10,10 @@
   align-items: center;
   width: 147px;
   margin-right: -9px;
+
+  @include vp-767 {
+    justify-content: flex-end;
+  }
 }
 
 .user-menu__unlogged.active {
@@ -54,6 +58,12 @@ button.user-menu__signup-btn {
 
   &:active {
     opacity: 0.5;
+  }
+}
+
+.user-menu__alerts {
+  @include vp-767 {
+    display: none;
   }
 }
 
@@ -149,6 +159,11 @@ button.user-menu__signup-btn {
     height: 100%;
     object-fit: cover;
   }
+
+
+  @include vp-767 {
+    display: none;
+  }
 }
 
 .user-menu__nav-btn {
@@ -167,4 +182,17 @@ button.user-menu__signup-btn {
 
 .user-menu__nav-icon {
   pointer-events: none;
+
+  @include vp-767 {
+    display: none;
+  }
+}
+
+.user-menu__nav-icon-mob {
+  display: none;
+
+  @include vp-767 {
+    display: block;
+    pointer-events: none;
+  }
 }

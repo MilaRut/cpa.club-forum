@@ -83,8 +83,10 @@
 }
 
 .updates-comments__author-img {
+  position: relative;
   width: 32px;
   height: 32px;
+  background-color: #1A1D25;
   border-radius: 50%;
   overflow: hidden;
   margin-right: 10px;
@@ -134,8 +136,10 @@
 }
 
 .updates-comments__reply-author-img {
+  position: relative;
   width: 40px;
   height: 40px;
+  background-color: #1A1D25;
   border-radius: 50%;
   overflow: hidden;
   margin-right: 15px;

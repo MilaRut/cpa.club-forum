@@ -15,4 +15,17 @@
   img:hover {
     opacity: 0.6;
   }
+
+  img {
+    @include vp-767 {
+      width: 127px;
+      height: 20px;
+    }
+  }
+}
+
+.header__search {
+  @include vp-767 {
+    display: none;
+  }
 }

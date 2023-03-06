@@ -1,13 +1,20 @@
-const friends = document.querySelector('.friends');
-const friendsItem = document.querySelectorAll('.friends__inner-content');
+const abbrItem = document.querySelectorAll('.abbr-item');
 
 function renderAbbr() {
-  if (friends) {
-    friendsItem.forEach((item) => {
-      const abbr = item.querySelector('.friends__abbr');
-      const friendsName = item.querySelector('.friends__name').textContent;
-      const friendsSurname = item.querySelector('.friends__surname').textContent;
-      abbr.textContent = `${friendsName[0]}${friendsSurname[0]}`;
+
+  if (abbrItem) {
+    abbrItem.forEach((item) => {
+      const abbrContent = item.querySelector('.abbr-name');
+      const userName = item.querySelector('.user-name');
+
+      const userNameArr = userName.innerText.split(' ');
+
+      let result = '';
+      for (let i = 0; i < userNameArr.length; i++) {
+        let firstLetter = userNameArr[i][0];
+        result = result + firstLetter;
+        abbrContent.textContent = result;
+      }
     });
   }
 }

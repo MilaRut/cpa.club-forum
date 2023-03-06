@@ -6,6 +6,10 @@
 .adblock-1240x110 {
   width: 1240px;
   height: 110px;
+
+  @include vp-767 {
+    display: none;
+  }
 }
 
 .adblock-925x110 {
@@ -39,4 +43,12 @@
   height: 320px;
   border-radius: 15px;
   overflow: hidden;
+}
+
+.adblock-290x76 {
+  display: none;
+
+  @include vp-767 {
+    display: block;
+  }
 }
