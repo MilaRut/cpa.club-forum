@@ -1430,6 +1430,14 @@ input::placeholder {
   opacity: 0.5;
 }
 
+.user-menu {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: -9px;
+}
+
 .user-menu__logged,
 .user-menu__unlogged {
   display: none;
@@ -1440,14 +1448,10 @@ input::placeholder {
   display: -ms-flexbox;
   display: flex;
   position: relative;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  width: 147px;
-  margin-right: -9px;
+  margin-right: 8px;
 }
 
 .user-menu__unlogged.active {
@@ -1507,6 +1511,11 @@ button.user-menu__signup-btn:hover {
 
 button.user-menu__signup-btn:active {
   opacity: 0.5;
+}
+
+.user-menu__alerts {
+  margin-right: 17px;
+  margin-top: 1px;
 }
 
 .user-menu__alerts-btn {
@@ -1604,8 +1613,17 @@ button.user-menu__signup-btn:active {
 .user-menu__avatar {
   width: 30px;
   height: 30px;
+  background: url("../img/admin-icon.png") center no-repeat;
+  background-size: cover;
   border-radius: 10px;
+  margin-bottom: 2px;
   overflow: hidden;
+}
+
+.user-menu__avatar a {
+  display: block;
+  width: 30px;
+  height: 30px;
 }
 
 .user-menu__avatar img {
@@ -1621,6 +1639,7 @@ button.user-menu__signup-btn:active {
   background-color: transparent;
   border: none;
   cursor: pointer;
+  margin-left: 10px;
 }
 
 .user-menu__nav-btn:hover,
@@ -3055,6 +3074,8 @@ button.user-menu__signup-btn:active {
 .personal__image {
   width: 159px;
   height: 152px;
+  background: url("../img/admin-icon.png") center no-repeat;
+  background-size: cover;
   border: 5px solid #ffffff;
   border-radius: 26px;
   overflow: hidden;
@@ -3141,6 +3162,7 @@ button.user-menu__signup-btn:active {
 }
 
 .personal__friends-image {
+  position: relative;
   width: 46px;
   height: 46px;
   border-radius: 50%;
@@ -3153,6 +3175,29 @@ button.user-menu__signup-btn:active {
   height: 100%;
   -o-object-fit: cover;
   object-fit: cover;
+}
+
+.personal__abbr {
+  font-family: "Inter", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 1.6;
+  color: #ffffff;
+  text-transform: uppercase;
+  color: #D1D2D3;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
 }
 
 .personal__tooltip {
@@ -5301,7 +5346,8 @@ button.user-menu__signup-btn:active {
   position: relative;
   width: 36px;
   height: 36px;
-  background-color: #14161B;
+  background: url("../img/admin-icon.png") center no-repeat;
+  background-size: cover;
   border-radius: 50%;
   margin-right: 10px;
   overflow: hidden;
@@ -5312,29 +5358,6 @@ button.user-menu__signup-btn:active {
   height: 100%;
   -o-object-fit: cover;
   object-fit: cover;
-}
-
-.article__abbr {
-  font-family: "Inter", "Arial", sans-serif;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 13px;
-  line-height: 1.6;
-  color: #ffffff;
-  text-transform: uppercase;
-  color: #D1D2D3;
-  position: absolute;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
 }
 
 .article__tags-list {
@@ -5361,7 +5384,7 @@ button.user-menu__signup-btn:active {
   border: 1px solid #FFFFFF;
   border-radius: 20px;
   opacity: 0.5;
-  padding: 0 15px;
+  padding: 0 15px 2px;
 }
 
 .article__tags-item span {
@@ -6927,7 +6950,8 @@ input[type=range]::-moz-range-thumb {
   position: relative;
   width: 36px;
   height: 36px;
-  background-color: #1A1D25;
+  background: url("../img/admin-icon.png") center no-repeat;
+  background-size: cover;
   border-radius: 50%;
   margin-right: 10px;
   overflow: hidden;
@@ -9516,6 +9540,14 @@ label:focus ~ .set-rating__focus {
 #choices--choices-single-default-item-choice-1,
 #choices--choices-single-default-2-item-choice-1 {
   display: none;
+}
+
+.choices.is-disabled .choices__inner {
+  background-color: #4f5257;
+}
+
+.choices__item--disabled {
+  opacity: 0.2;
 }
 
 .choices[data-type*=select-multiple] .choices__inner {

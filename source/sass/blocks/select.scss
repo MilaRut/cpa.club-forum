@@ -95,6 +95,14 @@
   display: none;
 }
 
+.choices.is-disabled .choices__inner{
+  background-color: #4f5257;
+}
+
+.choices__item--disabled {
+  opacity: 0.2;
+}
+
 // Multiple select
 
 .choices[data-type*=select-multiple] .choices__inner {

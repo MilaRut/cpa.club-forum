@@ -77,7 +77,8 @@
   position: relative;
   width: 36px;
   height: 36px;
-  background-color: #1A1D25;
+  background: url("../img/admin-icon.png") center no-repeat;
+  background-size: cover;
   border-radius: 50%;
   margin-right: 10px;
   overflow: hidden;

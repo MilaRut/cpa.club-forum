@@ -1,3 +1,9 @@
+.user-menu {
+  position: relative;
+  display: flex;
+  margin-right: -9px;
+}
+
 .user-menu__logged,
 .user-menu__unlogged {
   display: none;
@@ -6,10 +12,8 @@
 .user-menu__logged.active {
   display: flex;
   position: relative;
-  justify-content: space-between;
   align-items: center;
-  width: 147px;
-  margin-right: -9px;
+  margin-right: 8px;
 
   @include vp-767 {
     justify-content: flex-end;
@@ -62,6 +66,9 @@ button.user-menu__signup-btn {
 }
 
 .user-menu__alerts {
+  margin-right: 17px;
+  margin-top: 1px;
+
   @include vp-767 {
     display: none;
   }
@@ -151,8 +158,17 @@ button.user-menu__signup-btn {
 .user-menu__avatar {
   width: 30px;
   height: 30px;
+  background: url("../img/admin-icon.png") center no-repeat;
+  background-size: cover;
   border-radius: 10px;
+  margin-bottom: 2px;
   overflow: hidden;
+
+  a {
+    display: block;
+    width: 30px;
+    height: 30px;
+  }
 
   img {
     width: 100%;
@@ -172,6 +188,7 @@ button.user-menu__signup-btn {
   background-color: transparent;
   border: none;
   cursor: pointer;
+  margin-left: 10px;
 
   &:hover,
   &.active {
